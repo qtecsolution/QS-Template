@@ -32,7 +32,7 @@
   
   <!--========== AUTHENTICATION-START ==========-->
   <div class="auth">
-    <div class="authbox">
+    <div class="auth-box">
       <div class="authentication">
         <div class="authentication-header">
           <figure class="logo">
@@ -41,7 +41,26 @@
         </div>
     
         <div class="authentication-body">
-          
+          <form class="loginform">
+            <div class="inputbox">
+              <input type="email" placeholder="Enter email or mobile number" class="inputfield">
+            </div>
+  
+            <div class="inputbox">
+              <input type="password" placeholder="Enter password" class="inputfield logpassfield">
+            
+              <a href="forgot-password.html" class="authlink">Forgot?</a>
+            </div>
+
+            <div class="inputbox">
+              <input type="checkbox" id="rememberpassword" class="checkfield" hidden>
+              <label for="rememberpassword" class="checklabel">Remember Password</label>
+            </div>
+
+            <div class="inputbox">
+              <button class="btn-submit" type="button">Sign In</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

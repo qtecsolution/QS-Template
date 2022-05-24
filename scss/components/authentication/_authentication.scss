@@ -7,7 +7,98 @@
   min-height: 100vh;
   @include flex-center;
 
-  
+  &-box {
+    background: $white;
+    @include flex-center;
+    padding: length(16);
+    @include radius(10);
+
+    @include breakpoint(mobile576) {
+      padding: length(24);
+    }
+
+    @include breakpoint(mobile768) {
+      padding: length(32);
+    }
+
+    @include breakpoint(tab992) {
+      padding: length(48);
+    }
+
+    @include breakpoint(desktop1024) {
+      padding: length(64);
+    }
+  }
+
+  .authentication {
+    width: length(345);
+    @include flex-column;
+    gap: length(48);
+
+    &-header {
+      @include flex-center;
+
+      .logo {
+        width: length(160);
+        height: length(64);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &-body {
+      .loginform {
+        @include flex-column;
+        gap: length(14);
+        @include w100;
+
+        .inputbox {
+          @include w100;
+          position: relative;
+
+          .inputfield {
+            @include w100;
+            padding: length(14) length(16);
+            @include border(solid, 1, $input-border);
+            @include radius(10);
+            @include setBgColor($white, $secondary);
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+
+            &::placeholder {
+              color: $placeholder-color;
+            }
+          }
+
+          .logpassfield {
+            padding-right: length(72);
+          }
+
+          .authlink {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            position: absolute;
+            top: 50%;
+            right: length(16);
+            @include transform(translateY(-50%));
+            @include transitionscolor;
+
+            @include hover {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**=======================================================**
