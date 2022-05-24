@@ -1,0 +1,270 @@
+/**=======================================================**
+                    HOME-BANNER SECTION START
+**=======================================================**/
+
+.home-banner {
+  padding: length(0) length(0) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+}
+
+/**=======================================================**
+                    HOME-BANNER SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                  EVENT-SECTION START
+**=======================================================**/
+
+.event {
+  padding: length(0) length(16) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(16);
+  }
+
+  &-header {
+    background: $white;
+    @include radius(10);
+    padding: length(32);
+    @include flex-center-column;
+    gap: length(12);
+
+    @include breakpoint(mobile768) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .eventinfo {
+      @include flex-column;
+      gap: length(4);
+      @include w100;
+      order: 1;
+
+      @include breakpoint(mobile768) {
+        flex-direction: row;
+        gap: length(48);
+        order: 0;
+        width: auto;
+        margin-right: auto;
+      }
+
+      @include breakpoint(desktop1200) {
+        gap: length(80);
+      }
+
+      .event-title {
+        color: $black;
+        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(33.6, 24));
+        display: none;
+
+        @include breakpoint(mobile768) {
+          display: block;
+        }
+      }
+
+      .event-timer {
+        @include flex-center-column;
+        gap: length(6);
+
+        @include breakpoint(mobile768) {
+          flex-direction: row;
+          align-items: center;
+          gap: length(14);
+        }
+
+        .timer-title {
+          @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+      
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(22.4, 16));
+          }
+        }
+
+        .timer {
+          @include flex-center-vert;
+
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor($white, $primary);
+            @include square(length(36));
+            @include flex-center;
+            @include border(solid, 1, $primary);
+            @include radius(5);
+            @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(16, 16));
+          }
+
+          .divider {
+            @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(16, 16));
+            color: $primary;
+            margin-inline: length(4);
+          }
+        }
+      }
+    }
+
+    .more {
+      @include flex-center-between;
+      @include w100;
+      order: 0;
+
+      @include breakpoint(mobile768) {
+        order: 1;
+        width: auto;
+        margin-left: auto;
+      }
+
+      .event-title {
+        color: $black;
+        @include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(33.6, 24));
+        display: block;
+
+        @include breakpoint(mobile768) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding: length(20) length(0);
+  }
+}
+
+/**=======================================================**
+                  EVENT-SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    HOME-VIDEO SECTION START
+**=======================================================**/
+
+.home-products {
+  padding: length(0) length(16) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(32);
+  }
+
+  &-header {
+    @include flex-center-between;
+    gap: length(12);
+      
+    @include breakpoint(mobile768) {
+      padding-right: length(8);
+    }
+
+    .home-products-title {
+      color: $black;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(33.6, 24));
+      
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(39.2, 28));
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-vert;
+    gap: length(16);
+    flex-wrap: wrap;
+      
+    @include breakpoint(mobile768) {
+      gap: length(24);
+    }
+
+    .cardlink {
+      width: 47.5%;
+
+      @include breakpoint(mobile576) {
+        width: 46.5%;
+      }
+
+      @include breakpoint(mobile768) {
+        width: 30.75%;
+      }
+
+      @include breakpoint(tab992) {
+        width: 31.5%;
+      }
+
+      @include breakpoint(desktop1200) {
+        width: 23.25%;
+      }
+
+      @include breakpoint(desktop1400) {
+        width: 18.5%;
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    HOME-VIDEO SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-SERVICES SECTION START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-SERVICES SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-PROJECTS SECTION START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-PROJECTS SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                HOME-ARTICLES SECTION START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                HOME-ARTICLES SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                HOME-TESTIMONIALS SECTION START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                HOME-TESTIMONIALS SECTION END
+**=======================================================**/

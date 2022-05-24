@@ -1,0 +1,101 @@
+/**=====================================================**
+                    THEME-COLORS
+=======================================================**/
+$primary: hsl(1, 71%, 54%); //#dd3936
+$secondary: hsl(60, 1%, 15%); // #282827
+$border-primary: hsl(1, 73%, 54%); //#df3734
+
+/**=====================================================**
+                    TEXT-COLORS
+=======================================================**/
+$text-primary: hsl(0, 0%, 38%); //#616161
+$dark-1: hsl(0, 0%, 14%); //#242424
+$gray-1: hsl(0, 0%, 53%); //#888888
+$footer-heading: hsl(240, 3%, 13%); //#202022
+$text-placeholder: hsl(0, 0%, 80%); //#CCCCCC
+$text-icon: hsl(0, 0%, 84%); //#D7D7D7
+$text-verify: hsl(223, 12%, 11%); //#191B20
+$placeholder-color: hsl(0, 0%, 75%); //#BEBEBE
+$resendbg: hsl(202, 71%, 52%); //#2D9CDB
+$toastbg: hsl(0, 23%, 90%); //#EBDFDF
+$invoiceBlack: hsl(195, 11%, 15%); //#212729
+$logoBg: hsl(192, 16%, 94%); // #EDF1F2
+$notifybg: hsl(220, 20%, 97%); // #f6f7f9
+$notifyborder: hsl(252, 8%, 88%); //#dfdee3
+
+$black2: hsl(180, 14%, 3%); //#060808;
+$black3: hsl(203, 11%, 15%); //#212629;
+
+$blue: hsl(216, 72%, 54%); //#3477de
+
+/**=====================================================**
+                    BACKGROUND-COLORS
+=======================================================**/
+$copyrightbg: hsl(0, 0%, 96%); //#F5F5F5
+$countdownbg: hsl(213, 48%, 95%); //#EEF3F9
+$select-text: hsl(224, 21%, 28%); //#394157
+$discountbg: hsl(0, 100%, 95%); //#FFE6E6
+$cartcounterbg: hsl(225, 22%, 89%); //#DEE1EA
+$decrementbg: hsl(224, 100%, 98%); //#F4F7FF
+$prodboxbg: hsl(0, 0%, 95%); //#F2F2F2
+$offpricebg: hsl(38, 100%, 58%); //#FFB029
+$btnedit: hsl(195, 86%, 64%); //#56CCF2
+$bodybg: hsl(210, 46%, 95%); //#ecf2f8
+$prime-express-bg: hsl(220, 23%, 97%); //#F7F8FA
+$prime-shops-bg: hsl(0, 0%, 97%); //#F7F7F7
+$bg-success: hsl(145, 63%, 42%); //#27AE60
+$bg-success-light: hsl(147, 22%, 90%); //#E0EBE5
+$flagboxbg: hsl(0, 0%, 94%); //#F0F0F0
+$dividerbg: hsl(0, 0%, 93%); //#EEEEEE
+
+$profilebg: hsl(0, 43%, 95%); //#F7EBEB
+$profilebox: hsl(0, 0%, 77%); //#C4C4C4
+$profilebox-2: hsl(0, 0%, 92%); //#EBEBEB
+
+$linkhoverbg: hsl(240, 9%, 94%); //#EDEDF0
+$linkiconbg: hsl(0, 0%, 96%); //#f4f4f4
+$searchicon: hsl(240, 5%, 50%); //#787885
+
+$submenubg: #F7FAFC;
+$ratingColor: #F2B807;
+
+$red: #c32a01; // #c32a01
+$red2: #ae403c; // #c32a01
+
+/**=====================================================**
+                    BORDER-COLORS
+=======================================================**/
+$border-1: hsl(0, 0%, 69%); //#B0B0B0
+$border-2: hsl(216, 6%, 15%); //#242629
+$input-border: hsl(255, 7%, 88%); //#E0DFE3
+$category-border: hsl(0, 0%, 74%); //#BDBDBD
+
+/**=====================================================**
+                    NORMAL-COLORS
+=======================================================**/
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+
+/**=====================================================**
+                        SHADOWS
+=======================================================**/
+$shadow-1: #4444440d;
+$shadow-2: #42474c59;
+
+/**=====================================================**
+                        BOX-SHADOWS
+=======================================================**/
+$dropdownshadow: drop-shadow(0rem .9375rem 1.875rem rgba($black, 0.15));
+$box-shadow-1: 0 .5rem 3rem 0 $dividerbg, 0 .25rem .5rem 0 $shadow-1, 0 0 .0625rem 0 $shadow-2;
+$box-shadow-2: drop-shadow(0 .9375rem 1.875rem rgba($black, 0.15));
+
+
+/**=====================================================**
+                        TEXT-SHADOWS
+=======================================================**/
+
+
+/**=====================================================**
+                    TIMING-VARIABLES
+=======================================================**/
+$time: 250ms;

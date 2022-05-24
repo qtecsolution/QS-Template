@@ -1,0 +1,245 @@
+/**=====================================================
+                CATEGORIES DROPDOWN START
+=====================================================**/
+
+.categories {
+  @include flex-column;
+
+  &-header {
+    @include flex-center-between;
+    background: $primary;
+    padding: length(12);
+
+    .titleinfo {
+      width: calc(100% - 1.5rem);
+      @include flex-center-vert;
+      gap: length(14);
+
+      .icon {
+        @include square(length(24));
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .titlebox {
+        width: calc(100% - 1.5rem);
+
+        .title {
+          color: $white;
+					@include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(19.6, 14));
+          letter-spacing: length(3.2);
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .arrowicon {
+      @include square(length(24));
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+  
+  &-body {
+    .sidebarlist {
+      @include list-vertical;
+      background: $white;
+      position: relative;
+
+      &-link {
+        padding: length(9.6) length(5) length(15) length(18);
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 0.5, $border-1);
+
+        .icon-itemtext {
+          @include flex-center-vert;
+          width: calc(100% - .875rem);
+          gap: length(16);
+
+          .icon {
+            @include square(length(20));
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .itemtext {
+            width: calc(100% - 1.25rem);
+
+            .text {
+              color: $text-primary;
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            }
+          }
+        }
+
+        .arrow {
+          @include square(length(14));
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+
+      &-item {
+        &:last-of-type {
+          .sidebarlist-link {
+            border-bottom: 0;
+          }
+        }
+
+        @include hover {
+          .submenu {
+            display: block;
+          }
+
+          .sidebarlist-link {
+            background: $submenubg;
+  
+            .icon-itemtext {
+              .icon {
+                svg {
+                  path {
+                    fill: $primary;
+                  }
+                }
+              }
+  
+              .itemtext {
+                .text {
+                  color: $primary;
+                }
+              }
+            }
+  
+            .arrow {
+              svg {
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .submenu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: $white;
+        width: length(270);
+        @include h100;
+        @extend %animation;
+        @extend %slideRightIn;
+        z-index: 100;
+        display: none;
+
+        &-item {
+          list-style: none;
+
+          &:last-child {
+            .submenu-link {
+              border-bottom: 0;
+            }
+          }
+
+          @include hover {
+            .submenu-link {
+              background: $submenubg;
+  
+              .text {
+                color: $primary;
+              }
+  
+              .arrow {
+                svg {
+                  path {
+                    fill: $primary;
+                  }
+                }
+              }
+            }
+
+            .subsubmenu {
+              display: block;
+            }
+          }
+
+          .subsubmenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: $white;
+            width: length(270);
+            @extend %animation;
+            @extend %slideRightIn;
+            z-index: 100;
+            display: none;
+            @include h100;
+
+            &-item {
+              list-style: none;
+
+              @include hover {
+                .subsubmenu-link {
+                  @include setBgColor($submenubg, $primary);
+                }
+              }
+              
+              &:last-child {
+                .subsubmenu-link {
+                  border-bottom: 0;
+                }
+              }
+            }
+
+            &-link {
+              padding: length(10) length(5) length(15) length(18);
+              @include flex-center-between;
+              @include setBgColor($white, $text-primary);
+              @include border-single(bottom, solid, 0.5, $border-1);
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            }
+          }
+        }
+
+        &-link {
+          padding: length(10) length(5) length(15) length(18);
+          @include flex-center-between;
+          @include border-single(bottom, solid, 0.5, $border-1);
+          background: $white;
+
+          .text {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          }
+
+          .arrow {
+            @include square(length(14));
+            @include flex-center;
+            overflow: hidden;
+          }
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: length(8);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    }
+  }
+}
+
+/**=====================================================
+                CATEGORIES DROPDOWN END
+=====================================================**/

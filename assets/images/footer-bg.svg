@@ -1,0 +1,17 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1241 61" width="1241" height="61">
+	<title>Layer 1</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M1240.46 60.47L0.26 60.47L0.26 -1693.48L1240.46 -1693.48L1240.46 60.47Z" />
+		</clipPath>
+		<image  width="1249" height="66" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABOEAAABCCAMAAAAmPDKKAAAAAXNSR0IB2cksfwAAAiVQTFRFwykBwykBwykBwykB////IScpIScpIScpIScpwykBwykBwykBIScpIScpIScpwykBwykBIScpIScpwykBIScpwykBIScpwykBwykBIScpIScpwykBIScpwykBIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpwykBIScpIScpwykBIScpwykBwykBIScpIScpwykBIScpIScpIScpwykBwykBIScpIScpwykBwykBIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpwykBwykBIScpIScpwykBIScpwykBwykBIScpIScpwykBwykBIScpIScpIScpwykBwykBIScpIScpwykBIScpIScpwykBIScpwykBwykBIScpwykBIScpwykBIScpwykBwykBIScpwykBIScpwykBwykBIScpwykBIScpwykBIScpwykBIScpIScpwykBwykBIScpwykBIScpIScpwykBIScpwykBIScpIScpwykBwykBIScpwykBIScpIScpwykBIScpwykBIScpwykBwykBwykBIScpwykBIScpwykBIScpIScpwykBIScpwykBIScpwykBwykBwykBIScpIScpHXorcgAAALd0Uk5TWm9lAQAGbW8iz/9glP9P7hgO4a1IUqLnEhPpn1ZFr98MGu+RY/05Ab3XByH1g3H6LwPIywQr+XZ/9yTTwTX8aI3xHQrctEH+musVEOSnTajkDxbsmVz+QLXbCh3xi2r8NMLSBSb3fnf4KwTNxwMv+4T1IAjXuzv9YpLvGQyvRlSg6BPnoFRH4RmTYTu7CCD0hfvHzSr4eH4mBdLCAjNqi9q2QFyZ7BapTU+mEBXqm1pBtGd/Xxsn+XHRqwAAA55JREFUeJzt3WW3FmUUx+EHBTGPgokBiOIRExQVDBRQMVCxsLu7u8Xu7u5u/XyuJYLn7DPPzD0zL7asdV2f4b9+a99vZgaDSVBpo40njzdlk6mwQdl0sNnmUG2LULjJW24FG5QRhWOorbcJhZs2PXuw0IrCUWPbeMRtlz1YaEXhqLN9TNwO2YuFNhSOOjvuFAo3Y+fsyUILCketXeIRt2v2ZKEFhaPebjFxM7M3C+UUjnqzZofC7T4ne7RQTOFosEc84vbMHi0UUzgazN0rFG507+zVQimFo8m8fULi9t0ve7ZQSOFotH98px6QPVsopHA0OnB+KNyCg7J3C2UUjmYHLwyJO+TQ7OFCEYWjwGHxnbooe7hQROEosPjwULgpR2QvF0ooHCWOjB/DPGpJ9nShgMJR5Oj4Tj0me7pQQOEosnRZKNzyY7O3C80UjjLHxSPu+BXZ44VGCkehQUzcCdnjhUYKR6ETTwqFO3ll9nqhicJR6pR4xI1krxeaKBzFTo2JOy17vtBA4Si26vRQuDPOzN4v1FM4yp0Vj7izs/cL9RSOcqvPiYk7N3vAUEvhaOG880PhLrgwe8FQR+Fo46J4xF2cvWCoo3C0ccmloXCjl2VPGGooHK1cfkVI3JVXZW8YhlM42rk6vlOvyd4wDKdwtHPtdaFw19+QPWIYSuFo6cabQuJuviV7xTCMwtHWpPhOvTV7xTCMwtHWbbeHwt1xZ/aMYQiFo7W74k8b7r4ne8dQTeFo7974Tr0ve8dQTeFo7/4HQuEenJ49ZKikcHTwUDziHs4eMlRSOLp4JCbu0ewlQxWFo4vHHg+Fm7Eme8pQQeHo5Il4xD2ZPWWooHB081RM3MzsLcNECkc3T88OhXtmTvaYYQKFo6Nn4xH3XPaYYQKFo6O5z4fCjb6QvWaIFI6u5r0YEvfSy9lzhkDh6OyV+E6dmj1nCBSOzl6dHwq34LXsPcN4Ckd3ry8MiXvjzexBwzgKRw9vxXfq29mDhnEUjh4WvxMK9+572YuGsRSOPt7/ICTuwyXZk4YxFI5ePorv1I+zJw1jKBy9LF0WCrf8k+xNw38Ujn4+jUfcZyuyRw3rKRw9fR4T90X2qGE9haOnL78KhZu2MnvVsI7C0dfX8Yj7JnvVsI7C0du3MXHfZc8a/qVw9Lbq+1C4H37M3jWspXD091M84n7O3jWspXD0t/qXmLhfs4cN/xgZ/PY79PRHLNyfi+D/4K+/Ab2SiN5FYH7dAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Layer 1">
+		<g id="&lt;Clip Group&gt;" clip-path="url(#cp1)">
+			<use id="&lt;Group&gt;" href="#img1" x="-4" y="0" />
+		</g>
+	</g>
+</svg>

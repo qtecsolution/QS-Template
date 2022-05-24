@@ -1,0 +1,593 @@
+/**=====================================================
+                OFFCANVAS START
+=====================================================**/
+
+.offcanvas-top {
+	border-bottom: none;
+}
+
+.offcanvas-bottom {
+	border-top: none;
+}
+
+.offcanvas-start {
+	border-right: none;
+}
+
+.offcanvas-end {
+	border-left: 0;
+}
+
+.offcanvas {
+	background: $prime-express-bg;
+	@include w100;
+	min-height: 110vh;
+	z-index: 999999;
+
+	@include breakpoint(mobile500) {
+		width: length(300);
+	}
+
+	&-header {
+		position: relative;
+		justify-content: flex-start;
+
+		.logo {
+			width: length(96);
+			height: length(48);
+			@include flex-center;
+			overflow: hidden;
+
+			img {
+				@include wh100;
+				object-fit: contain;
+			}
+		}
+
+		.btn-close {
+			@include square(length(36));
+			background: transparent;
+			margin: 0;
+			padding: 0;
+			padding: length(8);
+			@include flex-center;
+			@include circle;
+			opacity: 1;
+
+			svg {
+				@include wh100;
+				@include transitiontransform;
+
+				path {
+					@include transitionsall;
+				}
+			}
+
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+
+			@include hover {
+				svg {
+					path {
+						stroke: $primary;
+					}
+				}
+			}
+		}
+
+		.cart-title {
+			color: $text-primary;
+      @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(28, 20));
+		}
+
+		.headerinfo {
+			@include flex-center-vert;
+			@include w100;
+			margin-bottom: length(16);
+
+			.title {
+				color: $text-primary;
+				@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(28, 20));
+			}
+		}
+
+		.searchbox{
+			@include flex-center-vert;
+			overflow: hidden;
+			@include w100;
+			background: $linkhoverbg;
+			@include radius(5);
+
+			.searchfield {
+				width: calc(100% - 3rem);
+				padding: length(12) length(16);
+				@include setBgColor(transparent, $footer-heading);
+				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(14, 14));
+
+				&::placeholder {
+					color: $border-1;
+				}
+			}
+
+			.btn-search {
+				width: length(48);
+				height: length(40);
+				@include flex-center;
+				padding: length(10);
+
+				.icon {
+					@include square(length(22));
+					@include flex-center;
+					overflow: hidden;
+
+					svg {
+						@include wh100;
+	
+						path {
+							fill: $searchicon;
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	&-body {
+		overflow-x: hidden;
+		padding-top: length(0);
+		@include flex-column;
+		padding: length(24);
+
+		&::-webkit-scrollbar {
+			background: transparent;
+			width: length(8);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $profilebox;
+			@include radius(8);
+		}
+
+		.mobile-suggestions {
+			display: none;
+			gap: length(12);
+			padding-bottom: length(64);
+
+			&.active {
+				@include flex-column;
+			}
+
+			&::-webkit-scrollbar {
+				background: transparent;
+				width: length(8);
+			}
+	
+			&::-webkit-scrollbar-thumb {
+				background: $profilebox;
+				@include radius(8);
+			}
+		}
+
+		.sidebarcartlist {
+			@include flex-column;
+			gap: length(14);
+		}
+
+		.mobilemenu {
+			@include list-vertical;
+			gap: length(8);
+
+			&-item {
+				.accordion {
+					&-header {
+						@include flex-center-vert;
+		
+						.link {
+							width: calc(100% - 2.5rem);
+							@include flex-center-vert;
+							gap: length(14);
+							padding-left: length(12);
+		
+							.icon {
+								@include square(length(24));
+								@include flex-center;
+								overflow: hidden;
+				
+								svg {
+									@include wh100;
+								}
+							}
+		
+							.itemtext {
+								width: calc(100% - 1.5rem);
+								@include flex-center-vert;
+				
+								.text {
+									color: $dark-1;
+									@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+									@include text-overflow;
+								}
+							}
+						}
+		
+						.accordion-button {
+							@include square(length(40));
+						}
+					}
+		
+					&-body {
+						.accordion {
+							&-header {
+								.sublink {
+									width: calc(100% - 2.5rem);
+		
+									.text {
+										color: $dark-1;
+										@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+										@include text-overflow;
+									}
+								}
+		
+								.accordion-button {
+									@include square(length(40));
+								}
+							}
+		
+							&-body {
+								@include flex-column;
+								gap: length(4);
+		
+								.subsublink {
+									display: inline-block;
+									@include w100;
+									padding: length(4) length(0);
+									color: $dark-1;
+									@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+									@include text-overflow;
+								}
+							}
+						}
+		
+						.sublink {		
+							.text {
+								color: $dark-1;
+								@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+								@include text-overflow;
+							}
+						}
+						
+					}
+				}
+			}
+
+			&-link {
+				background: $white;
+				@include flex-center-vert;
+				gap: length(14);
+				padding: length(8);
+
+				.icon {
+					@include square(length(24));
+					@include flex-center;
+					overflow: hidden;
+	
+					svg {
+						@include wh100;
+					}
+				}
+
+				.itemtext {
+					width: calc(100% - 1.5rem);
+	
+					.text {
+						color: $dark-1;
+						@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+						@include text-overflow;
+						display: inline-block;
+						margin-top: length(4);
+					}
+				}
+			}
+		}
+
+		.dropdownlist {
+			@include list-vertical;
+			gap: length(8);
+
+			&-link {
+				@include flex-center-vert;
+				gap: length(12);
+				background: $white;
+				padding: length(12) length(20);
+
+				.icon {
+					@include square(length(46));
+					@include flex-center;
+					@include circle;
+					background: $linkiconbg;
+
+					svg {
+						path {
+							fill: $gray-1;
+						}
+					}
+				}
+
+				.text {
+					color: $dark-1;
+					@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+				}
+
+				@include hover {
+					background: $linkhoverbg;
+
+					.icon {
+						background: $white;
+					}
+
+					.text {
+						color: $black;
+					}
+				}
+			}
+		}
+
+		.emptynotification {
+			@include h100;
+
+			&-body {
+				@include flex-center-column;
+				gap: length(8);
+				text-align: center;
+				@include h100;
+
+				.emptyicon {
+					@include square(length(160));
+					@include flex-center;
+					overflow: hidden;
+
+					img {
+						@include wh100;
+					}
+				}
+
+				.notification-text {
+					color: $gray-1;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+			}
+		}
+	
+		.notification {
+			padding-bottom: length(40);
+
+			&-body {
+				.notificationlist {
+					@include list-vertical;
+
+					&-item {
+						background: $notifybg;
+						@include border-single(bottom, solid, 0.5, $notifyborder);
+						padding: length(16) length(20);
+						@include transitionsbackground;
+
+						&:last-of-type {
+							border-bottom: 0;
+						}
+
+						@include hover {
+							background: $white;
+						}
+					}
+					
+					&-link {
+						@include flex-center-vert;
+						align-items: flex-start;
+						gap: length(16);
+
+						.notification-thumbnail {
+							@include square(length(60));
+							@include circle;
+							@include flex-center;
+							overflow: hidden;
+
+							img {
+								@include wh100;
+								object-fit: cover;
+							}
+						}
+
+						.notification-details {
+							width: calc(100% - 4.75rem);
+							@include flex-column;
+							gap: length(8);
+
+							.notification-text {
+								color: $border-2;
+								@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+							}
+
+							.notification-date {
+								color: $border-1;
+								@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+							}
+						}
+					}
+				}
+			}
+
+			&-footer {
+				background: $white;
+				@include double-radius(bottom, left, 10, bottom, right, 10);
+				@include flex-center;
+				padding: length(20);
+				text-align: center;
+
+				.btn-viewall {
+					color: $border-2;
+					@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+					@include transitionscolor;
+
+					@include hover {
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+
+	&-footer {
+		padding: length(8) length(24) length(80);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		@include w100;
+		@include flex-column;
+		gap: length(32);
+		background: $prime-express-bg;
+
+		@include breakpoint(tab992) {
+			padding: length(8) length(24) length(104);
+		}
+
+		.footer-head {
+			@include flex-column;
+			gap: length(14);
+
+			.subtotal {
+				@include flex-center-between;
+				padding-bottom: length(14);
+				@include border-single(bottom, solid, 0.5, $border-1);
+
+				&-title {
+					color: $text-primary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+
+				&-price {
+					color: $dark-1;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+
+					.sign,
+					.price {
+						color: inherit;
+						font: inherit;
+					}
+				}
+			}
+
+			.shippingfee {
+				@include flex-center-between;
+				padding-bottom: length(14);
+				@include border-single(bottom, solid, 0.5, $border-1);
+
+				&-title {
+					color: $text-primary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+
+				&-price {
+					color: $dark-1;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+
+					.sign,
+					.price {
+						color: inherit;
+						font: inherit;
+					}
+				}
+			}
+
+			.offer {
+				@include flex-center-between;
+				padding-bottom: length(14);
+				@include border-single(bottom, solid, 0.5, $border-1);
+
+				&-title {
+					color: $text-primary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+
+				&-price {
+					color: $dark-1;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+
+					.sign,
+					.price {
+						color: inherit;
+						font: inherit;
+					}
+				}
+			}
+
+			.total {
+				@include flex-center-between;
+
+				&-title {
+					color: $primary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+				}
+
+				&-price {
+					color: $primary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+
+					.sign,
+					.price {
+						color: inherit;
+						font: inherit;
+					}
+				}
+			}
+		}
+
+		.footer-body {
+			.btn-full {
+				@include setBgColor($primary, $white);
+				@include radius(10);
+				@include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+				@include w100;
+				display: inline-block;
+				padding: length(16);
+				text-align: center;
+				@include transitionsall;
+
+				@include hover {
+					@include setBgColor(darken($primary, 15%), rgba($white, 0.75));
+				}
+			}
+		}
+	}
+}
+
+.cartoffcanvas {
+	width: length(360);
+
+	.offcanvas-header {
+		height: length(84);
+	}
+
+	.offcanvas-body {
+		max-height: calc(100% - 27.1875rem);
+		// padding-bottom: length();
+
+		@include breakpoint(tab992) {
+			max-height: calc(100% - 31.25rem);
+		}
+	}
+
+	.offcanvas-footer {
+		height: length(351);
+
+		@include breakpoint(tab992) {
+			height: length(393);
+		}
+	}
+}
+
+/**=====================================================
+                OFFCANVAS END
+=====================================================**/

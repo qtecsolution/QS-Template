@@ -1,0 +1,228 @@
+/**=====================================================
+                FOOTER SECTION START
+=====================================================**/
+
+.footer {
+  padding: length(48) length(8) length(60);
+  background: $white;
+
+  @include breakpoint(tab992) {
+    padding: length(48) length(8) length(0);
+  }
+
+  &-top {
+    padding: length(0) length(8) length(48);
+
+    .footerinfo {
+      @include flex-center-column;
+      gap: length(24);
+      text-align: center;
+      
+      @include breakpoint(tab992) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .footerlogo {
+        width: length(110);
+        height: length(48);
+        @include flex-center;
+        overflow: hidden;
+  
+        @include breakpoint(mobile360) {
+          width: length(120);
+          height: length(48);
+        }
+        
+        @include breakpoint(tab992) {
+          order: 0;
+          width: length(160);
+          height: length(64);
+        }
+
+        img {
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .contactinfo {
+        @include flex-column;
+        gap: length(8);
+
+        &-header {
+          .contactinfotitle {
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+            color: $gray-1;
+
+            @include breakpoint(mobile360) {
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            }
+
+            span {
+              color: $primary;
+              font: inherit;
+            }
+          }
+        }
+
+        &-body {
+          .contactlink {
+            color: $footer-heading;
+            @include font-face($primaryFont, style('normal'), size(18), weight('medium'), line-height(25.2, 18));
+            letter-spacing: length(-0.231818);
+            @include transitionscolor;
+    
+            @include breakpoint(desktop1200) {
+              @include font-face($primaryFont, style('normal'), size(20), weight('medium'), line-height(28, 20));
+            }
+
+            @include hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      .social-list {
+        @include list-horizontal;
+        gap: length(24);
+
+        &-link {
+          @include square(length(22));
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+            
+            path {
+              @include transitionsall;
+            }
+          }
+
+          @include hover {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      @include flex-center-column;
+      gap: length(24);
+      text-align: center;
+      
+      @include breakpoint(tab992) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      &-header {
+        .footerinfo-title {
+          color: $footer-heading;
+          @include font-face($primaryFont, style('normal'), size(18), weight('medium'), line-height(25.2, 18));
+          letter-spacing: length(-0.231818);
+  
+          @include breakpoint(desktop1200) {
+            @include font-face($primaryFont, style('normal'), size(20), weight('medium'), line-height(28, 20));
+          }
+        }
+      }
+
+      &-body {
+        .footerinfo-list {
+          @include list-vertical;
+          gap: length(12);
+
+          &-link {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            letter-spacing: length(-0.204545);
+            position: relative;
+  
+            @include breakpoint(desktop1200) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+
+						&::before {
+							content: '';
+							position: absolute;
+							bottom: length(1);
+							left: 0;
+							height: length(2);
+							width: 0;
+							background: $primary;
+              @include transitionsall;
+						}
+
+						@include hover {
+							color: $primary;
+
+							&::before {
+								@include w100;
+							}
+						}
+          }
+        }
+
+        .address {
+          color: $text-primary;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          letter-spacing: length(-0.204545);
+
+          @include breakpoint(desktop1200) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+          }
+        }
+
+        .download-list {
+          @include list-vertical;
+          gap: length(12);
+
+          &-link {
+            @include radius(5);
+            @include flex-center;
+            width: length(160);
+            height: length(48);
+            overflow: hidden;
+
+            img {
+              @include wh100;
+              object-fit: cover;  
+            }
+          }
+        }
+      }
+    }
+  }
+
+	&-bottom {
+    padding: length(16);
+    background: $copyrightbg;
+    margin: length(0) length(-12);
+
+    .copyright {
+      @include flex-center;
+      text-align: center;
+
+      &-text {
+        color: $border-1;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        letter-spacing: length(-0.204545);
+
+        @include breakpoint(desktop1200) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+      }
+    }
+  }
+}
+
+/**=====================================================
+                FOOTER SECTION END
+=====================================================**/

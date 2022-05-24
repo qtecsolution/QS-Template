@@ -1,0 +1,422 @@
+/**=======================================================**
+                        CARDS START
+**=======================================================**/
+
+.card-horizontal {
+  background: $white;
+  @include radius(10);
+  @include flex-center-vert;
+  align-items: flex-start;
+  gap: length(14);
+  padding: length(14);
+
+  .card-thumbnail {
+    @include square(length(96));
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: length(16);
+
+    .card-details {
+      @include flex-column;
+      gap: length(8);
+
+      .titlebox {
+        .cardtitle {
+          color: $text-primary;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          @include line-clamp;
+          height: length(39.19);
+          @include transitionscolor;
+  
+          @include hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .pricebox {
+        .pricecount {
+          @include flex-center-vert;
+          gap: length(20);
+
+          .priceinfo {
+            span {
+              color: $border-1;
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            }
+          }
+
+          .prevprice {
+            color: $border-1;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            text-decoration: line-through;
+
+            span {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+
+      .currentprice {
+        color: $text-primary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(19.6, 14));
+      }
+    }
+
+    .count-delete {
+      @include flex-center-between;
+      width: length(7rem);
+
+      .count {
+        background: $cartcounterbg;
+        @include flex-center-vert;
+        @include radius(5);
+        overflow: hidden;
+
+        .countfield {
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          height: legth(32);
+          width: length(48);
+          @include setBgColor(transparent, $text-primary);
+          text-align: center;
+          padding: length(4);
+        }
+        
+        .btn-decrement,
+        .btn-increment {
+          @include square(length(32));
+          @include flex-center;
+          padding: length(12);
+
+          svg {
+            @include wh100;
+          }
+        }
+        
+        .btn-decrement {
+          background: $decrementbg;
+        }
+
+        .btn-increment {
+          background: $border-primary;
+        }
+      }
+      
+      .delete {
+        .btn-delete {
+          @include square(length(24));
+          @include flex-center;
+          @include transparent-button;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+
+            path {
+              @include transitionsall;
+            }
+          }
+
+          @include hover {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-suggestion {
+  @include flex-center-vert;
+  gap: length(14);
+  background: $white;
+  padding: length(8);
+  cursor: pointer;
+  @include transitionsbackground;
+
+  &-cap {
+    @include square(length(64));
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: contain;
+    }
+  }
+
+  &-details {
+    width: calc(100% - 4.875rem);
+    @include flex-column;
+
+    .suggestion-title {
+      color: $text-primary;
+      @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+      @include text-overflow;
+      
+      @include breakpoint(mobile480) {
+        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+      }
+    }
+  }
+
+  @include hover {
+    background: $prodboxbg;
+
+    @include breakpoint(tab992) {
+      background: $notifybg;
+    }
+  }
+}
+
+.card-event {
+  @include flex-center-column;
+  gap: length(12);
+  padding: length(0) length(16) length(16);
+  background: $white;
+  @include radius(10);
+  position: relative;
+
+  .discount-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &-header {
+    @include w100;
+    height: length(180);
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: contain;
+      @include transitiontransform;
+
+      @include hover {
+        @include transform(scale(1.05));
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: length(12);
+    text-align: center;
+
+    .event-card-title {
+      color: $dark-1;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+      @include line-clamp;
+      height: length(36);
+      @include transitionscolor;
+
+      @include breakpoint(mobile576) {
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        height: length(42);
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        height: length(45);
+      }
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .review {
+      @include flex-center-vert;
+      gap: length(4);
+
+      .reviewcount {
+        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+        color: $ratingColor;
+      }
+
+      .reviewlist {
+        @include list-horizontal;
+        gap: length(3);
+
+        &-item {
+          @include square(length(10));
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .prices {
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: length(8);
+      text-align: center;
+      
+      @include breakpoint(tab992) {
+        gap: length(12);
+      }
+
+      .current-price {
+        color: $secondary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+  
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(22.4, 16));
+        }
+      }
+
+      .previous-price {
+        color: $text-primary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        text-decoration: line-through;
+
+        span {
+          color: inherit;
+          font: inherit;
+          text-decoration: line-through;
+        }
+  
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+      }
+    }
+  }
+}
+
+.product {
+  @include flex-center-column;
+  gap: length(12);
+  padding: length(0) length(16) length(16);
+  background: $white;
+  @include radius(10);
+
+  &-header {
+    @include w100;
+    height: length(180);
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: contain;
+      @include transitiontransform;
+
+      @include hover {
+        @include transform(scale(1.05));
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: length(12);
+    text-align: center;
+
+    .product-title {
+      color: $dark-1;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+      @include line-clamp;
+      height: length(36);
+      @include transitionscolor;
+
+      @include breakpoint(mobile576) {
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        height: length(42);
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        height: length(45);
+      }
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .review {
+      @include flex-center-vert;
+      gap: length(4);
+
+      .reviewcount {
+        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+        color: $ratingColor;
+      }
+
+      .reviewlist {
+        @include list-horizontal;
+        gap: length(3);
+
+        &-item {
+          @include square(length(10));
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .prices {
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: length(8);
+      text-align: center;
+      
+      @include breakpoint(tab992) {
+        gap: length(12);
+      }
+
+      .current-price {
+        color: $secondary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+  
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(22.4, 16));
+        }
+      }
+
+      .previous-price {
+        color: $text-primary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        text-decoration: line-through;
+
+        span {
+          color: inherit;
+          font: inherit;
+          text-decoration: line-through;
+        }
+  
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                        CARDS END
+**=======================================================**/

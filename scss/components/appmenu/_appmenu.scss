@@ -1,0 +1,57 @@
+
+/**=====================================================
+                      APP MENU START
+=====================================================**/
+
+.appmenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  @include w100;
+  background: $white;
+  z-index: 100;
+  display: block;
+
+  @include breakpoint(tab992) {
+    display: none;
+  }
+
+  .applist {
+    @include w100;
+    @include list-horizontal;
+
+    &-item {
+      width: calc(100% / 4);
+      @include flex-center;
+
+      @include hover {
+        .applist-link {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &-link {
+      @include square(length(60));
+      @include flex-center;
+      @include transparent-button;
+
+      .icon {
+        @include square(length(24));
+        @include flex-center;
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+}
+
+/**=====================================================
+                      APP MENU END
+=====================================================**/

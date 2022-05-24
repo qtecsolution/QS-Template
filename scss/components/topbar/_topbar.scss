@@ -1,0 +1,132 @@
+/**=======================================================**
+                      TOPBAR START
+**=======================================================**/
+
+.topbar {
+	background: $secondary;
+  display: none;
+
+  @include breakpoint(mobile360) {
+    display: block;
+  }
+
+  &-nav {
+    @include flex-center-between;
+
+    .topbar-list {
+      @include list-horizontal;
+          
+      @include breakpoint(tab992) {
+        gap: length(40);
+      }
+
+      &-item {
+        &.timeitem {
+          display: none;
+          
+          @include breakpoint(tab992) {
+            display: block;
+          }
+        }
+      }
+
+      &-link {
+        @include flex-center-vert;
+        gap: length(8);
+        padding: length(13) length(0);
+
+        .icon {
+          @include square(length(12));
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .linktext {
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(14, 12));
+          color: $copyrightbg;
+        }
+
+        @include hover {
+          .icon {
+            .phoneicon {
+              path {
+                fill: $primary;
+              }
+            }
+
+            .clockicon {
+              path {
+                stroke: $primary;
+              }
+            }
+          }
+
+          .linktext {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .top-list {
+      @include list-horizontal;
+          
+      @include breakpoint(tab992) {
+        gap: length(40);
+      }
+
+      &-item {
+        &.appitem {
+          display: none;
+
+          @include breakpoint(tab992) {
+            display: block;
+          }
+        }
+      }
+
+      &-link {
+        @include flex-center-vert;
+        gap: length(8);
+        padding: length(13) length(0);
+
+        .icon {
+          @include square(length(12));
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .linktext {
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(14, 12));
+          color: $copyrightbg;
+        }
+
+        @include hover {
+          .icon {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+
+          .linktext {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                      TOPBAR END
+**=======================================================**/

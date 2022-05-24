@@ -1,0 +1,88 @@
+
+/**=======================================================**
+                        BUTTONS START
+**=======================================================**/
+
+.up-btn {
+	margin-left: auto;
+	left: 100%;
+	@include circle;
+	padding: length(14);
+	@include flex-center;
+	cursor: pointer;
+}
+
+.btn-more {
+	@include flex-center-vert;
+	gap: length(10);
+
+	.text {
+		color: $select-text;
+		@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+
+		@include breakpoint(tab992) {
+			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+		}
+	}
+
+	.icon {
+		display: inline-block;
+		margin-top: length(-3);
+	}
+
+	@include hover {
+		.text {
+			color: $primary;
+		}
+
+		.icon {
+			svg {
+				path {
+					fill: $primary;
+				}
+			}
+		}
+	}
+}
+
+.discount-badge {
+	@include setBgColor($primary, $white);
+	@include double-radius(top, right, 10, bottom, left, 10);
+	display: inline-block;
+	@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+	padding: length(8) length(14);
+	text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	@include square(length(32));
+	@include transparent-button;
+
+	&::after {
+		width: 0;
+		height: 0;
+		content: '';
+		display: none;
+	}
+
+	svg {
+		@include wh100;
+
+		path {
+			fill: $border-1;
+		}
+	}
+
+	@include hover {
+		svg {
+			path {
+				fill: $primary;
+			}
+		}
+	}
+}
+
+/**=======================================================**
+                        BUTTONS END
+**=======================================================**/

@@ -1,0 +1,98 @@
+/**=====================================================
+                  HOME CAROUSEL START
+=====================================================**/
+
+.homecarousel {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include breakpoint(tab992) {
+    padding-left: length(12);
+    padding-right: length(12);
+  }
+}
+
+.carousel {
+
+  &-indicators {
+    gap: length(8);
+
+    [data-bs-target] {
+      border: 0;
+      @include circle;
+      margin: 0;
+      padding: 0;
+      @include square(length(8));
+    }
+  }
+
+  &-item {
+    height: length(220);
+
+    @include breakpoint(mobile480) {
+      height: length(250);
+    }
+    
+    @include breakpoint(mobile576) {
+      height: length(350);
+    }
+    
+    @include breakpoint(mobile768) {
+      height: length(440);
+    }
+
+    @include breakpoint(tab992) {
+      height: length(502);
+    }
+
+    img {
+      @include wh100;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include wh100;
+      background: rgba($black, 0.3);
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    @include square(length(24));
+    @include circle;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    svg {
+      @include wh100;
+    }
+
+    @include breakpoint(mobile768) {
+      @include square(length(32));
+    }
+  }
+
+  .carousel-control-prev {
+    left: length(8);
+
+    @include breakpoint(tab992) {
+      left: length(14);
+    }
+  }
+
+  .carousel-control-next {
+    right: length(8);
+
+    @include breakpoint(tab992) {
+      right: length(14);
+    }
+  }
+}
+
+/**=====================================================
+                  HOME CAROUSEL END
+=====================================================**/
