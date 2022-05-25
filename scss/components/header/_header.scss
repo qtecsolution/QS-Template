@@ -91,6 +91,7 @@
 					padding: length(11) length(16);
 					@include setBgColor(transparent, $footer-heading);
 					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+					height: length(40);
 
 					&::placeholder {
 						color: $text-icon;

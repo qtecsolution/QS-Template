@@ -1,0 +1,145 @@
+/**=======================================================**
+                      CART SECTION START
+**=======================================================**/
+
+.cart {
+  padding: length(32) length(0) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(24);
+
+    @include breakpoint(tab992) {
+      gap: length(32);
+    }
+  }
+
+  &-header {
+    .cart-title {
+      color: $dark-1;
+      @include font-face($primaryFont, style('normal'), size(20), weight('medium'), line-height(28, 20));
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(32), weight('medium'), line-height(44.8, 32));
+      }
+    }
+  }
+
+  &-body {
+    .cartlist {
+      @include flex-column;
+      gap: length(16);
+    }
+
+    .cartsummary {
+      padding: length(24) length(24) length(24);
+      @include w100;
+      @include flex-column;
+      gap: length(32);
+      background: $prime-express-bg;
+  
+      @include breakpoint(tab992) {
+        padding: length(24) length(24) length(32);
+      }
+  
+      &-head {
+        @include flex-column;
+        gap: length(14);
+  
+        .subtotal {
+          @include flex-center-between;
+          padding-bottom: length(14);
+          @include border-single(bottom, solid, 0.5, $border-1);
+  
+          &-title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+          }
+  
+          &-price {
+            color: $dark-1;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+  
+            .sign,
+            .price {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+  
+        .shippingfee {
+          @include flex-center-between;
+          padding-bottom: length(14);
+          @include border-single(bottom, solid, 0.5, $border-1);
+  
+          &-title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+          }
+  
+          &-price {
+            color: $dark-1;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+  
+            .sign,
+            .price {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+  
+        .offer {
+          @include flex-center-between;
+          padding-bottom: length(14);
+          @include border-single(bottom, solid, 0.5, $border-1);
+  
+          &-title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+          }
+  
+          &-price {
+            color: $dark-1;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+  
+            .sign,
+            .price {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+  
+        .total {
+          @include flex-center-between;
+  
+          &-title {
+            color: $primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+          }
+  
+          &-price {
+            color: $primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+  
+            .sign,
+            .price {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                      CART SECTION END
+**=======================================================**/

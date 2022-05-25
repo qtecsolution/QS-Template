@@ -24,6 +24,7 @@
   &-body {
     @include flex-column;
     gap: length(16);
+    width: calc(100% - 6rem);
 
     .card-details {
       @include flex-column;

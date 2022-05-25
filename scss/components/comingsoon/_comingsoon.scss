@@ -1,0 +1,106 @@
+/**=======================================================**
+                        COMMING-SOON START
+**=======================================================**/
+
+.comingsoon {
+  @include flex-center-column;
+  gap: length(24);
+  @include w100;
+  height: 100vh;
+  overflow: hidden;
+  padding: length(16);
+
+  &-details {
+    @include flex-center-column;
+    gap: length(48);
+  }
+
+  &-info {
+    @include flex-center-column;
+    gap: length(32);
+    text-align: center;
+    @include w100;
+
+    &-header {
+      .comingsoontitle {
+        color: $secondary;
+        @include font-face($primaryFont, style('normal'), size(32), weight('bold'), line-height(44.8, 32));
+
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(56, 40));
+        }
+      }
+
+      .comingsoontext {
+        color: $dark-1;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+    
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+      }
+    }
+
+    &-body {
+      @include w100;
+      
+      .timer {
+        @include w100;
+        @include flex-center;
+        gap: length(8);
+
+        .timerinfo {
+          @include flex-center-column;
+          gap: length(8);
+          padding: length(16);
+          width: calc(100% / 4);
+          @include border(solid, 2, $primary);
+          background: $white;
+
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            color: $black2;
+            @include font-face($primaryFont, style('normal'), size(20), weight('bold'), line-height(28, 20));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(24), weight('bold'), line-height(33.6, 24));
+            }
+          }
+
+          .title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-thumbnail {
+    @include flex-center;
+    overflow: hidden;
+
+    @include breakpoint(mobile576) {
+      @include square(length(300));
+    }
+
+    @include breakpoint(tab992) {
+      @include square(length(480));
+    }
+
+    svg {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
+
+/**=======================================================**
+                        COMMING-SOON END
+**=======================================================**/

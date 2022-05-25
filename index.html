@@ -206,8 +206,8 @@
         <!-- HEADER LIST START -->
         <ul class="headerlist">
           <li class="headerlist-item cart-item">
-            <!-- CART SIDEBAR BUTTON -->
-            <button class="headerlist-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+            <!-- CART SIDEBAR BUTTON (DESKTOP) -->
+            <button class="headerlist-link d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
               <span class="icon">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#carticon)">
@@ -225,6 +225,26 @@
 
               <span class="cartcounter">0</span>
             </button>
+
+            <!-- CART LINK (MOBILE) -->
+            <a href="cart.html" class="headerlist-link d-lg-none d-block">
+              <span class="icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#carticon)">
+                    <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"/>
+                    <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"/>
+                    <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"/>
+                  </g>
+                  <defs>
+                    <clipPath id="carticon">
+                      <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+
+              <span class="cartcounter">0</span>
+            </a>
           </li>
           
           <li class="headerlist-item wishlist-item">

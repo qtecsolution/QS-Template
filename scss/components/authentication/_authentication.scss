@@ -5,13 +5,21 @@
 .auth {
   @include w100;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   @include flex-center;
+  padding: length(16);
 
   &-box {
     background: $white;
     @include flex-center;
-    padding: length(16);
+    padding: length(24);
     @include radius(10);
+    @include w100;
+
+    @include breakpoint(mobile500) {
+      width: auto;
+    }
 
     @include breakpoint(mobile576) {
       padding: length(24);
@@ -31,9 +39,13 @@
   }
 
   .authentication {
-    width: length(345);
+    @include w100;
     @include flex-column;
     gap: length(48);
+
+    @include breakpoint(mobile500) {
+      width: length(345);
+    }
 
     &-header {
       @include flex-center;
@@ -49,25 +61,61 @@
           object-fit: contain;
         }
       }
+
+      .verification {
+        @include flex-column;
+        gap: length(24);
+
+        &-head {
+          @include flex-center-between;
+
+          .verification-title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(20), weight('bold'), line-height(28, 20));
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(24), weight('bold'), line-height(33.6, 24));
+            }
+          }
+        }
+
+        &-body {
+          .verification-text {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+          }
+        }
+      }
     }
 
     &-body {
-      .loginform {
+      @include flex-column;
+      gap: length(48);
+
+      .authenticationform {
         @include flex-column;
         gap: length(14);
         @include w100;
+        overflow: hidden;
 
         .inputbox {
           @include w100;
           position: relative;
+          @include flex-column;
+          gap: length(8);
 
           .inputfield {
-            @include w100;
-            padding: length(14) length(16);
+            @include setBgColor($white, $secondary);
             @include border(solid, 1, $input-border);
             @include radius(10);
-            @include setBgColor($white, $secondary);
             @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            padding: length(14) length(16);
+            @include w100;
+            @include transitionsall;
         
             @include breakpoint(tab992) {
               @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
@@ -76,10 +124,83 @@
             &::placeholder {
               color: $placeholder-color;
             }
+
+            &:focus {
+              border-color: $border-1;
+            }
           }
 
           .logpassfield {
             padding-right: length(72);
+          }
+
+          .checkfield {
+            &:checked ~ .checklabel {
+              &::before {
+                background: $primary;
+                border-color: $primary;
+              }
+
+              &::after {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+
+          .checklabel {
+            position: relative;
+            padding-left: length(26);
+            cursor: pointer;
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              @include transform(translateY(-50%));
+              left: 0;
+              @include square(length(18));
+              @include border(solid, 1, $category-border);
+              @include radius(4);
+              @include transitionsall;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 40%;
+              left: length(7);
+              width: length(5);
+              height: length(10);
+              @include transform(translateY(-50%) rotate(45deg));
+              @include border(solid, 1.5, $white);
+              border-top: 0;
+              border-left: 0;
+              opacity: 0;
+              visibility: hidden;
+              @include transitionsall;
+            }
+
+            &::selection {
+              @include setBgColor(transparent, $text-primary);
+            }
+          }
+
+          .error-message {
+            color: $primary;
+            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+            display: none;
+          }
+
+          .text {
+            color: darken($border-1, 15%);
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
           }
 
           .authlink {
@@ -93,6 +214,141 @@
 
             @include hover {
               color: $black;
+            }
+          }
+
+          .verify {
+            @include flex-center;
+            gap: length(24);
+            @include w100;
+
+            @include breakpoint(mobile576) {
+
+            }
+
+            .inputverify {
+              @include square(length(48));
+              @include circle;
+              @include flex-center;
+              @include setBgColor($prime-shops-bg, $text-verify);
+              @include border(solid, 1, transparent);
+              @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.2, 18));
+              overflow: hidden;
+              text-align: center;
+              @include transitionsall;
+
+              @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(30.8, 22));
+                @include square(length(60));
+              }
+
+              &:focus {
+                background: $white;
+                border-color: $border-2;
+              }
+
+              &::placeholder {
+                color: $text-placeholder;
+              }
+            }
+          }
+
+          &.error {
+            .inputfield {
+              border-color: $primary;
+            }
+
+            .error-message {
+              display: block;
+            }
+
+            .authlink {
+              top: 36%;
+            }
+          }
+        }
+
+        .congrats {
+          width: length(180);
+          height: length(220);
+          @include flex-center;
+          margin-inline: auto;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .submitbox {
+          margin-top: length(18);
+        }
+      }
+
+      .logininfo {
+        @include flex-center-column;
+        gap: length(32);
+
+        .socialinfo {
+          @include flex-center-column;
+          gap: length(14);
+
+          .title {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+          }
+
+          .social-list {
+            @include list-horizontal;
+            align-items: center;
+            gap: length(16);
+
+            &-link {
+              @include transparent-button;
+              @include square(length(40));
+              @include circle;
+
+              @include breakpoint(tab992) {
+                @include square(length(56));
+              }
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+        }
+
+        .authdetails {
+          @include flex-center;
+          gap: length(8);
+
+          .authtitle {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          }
+
+          .authlink {
+            @include setBgColor(transparent, $primary);
+            @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+            text-align: center;
+            text-transform: uppercase;
+          }
+
+          .btn-resend {
+            @include setBgColor(transparent, $resendbg);
+            @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+            text-align: center;
+            text-transform: uppercase;
+            @include transitionscolor;
+
+            @include hover {
+              color: $primary;
             }
           }
         }
