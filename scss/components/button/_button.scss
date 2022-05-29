@@ -288,6 +288,29 @@
 	}
 }
 
+.btn-delete {
+	@include square(length(24));
+	@include flex-center;
+	@include transparent-button;
+	overflow: hidden;
+
+	svg {
+		@include wh100;
+
+		path {
+			@include transitionsall;
+		}
+	}
+
+	@include hover {
+		svg {
+			path {
+				fill: $primary;
+			}
+		}
+	}
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/

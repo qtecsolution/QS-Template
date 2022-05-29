@@ -44,6 +44,26 @@
         }
       }
 
+      .wishprice {
+        @include flex-center-between;
+
+        .currentprice {
+          width: calc(100% - 1.5rem);
+        }
+
+        .wishlistdelete {
+          width: length(24);
+
+          .delete {
+            @include w100;
+
+            .btn-delete {
+              @include w100;
+            }
+          }
+        }
+      }
+
       .pricebox {
         .pricecount {
           @include flex-center-vert;
@@ -110,31 +130,6 @@
 
         .btn-increment {
           background: $border-primary;
-        }
-      }
-      
-      .delete {
-        .btn-delete {
-          @include square(length(24));
-          @include flex-center;
-          @include transparent-button;
-          overflow: hidden;
-
-          svg {
-            @include wh100;
-
-            path {
-              @include transitionsall;
-            }
-          }
-
-          @include hover {
-            svg {
-              path {
-                fill: $primary;
-              }
-            }
-          }
         }
       }
     }

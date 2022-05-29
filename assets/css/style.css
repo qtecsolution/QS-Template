@@ -1954,6 +1954,37 @@ select {
   color: white;
 }
 
+.btn-delete {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.btn-delete svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-delete svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-delete:not([disabled]):hover svg path {
+  fill: #dd3936;
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/
@@ -2041,6 +2072,35 @@ select {
 
 .card-horizontal-body .card-details .titlebox .cardtitle:not([disabled]):hover {
   color: #dd3936;
+}
+
+.card-horizontal-body .card-details .wishprice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.card-horizontal-body .card-details .wishprice .currentprice {
+  width: calc(100% - 1.5rem);
+}
+
+.card-horizontal-body .card-details .wishprice .wishlistdelete {
+  width: 1.5rem;
+}
+
+.card-horizontal-body .card-details .wishprice .wishlistdelete .delete {
+  width: 100%;
+}
+
+.card-horizontal-body .card-details .wishprice .wishlistdelete .delete .btn-delete {
+  width: 100%;
 }
 
 .card-horizontal-body .card-details .pricebox .pricecount {
@@ -2154,37 +2214,6 @@ select {
 
 .card-horizontal-body .count-delete .count .btn-increment {
   background: #df3734;
-}
-
-.card-horizontal-body .count-delete .delete .btn-delete {
-  height: 1.5rem;
-  width: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: transparent;
-  border: none;
-  overflow: hidden;
-}
-
-.card-horizontal-body .count-delete .delete .btn-delete svg {
-  width: 100%;
-  height: 100%;
-}
-
-.card-horizontal-body .count-delete .delete .btn-delete svg path {
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.card-horizontal-body .count-delete .delete .btn-delete:not([disabled]):hover svg path {
-  fill: #dd3936;
 }
 
 .card-suggestion {
@@ -6337,4 +6366,67 @@ select {
 **=======================================================**/
 /**=======================================================**
                          SECTION END
+**=======================================================**/
+/**=======================================================**
+                      WISHLIST SECTION START
+**=======================================================**/
+.wishlist {
+  padding: 2rem 0rem 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .wishlist {
+    padding: 2rem 0.5rem 4rem;
+  }
+}
+
+.wishlist-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .wishlist-content {
+    gap: 2rem;
+  }
+}
+
+.wishlist-header .wishlist-title {
+  color: #242424;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 62rem) {
+  .wishlist-header .wishlist-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
+
+.wishlist-body .mywishlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+/**=======================================================**
+                      WISHLIST SECTION END
 **=======================================================**/

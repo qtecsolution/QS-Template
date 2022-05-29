@@ -1,0 +1,42 @@
+/**=======================================================**
+                      WISHLIST SECTION START
+**=======================================================**/
+
+.wishlist {
+  padding: length(32) length(0) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(24);
+
+    @include breakpoint(tab992) {
+      gap: length(32);
+    }
+  }
+
+  &-header {
+    .wishlist-title {
+      color: $dark-1;
+      @include font-face($primaryFont, style('normal'), size(20), weight('medium'), line-height(28, 20));
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(32), weight('medium'), line-height(44.8, 32));
+      }
+    }
+  }
+
+  &-body {
+    .mywishlist {
+      @include flex-column;
+      gap: length(24);
+    }
+  }
+}
+
+/**=======================================================**
+                      WISHLIST SECTION END
+**=======================================================**/
