@@ -159,21 +159,32 @@
 	}
 }
 
-.btn-wishlist {
+.btn-wishlist,
+.btn-cart {
 	@include transparent-button;
-	@include square(length(26));
+	@include square(length(36));
 	@include flex-center;
+	background: $white;
+	box-shadow: $box-shadow-3;
+	@include circle;
+	padding: length(8);
 
 	.icon {
-		@include square(length(26));
+		@include square(length(24));
 		@include flex-center;
 		
 		svg {
 			@include wh100;
+		}
+	}
+}
 
+.btn-wishlist {
+	.icon {		
+		svg {
 			path {
 				fill: transparent;
-				stroke: $primary;
+				stroke: $gray-1;
 				stroke-width: 1.25;
 			}
 		}
@@ -199,6 +210,80 @@
 					stroke: transparent;
 				}
 			}
+		}
+	}
+}
+
+.btn-cart {
+	.icon {		
+		svg {
+			path {
+				@include transitionsall;
+			}
+		}
+	}
+
+	@include hover {
+		.icon {
+			svg {
+				path {
+					fill: $primary;
+				}
+			}
+		}
+	}
+
+	&:focus,
+	&:active {
+		.icon {
+			svg {
+				path {
+					fill: $primary;
+				}
+			}
+		}
+	}
+}
+
+.btn-addto {
+	position: relative;
+	text-transform: uppercase;
+	@include border(solid, 2, $primary);
+	@include setBgColor($white, $primary);
+	padding: length(10);
+	@include w100;
+	@include radius(8);
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: $primary;
+		top: 0;
+		bottom: 0;
+		right: 0; 
+		width: 0;
+		@include h100;
+		@include transitionsall;
+	}
+
+	.btn-text {
+		color: $primary;
+		@include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+		position: relative;
+		@include w100;
+	
+		@include breakpoint(tab992) {
+			@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+		}
+	}
+
+	@include hover {
+		&::before {
+			@include w100;
+		}
+
+		.btn-text {
+			color: $white;
 		}
 	}
 }

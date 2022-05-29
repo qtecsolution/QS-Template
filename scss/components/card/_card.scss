@@ -184,7 +184,7 @@
   }
 }
 
-.card-event {
+.product {
   @include flex-center-column;
   gap: length(12);
   padding: length(0) length(16) length(16);
@@ -198,169 +198,23 @@
     right: 0;
     z-index: 10;
   }
+  
+  .product-buttons {
+    position: absolute;
+    top: length(12);
+    left: length(12);
+    z-index: 10;
+    @include flex-column;
+    gap: length(8);
+    opacity: 0;
+    visibility: hidden;
+    @include transitionsall;
+  }
 
   &-header {
     @include w100;
     height: length(180);
     overflow: hidden;
-    position: relative;
-
-    .btn-wishlist {
-      position: absolute;
-      top: length(12);
-      left: length(0);
-      z-index: 10;
-      @include transitionsall;
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    img {
-      @include wh100;
-      object-fit: contain;
-      @include transitiontransform;
-      position: relative;
-      z-index: 1;
-
-      @include hover {
-        @include transform(scale(1.05));
-      }
-    }
-  }
-
-  &-body {
-    @include flex-center-column;
-    gap: length(12);
-    text-align: center;
-
-    .cardlink {
-      height: length(36);
-      overflow: hidden;
-      @include flex-center-vert;
-
-      @include breakpoint(mobile576) {
-        height: length(42);
-      }
-
-      @include breakpoint(tab992) {
-        height: length(45);
-      }
-    }
-
-    .event-card-title {
-      color: $dark-1;
-      @include flex-center-vert;
-      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
-      @include line-clamp;
-      @include transitionscolor;
-
-      @include breakpoint(mobile576) {
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-      }
-
-      @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
-      }
-
-      @include hover {
-        color: $primary;
-      }
-    }
-
-    .review {
-      @include flex-center-vert;
-      gap: length(4);
-
-      .reviewcount {
-        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
-        color: $ratingColor;
-      }
-
-      .reviewlist {
-        @include list-horizontal;
-        gap: length(3);
-
-        &-item {
-          @include square(length(10));
-          @include flex-center;
-          overflow: hidden;
-
-          svg {
-            @include wh100;
-          }
-        }
-      }
-    }
-
-    .prices {
-      @include flex-center;
-      flex-wrap: wrap;
-      gap: length(8);
-      text-align: center;
-      
-      @include breakpoint(tab992) {
-        gap: length(12);
-      }
-
-      .current-price {
-        color: $secondary;
-        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
-  
-        @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(22.4, 16));
-        }
-      }
-
-      .previous-price {
-        color: $text-primary;
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-        text-decoration: line-through;
-
-        span {
-          color: inherit;
-          font: inherit;
-          text-decoration: line-through;
-        }
-  
-        @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
-        }
-      }
-    }
-  }
-
-  @include hover {
-    .card-event-header {
-      .btn-wishlist {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-}
-
-.product {
-  @include flex-center-column;
-  gap: length(12);
-  padding: length(0) length(16) length(16);
-  background: $white;
-  @include radius(10);
-
-  &-header {
-    @include w100;
-    height: length(180);
-    overflow: hidden;
-    position: relative;
-
-    .btn-wishlist {
-      position: absolute;
-      top: length(12);
-      left: length(0);
-      z-index: 10;
-      @include transitionsall;
-      opacity: 0;
-      visibility: hidden;
-    }
 
     img {
       @include wh100;
@@ -475,11 +329,9 @@
   }
 
   @include hover {
-    .product-header {
-      .btn-wishlist {
-        opacity: 1;
-        visibility: visible;
-      }
+    .product-buttons {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
