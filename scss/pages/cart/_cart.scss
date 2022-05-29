@@ -3,7 +3,7 @@
 **=======================================================**/
 
 .cart {
-  padding: length(32) length(0) length(48);
+  padding: length(32) length(8) length(48);
   
   @include breakpoint(tab992) {
     padding: length(32) length(8) length(64);

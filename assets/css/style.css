@@ -6117,7 +6117,7 @@ select {
                       CART SECTION START
 **=======================================================**/
 .cart {
-  padding: 2rem 0rem 3rem;
+  padding: 2rem 0.5rem 3rem;
 }
 
 @media screen and (min-width: 62rem) {
@@ -6371,7 +6371,7 @@ select {
                       WISHLIST SECTION START
 **=======================================================**/
 .wishlist {
-  padding: 2rem 0rem 3rem;
+  padding: 2rem 0.5rem 3rem;
 }
 
 @media screen and (min-width: 62rem) {
