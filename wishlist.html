@@ -204,8 +204,28 @@
         <!-- HEADER LIST START -->
         <ul class="headerlist">
           <li class="headerlist-item cart-item">
+            <!-- CART SIDEBAR BUTTON (DESKTOP) -->
+            <button class="headerlist-link d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+              <span class="icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"/>
+                    <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"/>
+                    <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"/>
+                  </g>
+                  <defs>
+                    <clipPath>
+                      <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+
+              <span class="cartcounter">0</span>
+            </button>
+
             <!-- CART LINK (MOBILE) -->
-            <a href="cart.html" class="headerlist-link mobile-link">
+            <a href="cart.html" class="headerlist-link d-lg-none d-block">
               <span class="icon">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -1940,6 +1960,442 @@
     </div>
   </div>
 	<!--========== MOBILE MENU SIDEBAR END ============-->
+
+  <!--========== CART-SIDEBAR START ==========-->
+  <div class="offcanvas offcanvas-end cartoffcanvas" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebar">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.5">
+            <path d="M28.5 4.5H7.5C5.84315 4.5 4.5 5.84315 4.5 7.5V28.5C4.5 30.1569 5.84315 31.5 7.5 31.5H28.5C30.1569 31.5 31.5 30.1569 31.5 28.5V7.5C31.5 5.84315 30.1569 4.5 28.5 4.5Z" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13.5 13.5L22.5 22.5" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22.5 13.5L13.5 22.5" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+        </svg>
+      </button>
+
+      <h5 class="cart-title">My Cart</h5>
+    </div>
+
+    <div class="offcanvas-body pt-0">
+      <div class="sidebarcartlist">
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-horizontal">
+          <div class="card-thumbnail">
+            <img src="assets/images/pages/cart/cart-product-1.png" alt="card-thumbnail">
+          </div>
+
+          <div class="card-horizontal-body">
+            <div class="card-details">
+              <div class="titlebox">
+                <a href="product-details.html" class="cardtitle">Original Xiaodi Dija IP Camera Smart black Color</a>
+              </div>
+
+              <div class="pricebox">
+                <div class="pricecount">
+                  <span class="priceinfo">
+                    <span class="sign">&dollar; </span>
+                    <span class="countprice">
+                      <span class="currprice">2,960</span> x <span class="quantity">1</span>
+                    </span>
+                  </span>
+
+                  <s class="prevprice">
+                    <span class="sign">&dollar; </span>
+                    <span class="previousprice">2,960</span>
+                  </s>
+                </div>
+              </div>
+
+              <p class="currentprice">
+                <span class="sign">&dollar; </span>
+
+                <span>2,960</span>
+              </p>
+            </div>
+
+            <div class="count-delete">
+              <div class="count">
+                <button class="btn-decrement">
+                  <svg width="5" height="2" viewBox="0 0 5 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5625 1.78369H0.75V0.604004H4.5625V1.78369Z" fill="#616161"/>
+                  </svg>
+                </button>
+
+                <input type="number" placeholder="1" value="1" class="countfield">
+
+                <button class="btn-increment">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.92578 3.92432H8.09766V5.2915H4.92578V8.88525H3.47266V5.2915H0.300781V3.92432H3.47266V0.604004H4.92578V3.92432Z" fill="white"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="delete">
+                <button class="btn-delete">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5508 6.0451H22.5508V8.0451H20.5508V21.0451C20.5508 21.3103 20.4454 21.5647 20.2579 21.7522C20.0704 21.9397 19.816 22.0451 19.5508 22.0451H5.55078C5.28556 22.0451 5.03121 21.9397 4.84367 21.7522C4.65614 21.5647 4.55078 21.3103 4.55078 21.0451V8.0451H2.55078V6.0451H7.55078V3.0451C7.55078 2.77989 7.65614 2.52553 7.84367 2.338C8.03121 2.15046 8.28556 2.0451 8.55078 2.0451H16.5508C16.816 2.0451 17.0704 2.15046 17.2579 2.338C17.4454 2.52553 17.5508 2.77989 17.5508 3.0451V6.0451ZM18.5508 8.0451H6.55078V20.0451H18.5508V8.0451ZM13.9648 14.0451L15.7328 15.8131L14.3188 17.2271L12.5508 15.4591L10.7828 17.2271L9.36878 15.8131L11.1368 14.0451L9.36878 12.2771L10.7828 10.8631L12.5508 12.6311L14.3188 10.8631L15.7328 12.2771L13.9648 14.0451ZM9.55078 4.0451V6.0451H15.5508V4.0451H9.55078Z" fill="#D7D7D7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-footer">
+      <div class="footer-head">
+        <div class="subtotal">
+          <p class="subtotal-title">Subtotal :</p>
+          <p class="subtotal-price">
+            <span class="sign">&dollar; </span>
+            <span class="price">25,698</span>
+          </p>
+        </div>
+
+        <div class="shippingfee">
+          <p class="shippingfee-title">Shipping Fee :</p>
+          <p class="shippingfee-price">
+            <span class="sign">&dollar; </span>
+            <span class="price">100</span>
+          </p>
+        </div>
+
+        <div class="offer">
+          <p class="offer-title">Offer Fee :</p>
+          <p class="offer-price">
+            <span class="sign">&dollar; </span>
+            <span class="price">2500</span>
+          </p>
+        </div>
+
+        <div class="total">
+          <p class="total-title">Total: </p>
+          <p class="total-price">
+            <span class="sign">&dollar; </span>
+            <span class="price">26,012</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-body">
+        <a href="checkout.html" class="btn-submit">
+          <span class="btn-text">Check Out</span>
+        </a>
+      </div>
+    </div>
+  </div>
+	<!--========== CART-SIDEBAR END ============-->
 
   <!--========== MOBILE SEARCH SIDEBAR START ==========-->
   <div class="offcanvas offcanvas-top w-100" tabindex="-1" id="mobileSearch" aria-labelledby="mobileSearch">

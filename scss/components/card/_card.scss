@@ -96,7 +96,6 @@
 
     .count-delete {
       @include flex-center-between;
-      width: length(7rem);
 
       .count {
         background: $cartcounterbg;
@@ -106,7 +105,7 @@
 
         .countfield {
           @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-          height: legth(32);
+          height: length(32);
           width: length(48);
           @include setBgColor(transparent, $text-primary);
           text-align: center;

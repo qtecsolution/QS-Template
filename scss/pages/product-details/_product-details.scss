@@ -2,7 +2,136 @@
                          SECTION START
 **=======================================================**/
 
+.product-details {
+  padding: length(0) length(8) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(0) length(8) length(64);
+  }
 
+  &-content {
+    @include flex-column;
+    gap: length(48);
+
+    @include breakpoint(tab992) {
+      gap: length(80);
+    }
+
+    .sliderinfo {
+      @include flex-column;
+      gap: length(16);
+      overflow: hidden;
+    
+      @include breakpoint(mobile768) {
+        gap: length(32);
+      }
+
+      .gallery-top {
+        background: $white;
+        @include w100;
+        height: length(300);
+        @include radius(10);
+        padding: length(16);
+        position: relative;
+  
+        @include breakpoint(mobile576) {
+          height: length(360);
+          padding: length(32);
+        }
+  
+        @include breakpoint(mobile768) {
+          height: length(440);
+        }
+  
+        @include breakpoint(tab992) {
+          height: length(500);
+        }
+  
+        .swiper-slide {
+          @include flex-center;
+          overflow: hidden;
+  
+          img {
+            @include wh100;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .gallery-thumbs {
+        @include flex-center;
+        position: relative;
+
+        .swiper-wrapper {
+          padding: length(8);
+
+          .swiper-slide {
+            @include square(length(110));
+            padding: length(8);
+            @include flex-center;
+            background: $white;
+            @include border(solid, 2, $white);
+            @include radius(4);
+            cursor: pointer;
+
+            img {
+              @include wh100;
+              object-fit: contain;
+            }
+
+            &.swiper-slide-duplicate-active,
+            &.swiper-slide-active {
+              @include square(length(110));
+              padding: length(8);
+              @include flex-center;
+              background: rgba($white, 0.75);
+              @include radius(4);
+              cursor: pointer;
+              box-shadow: $box-shadow-1;
+              border-color: $primary;
+  
+              img {
+                @include wh100;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          position: absolute;
+          @include square(length(40));
+          @include flex-center;
+          top: 70%;
+          @include transform(translateY(-50%));
+          padding: length(8);
+          @include circle;
+          background: $white;
+          filter: $dropdownshadow;
+          box-shadow: $box-shadow-1;
+  
+          @include breakpoint(tab992) {
+            top: 50%;
+            transform: none;
+          }
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .swiper-button-prev {
+          left: length(0);
+        }
+
+        .swiper-button-next {
+          right: length(0);
+        }
+      }
+    }
+  }
+}
 
 /**=======================================================**
                          SECTION END

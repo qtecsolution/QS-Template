@@ -1,0 +1,54 @@
+/**=======================================================**
+                        BREADCRUMB START
+**=======================================================**/
+
+.sitebreadcrumb {
+  padding: length(24) length(0);
+
+  nav {
+    .breadcrumb {
+      margin-bottom: 0;
+      gap: length(10);
+
+      &-item {
+        color: $border-1;
+        @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        font-feature-settings: 'salt';
+        padding: 0;
+
+        @include breakpoint(tab992) {
+          @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+
+        &.divider {
+          width: length(14);
+          @include flex-center;
+        }
+
+        a {
+          font: inherit;
+          color: inherit;
+          @include transitionscolor;
+
+          @include hover {
+            color: $primary;
+          }
+        }
+
+        &::before {
+          content: '';
+          display: none;
+        }
+
+        &.active {
+          color: $text-primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                        BREADCRUMB START
+**=======================================================**/

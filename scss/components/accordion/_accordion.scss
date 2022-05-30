@@ -12,7 +12,7 @@
 		&:last-of-type {
 			.accordion-button {
 				&.collapsed {
-					@include radius(0);
+					border-radius: 0;
 				}
 			}
 		}
@@ -47,10 +47,10 @@
 		.accordion-button {
 			@include square(length(40));
 			@include flex-center;
-			@include radius(0);
+			border-radius: 0;
 	
 			&:not(.collapsed) {
-				@include radius(0);
+				border-radius: 0;
 				box-shadow: none;
 				background: transparent;
 	
