@@ -30,6 +30,15 @@ $blue: hsl(216, 72%, 54%); //#3477de
 
 $breadcrumbactive: hsl(184, 54%, 15%); //#12393C
 
+$product-title: hsl(218, 23%, 23%); //#2D3748
+$sharebg: hsl(211, 25%, 84%); // #CBD5E0
+
+$prevprice: hsl(0, 0%, 62%); //#9F9F9F
+
+$ratingtext: hsl(218, 17%, 35%); //#4A5568
+$progressbg: hsl(210, 38%, 95%); //#EDF2F7
+$datetext: hsl(216, 15%, 52%); //#718096
+
 /**=====================================================**
                     BACKGROUND-COLORS
 =======================================================**/
@@ -58,11 +67,22 @@ $linkhoverbg: hsl(240, 9%, 94%); //#EDEDF0
 $linkiconbg: hsl(0, 0%, 96%); //#f4f4f4
 $searchicon: hsl(240, 5%, 50%); //#787885
 
-$submenubg: #F7FAFC;
-$ratingColor: #F2B807;
+$submenubg: hsl(204, 45%, 98%); //#F7FAFC
+$ratingColor: hsl(45, 94%, 49%); //#F2B807
+$ratecolor: hsl(240, 9%, 85%); //#D5D5DC
 
-$red: #c32a01; // #c32a01
-$red2: #ae403c; // #c32a01
+$red: hsl(13, 99%, 38%); // #c32a01
+$red2: hsl(2, 49%, 46%); // #c32a01
+$storagebg: hsl(0, 0%, 71%); //#B6B6B6
+
+$successbg: hsl(124, 100%, 90%); //#CCFFCF 
+$successcolor: hsl(146, 64%, 36%); //#219653
+
+$dangerbg: hsl(0, 100%, 90%); //#FFCCCC
+$dangercolor: hsl(0, 66%, 47%); //#C62828
+
+$pendingbg: hsl(27, 100%, 90%); //#FFE3CC
+$pendingcolor: hsl(27, 100%, 47%); //#EF6C00
 
 /**=====================================================**
                     BORDER-COLORS
@@ -71,6 +91,7 @@ $border-1: hsl(0, 0%, 69%); //#B0B0B0
 $border-2: hsl(216, 6%, 15%); //#242629
 $input-border: hsl(255, 7%, 88%); //#E0DFE3
 $category-border: hsl(0, 0%, 74%); //#BDBDBD
+$inputborder: hsl(214, 20%, 69%); //#A0AEC0
 
 /**=====================================================**
                     NORMAL-COLORS
@@ -83,6 +104,7 @@ $white: hsl(0, 0%, 100%);
 =======================================================**/
 $shadow-1: #4444440d;
 $shadow-2: #42474c59;
+$shadow-3: rgb(14, 14, 16);
 
 /**=====================================================**
                         BOX-SHADOWS
@@ -91,7 +113,7 @@ $dropdownshadow: drop-shadow(0rem .9375rem 1.875rem rgba($black, 0.15));
 $box-shadow-1: 0 .5rem 3rem 0 $dividerbg, 0 .25rem .5rem 0 $shadow-1, 0 0 .0625rem 0 $shadow-2;
 $box-shadow-2: drop-shadow(0 .9375rem 1.875rem rgba($black, 0.15));
 $box-shadow-3: 0 0 1.875rem rgba($black, 0.12);
-
+$share-shadow: 0 -0.25rem .375rem rgba($shadow-3, 0.08);
 
 /**=====================================================**
                         TEXT-SHADOWS

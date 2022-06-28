@@ -3,38 +3,40 @@
 **=======================================================**/
 .nav-tabs {
 	border: none;
-	padding: length(4);
-	@include radius(8);
+	// padding: length(4);
+	@include radius(0);
 	border: 0;
 
 	.nav-item {
-		&:last-of-type {
-			.nav-link {
-				border-right: 0;
-			}
-		}
+		width: calc((100% / 3) - 0.25rem);
 
-		@include hover {
-			.nav-link {
-				border: 0;
-			}
-		}
+		// &:last-of-type {
+		// 	.nav-link {
+		// 	}
+		// }
+
+		// @include hover {
+		// 	.nav-link {
+		// 		border: 0;
+		// 	}
+		// }
 	}
 
 	.nav-link {
-		padding: length(15) length(8);
-		border: none;
+		@include w100;
+		padding: length(12) length(10);
+		@include border(solid, 2, transparent);
+		border-bottom: 0;
 		margin: 0;
-		border-radius: 0;
+		@include double-radius(top, left, 8, top, right, 8);
 
 		&:hover:not(.active) {
-			@include radius(8);
-			border: none;
+			border-color: transparent;
 			outline: none;
 		}
 
 		&.active {
-			@include radius(8);
+			
 		}
 	}
 }

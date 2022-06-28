@@ -28,23 +28,20 @@
 
       .gallery-top {
         background: $white;
-        @include w100;
-        height: length(300);
+        @include square(length(300));
         @include radius(10);
         padding: length(16);
         position: relative;
+        overflow: hidden;
+        margin-inline: auto;
   
         @include breakpoint(mobile576) {
-          height: length(360);
+          @include square(length(360));
           padding: length(32);
         }
-  
-        @include breakpoint(mobile768) {
-          height: length(440);
-        }
-  
+
         @include breakpoint(tab992) {
-          height: length(500);
+          margin: 0;
         }
   
         .swiper-slide {
@@ -61,12 +58,23 @@
       .gallery-thumbs {
         @include flex-center;
         position: relative;
+        width: length(300);
+        overflow: hidden;
+        margin-inline: auto;
+
+        @include breakpoint(mobile576) {
+          width: length(360);
+        }
+
+        @include breakpoint(tab992) {
+          margin: 0;
+        }
 
         .swiper-wrapper {
           padding: length(8);
 
           .swiper-slide {
-            @include square(length(110));
+            @include square(length(64));
             padding: length(8);
             @include flex-center;
             background: $white;
@@ -81,7 +89,7 @@
 
             &.swiper-slide-duplicate-active,
             &.swiper-slide-active {
-              @include square(length(110));
+              @include square(length(64));
               padding: length(8);
               @include flex-center;
               background: rgba($white, 0.75);
@@ -101,20 +109,16 @@
         .swiper-button-prev,
         .swiper-button-next {
           position: absolute;
-          @include square(length(40));
+          @include square(length(32));
           @include flex-center;
-          top: 70%;
+          top: 50%;
           @include transform(translateY(-50%));
           padding: length(8);
           @include circle;
           background: $white;
           filter: $dropdownshadow;
           box-shadow: $box-shadow-1;
-  
-          @include breakpoint(tab992) {
-            top: 50%;
-            transform: none;
-          }
+          margin-top: length(0);
 
           svg {
             @include wh100;
@@ -130,9 +134,780 @@
         }
       }
     }
+
+    .descriptions {
+      @include flex-column;
+      gap: length(24);
+
+      .product-title {
+        color: $product-title;
+        @include font-face($secondaryFont, style('normal'), size(20), weight('semibold'), line-height(38.09, 20));
+        
+        @include breakpoint(mobile576) {
+          @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+        }
+      }
+
+      .brand-share {
+        @include flex-center-between;
+
+        .stockbrand {
+          @include flex-center-vert;
+          gap: length(20);
+
+          .brand {
+            @include flex-center;
+            @include square(length(48));
+            @include radius(4);
+            background: $white;
+            padding: length(8);
+  
+            img {
+              @include wh100;
+              object-fit: contain;
+            }
+          }
+
+          .stocks {
+            @include flex-center-vert;
+            gap: length(12);
+
+            .stock {
+              @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+              padding: length(8) length(24);
+              @include radius(40);
+
+              &.stock-in {
+                @include setBgColor($successbg, $successcolor);
+              }
+
+              &.stock-out {
+                @include setBgColor($dangerbg, $dangercolor);
+              }
+            }
+          }
+        }
+
+        .wishshare {
+          @include flex-center;
+          gap: length(8);
+
+          .share {
+            position: relative;
+            @include flex-end;
+  
+            .button-share {
+              background: $white;
+              @include square(length(48));
+              @include radius(4);
+              padding: length(8);
+              @include flex-center;
+  
+              .icon {
+                @include square(length(24));
+                @include flex-center;
+                overflow: hidden;
+  
+                svg {
+                  @include wh100;
+  
+                  path {
+                    fill: $gray-1;
+                  }
+                }
+              }
+            }
+  
+            .share-dropdown {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              background: $white;
+              padding: length(14);
+              box-shadow: $share-shadow;
+              @extend %animation;
+              @extend %slideUpIn;
+              display: none;
+  
+              .shareslist {
+                @include list-horizontal;
+                gap: length(12);
+  
+                &-link {
+                  @include square(length(20));
+                  @include flex-center;
+                  overflow: hidden;
+  
+                  svg {
+                    @include wh100;
+                  }
+  
+                  @include hover {
+                    svg {
+                      path {
+                        fill: $primary;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+  
+            @include hover {
+              .share-dropdown {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .product-prices {
+        @include flex-center-vert;
+        gap: length(14);
+
+        .current-price {
+          color: $product-title;
+          @include font-face($secondaryFont, style('normal'), size(20), weight('medium'), line-height(28, 20));
+
+          span {
+            color: inherit;
+            font: inherit;
+          }
+        }
+
+        .previous-price {
+          color: $prevprice;
+          @include font-face($secondaryFont, style('normal'), size(16), weight('medium'), line-height(24, 16));
+          text-decoration: line-through;
+
+          span {
+            color: inherit;
+            font: inherit;
+            text-decoration: inherit;
+          }
+        }
+      }
+
+      .product-colors {
+        @include flex-column;
+        gap: length(14);
+
+        &-header {
+          .colors-title {
+            color: $product-title;
+            @include font-face($secondaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          flex-wrap: wrap;
+          gap: length(14);
+
+          .colorbox {
+            @include square(length(32));
+            background: $white;
+            @include border(solid, 2, transparent);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            .color {
+              @include square(length(20));
+              @include circle;
+              @include flex-center;
+              background: transparent;
+            }
+          }
+        }
+      }
+
+      .product-storage {
+        @include flex-column;
+        gap: length(14);
+
+        &-header {
+          .storage-title {
+            color: $product-title;
+            @include font-face($secondaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: length(8);
+          flex-wrap: wrap;
+        }
+      }
+
+      .product-buttons {
+        @include flex-center-vert;
+        gap: length(8);
+
+        .cartbtn,
+        .buybtn {
+          @include w100;
+
+          @include breakpoint(mobile768) {
+            width: 25%;
+          }
+        }
+      }
+    }
   }
 }
 
 /**=======================================================**
                          SECTION END
+**=======================================================**/
+
+
+/**=======================================================**
+                  PRODUCT-INFOS SECTION START
+**=======================================================**/
+
+.productinfos {
+  padding-bottom: length(48);
+
+  &-content {
+    .nav-tabs {
+      gap: length(4);
+  
+      @include breakpoint(tab992) {
+        max-width: 76%;
+      }
+  
+      .nav-link {
+        color: $black;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+  
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+
+        span {
+          color: inherit;
+          font: inherit;
+          display: none;
+
+          @include breakpoint(tab992) {
+            display: inline-block;
+          }
+        }
+  
+        &.active {
+          border-color: $primary;
+        }
+  
+        &:hover:not(.active) {
+          background: $white;
+          border-color: $primary;
+        }
+      }
+    } 
+
+    .tab-content {
+      background: $white;
+      padding: length(20) length(16) length(40);
+      @include radius(10);
+      border-top-left-radius: 0;
+
+      @include breakpoint(tab992) {
+        padding: length(32) length(40) length(48);
+      }
+
+      .description {
+        @include flex-column;
+        gap: length(16);
+
+        &-header {
+          .description-title {
+            color: $black;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
+            }
+          }
+        }
+
+        &-body {
+          .descriptionlist {
+            padding-left: length(16);
+            color: $black;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(28, 14));
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(40, 16));
+            }
+          }
+        }
+      }
+
+      .reviews {
+        @include flex-column;
+        gap: length(24);
+
+        &-header {
+          .reviews-title {
+            color: $black;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
+            }
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: length(48);
+
+          .ratings {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tab992) {
+              flex-direction: row;
+            }
+
+            &-left {
+              @include flex-column;
+              gap: length(12);
+              @include w100;
+
+              @include breakpoint(tab992) {
+                width: 40%;
+              }
+
+              .reting {
+                .getrate {
+                  color: $ratingColor;
+                  @include font-face($secondaryFont, style('normal'), size(36), weight('semibold'), line-height(48.97, 36));
+                }
+
+                .totalrate {
+                  color: $ratecolor;
+                  @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                }
+              }
+
+              .ratinglist {
+                @include list-horizontal;
+                gap: length(2);
+
+                &-item {
+                  @include square(length(24));
+                  @include flex-center;
+                  overflow: hidden;
+
+                  svg {
+                    @include wh100;
+                  }
+                }
+              }
+
+              .ratingcount {
+                color: $black;
+                @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(23, 14));
+              }
+            }
+
+            &-right {
+              @include flex-column;
+              gap: length(16);
+              @include w100;
+
+              @include breakpoint(tab992) {
+                width: 60%;
+              }
+
+              .reting-single {
+                @include flex-center-vert;
+                gap: length(12);
+                
+                .ratinglist {
+                  @include list-horizontal;
+                  gap: length(2);
+                  width: length(90);
+
+                  &-item {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                      @include wh100;
+                    }
+                  }
+                }
+
+                .progress {
+                  width: calc(100% - 9.625rem);
+                  @include radius(0);
+                  height: length(16);
+                  background: $progressbg;
+
+                  &-bar {
+                    background: $ratingColor;
+                  }
+                }
+
+                .ratingcount {
+                  color: $ratingtext;
+                  @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(23, 14));
+                  width: length(64);
+                  @include flex-center;
+                }
+              }
+            }
+          }
+
+          .givereview {
+            @include flex-column;
+            gap: length(24);
+
+            &-header {
+              .givereview-title {
+                color: $black;
+                @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+    
+                @include breakpoint(tab992) {
+                  @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
+                }
+              }
+            }
+
+            &-body {
+              @include flex-column;
+              gap: length(48);
+
+              .reviewform {
+                @include w100;
+                @include flex-column;
+                gap: length(20);
+
+                @include breakpoint(tab992) {
+                  max-width: length(740);
+                }
+
+                .reviewlist {
+                  @include list-horizontal;
+                  gap: length(4);
+
+                  &-item {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    svg {
+                      @include wh100;
+                    }
+                  }
+                }
+
+                .inputfield {
+                  color: $black2;
+                  @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+                  padding: length(16);
+                  @include border(solid, 1, $inputborder);
+                  @include transitionsall;
+      
+                  @include breakpoint(tab992) {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+                  }
+
+                  &:focus {
+                    outline: none;
+                    border-color: $ratingtext;
+                  }
+
+                  &::placeholder {
+                    color: lighten($gray-1, 25%);
+                  }
+                }
+
+                .review-images {
+                  @include flex-center-vert;
+                  gap: length(16);
+
+                  .reviewthumb {
+                    @include square(length(64));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(mobile576) {
+                      @include square(length(80));
+                    }
+
+                    @include breakpoint(mobile768) {
+                      @include square(length(100));
+                    }  
+
+                    @include breakpoint(tab992) {
+                      @include square(length(170));
+                    }
+
+                    img {
+                      @include wh100;
+                      object-fit: cover;
+                    }
+                  }
+
+                  .uploadthumb {
+                    @include square(length(64));
+
+                    @include breakpoint(mobile576) {
+                      @include square(length(80));
+                    }
+
+                    @include breakpoint(mobile768) {
+                      @include square(length(100));
+                    }  
+
+                    @include breakpoint(tab992) {
+                      @include square(length(170));
+                    }
+
+                    label {
+                      @include square(length(64));
+                      @include flex-center;
+                      overflow: hidden;
+  
+                      @include breakpoint(mobile576) {
+                        @include square(length(80));
+                      }
+  
+                      @include breakpoint(mobile768) {
+                        @include square(length(100));
+                      }  
+  
+                      @include breakpoint(tab992) {
+                        @include square(length(170));
+                      }
+  
+                      img {
+                        @include wh100;
+                        object-fit: cover;
+                      }
+                    }
+                  }
+                }
+
+                .submitinfo {
+                  .submitbox {
+                    @include w100;
+
+                    @include breakpoint(mobile576) {
+                      width: length(200);
+                      margin-left: auto;
+                    }
+                  }
+                }
+              }
+
+              .reviewpreview {
+                @include flex-column;
+                gap: length(20);
+
+                @include breakpoint(tab992) {
+                  gap: length(40);
+                }
+
+                .singlereview {
+                  @include flex-column;
+                  gap: length(20);
+                  padding-bottom: length(20);
+                  @include border-single(bottom, solid, 1, $inputborder);
+
+                  &:last-child {
+                    border-bottom: 0;
+                  }
+  
+                  @include breakpoint(tab992) {
+                    padding-bottom: length(40);
+                  }
+
+                  &-header {
+                    .topinfo {
+                      @include flex-column;
+                      gap: length(8);
+                      
+                      .list-date {
+                        @include flex-center-between;
+
+                        .revlist {
+                          @include list-horizontal;
+                          gap: length(2);
+
+                          &-item {
+                            @include square(length(16));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                              @include wh100;
+                            }
+                          }
+                        }
+
+                        .datetime {
+                          color: $datetext;
+                          @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+                        }
+                      }
+
+                      .author {
+                        color: $black;
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+                      }
+                    }
+                  }
+
+                  &-body {
+                    @include flex-column;
+                    gap: length(24);
+
+                    .reviewinfo {
+                      max-width: length(560);
+
+                      .reviewtext {
+                        color: $datetext;
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+
+                        @include breakpoint(tab992) {
+                          @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+                        }
+                      }
+                    }
+
+                    .reviewimages {
+                      @include flex-center-vert;
+                      gap: length(16);
+
+                      .reviewthumb {
+                        @include square(length(64));
+                        @include flex-center;
+                        overflow: hidden;
+    
+                        @include breakpoint(mobile576) {
+                          @include square(length(80));
+                        }
+    
+                        @include breakpoint(mobile768) {
+                          @include square(length(100));
+                        }  
+    
+                        @include breakpoint(tab992) {
+                          @include square(length(170));
+                        }
+    
+                        img {
+                          @include wh100;
+                          object-fit: cover;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                  PRODUCT-INFOS SECTION START
+**=======================================================**/
+
+
+/**=======================================================**
+                  RELATED-PRODUCTS SECTION START
+**=======================================================**/
+
+.related-products {
+  padding: length(0) length(16) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(32) length(8) length(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(32);
+    background: $prime-express-bg;
+    @include radius(10);
+    padding: length(20) length(20) length(64);
+    
+    @include breakpoint(tab992) {
+      padding: length(32) length(20) length(64);
+    }
+  }
+
+  &-header {
+    @include flex-center-between;
+    gap: length(12);
+      
+    @include breakpoint(mobile768) {
+      padding-right: length(8);
+    }
+
+    .related-products-title {
+      color: $product-title;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(33.6, 24));
+      
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(39.2, 28));
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-vert;
+    gap: length(16);
+    flex-wrap: wrap;
+      
+    @include breakpoint(mobile768) {
+      gap: length(24);
+    }
+
+    .product {
+      width: 75%;
+      margin-inline: auto;
+
+      @include breakpoint(mobile414) {
+        width: 60%;
+      }
+
+      @include breakpoint(mobile576) {
+        width: 46.5%;
+        margin: 0;
+      }
+
+      @include breakpoint(mobile768) {
+        width: 30.75%;
+      }
+
+      @include breakpoint(tab992) {
+        width: 31.5%;
+      }
+
+      @include breakpoint(desktop1200) {
+        width: 23.25%;
+      }
+
+      @include breakpoint(desktop1400) {
+        width: 18.5%;
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                  RELATED-PRODUCTS SECTION END
 **=======================================================**/

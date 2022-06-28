@@ -207,8 +207,12 @@
 
   &-header {
     @include w100;
-    height: length(180);
+    height: length(120);
     overflow: hidden;
+
+    @include breakpoint(mobile414) {
+      height: length(180);
+    }
 
     img {
       @include wh100;

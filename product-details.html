@@ -614,12 +614,13 @@
   <!--========== BREADCRUMB END ==============-->
 
 
-  <!--========== CART-SECTION START ==========-->
+  <!--========== PRODUCT-DETAILS START ==========-->
   <section class="product-details">
     <div class="container">
       <div class="product-details-content">
         <div class="row g-4">
-          <div class="col-lg-6 col-12">
+          <!-- SLIDER PART -->
+          <div class="col-lg-4 col-12">
             <div class="sliderinfo">
               <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
@@ -684,77 +685,100 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-12">
+          <!-- DETAILS PART -->
+          <div class="col-lg-8 col-12">
             <div class="descriptions">
+              <!-- PRODUCT-TITLE -->
               <h1 class="product-title">iPhone 12 Pro Max - 128GB</h1>
 
+              <!-- BRAND-SHARE -->
               <div class="brand-share">
-                <figure class="brand">
-                  <img src="assets/images/product-details/product-brands/apple.svg" alt="brand-thumbnail">
-                </figure>
+                <div class="stockbrand">
+                  <figure class="brand" data-bs-toggle="tooltip" data-bs-placement="right" title="Product Brand">
+                    <img src="assets/images/product-details/product-brands/apple.svg" alt="brand-thumbnail">
+                  </figure>
 
-                <div class="share">
-                  <button class="button-share" type="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13 14H11C9.3596 13.9994 7.75023 14.4471 6.34588 15.2949C4.94152 16.1427 3.7956 17.3582 3.032 18.81C3.01054 18.5405 2.99986 18.2703 3 18C3 12.477 7.477 8 13 8V2.5L23.5 11L13 19.5V14ZM11 12H15V15.308L20.321 11L15 6.692V10H13C11.8503 9.99871 10.7138 10.2458 9.66839 10.7244C8.62299 11.203 7.69332 11.9018 6.943 12.773C8.23432 12.2612 9.61096 11.9989 11 12Z" fill="#A0AEC0"/>
-                    </svg>
+                  <div class="stocks">
+                    <span class="stock stock-in">In Stock</span>
+                    <span class="stock stock-out d-none">Out of Stock</span>
+                  </div>
+                </div>
+
+                <div class="wishshare">
+                  <button class="btn-wish" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to wishlist">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="#888888"></path>
+                      </svg>
+                    </span>
                   </button>
 
-                  <!-- SHARE DROPDOWN START -->
-                  <div class="share-dropdown">
-                    <ul class="sharelist">
-                      <li class="sharelist-item">
-                        <!-- FACEBOOK SHARE LINK -->
-                        <a href="#" class="sharelist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Facebook">
-                          <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.20147 3.91179H10.0132V0.756441C9.70059 0.713443 8.62566 0.616699 7.37377 0.616699C4.76168 0.616699 2.97232 2.2597 2.97232 5.27944V8.05856H0.0898438V11.586H2.97232V20.4617H6.50638V11.5868H9.27227L9.71134 8.05939H6.50555V5.62921C6.50638 4.60967 6.7809 3.91179 8.20147 3.91179Z" fill="#B0B0B0"/>
-                          </svg>
-                        </a>
-                      </li>
+                  <div class="share">
+                    <button class="button-share" type="button">
+                      <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 14H11C9.3596 13.9994 7.75023 14.4471 6.34588 15.2949C4.94152 16.1427 3.7956 17.3582 3.032 18.81C3.01054 18.5405 2.99986 18.2703 3 18C3 12.477 7.477 8 13 8V2.5L23.5 11L13 19.5V14ZM11 12H15V15.308L20.321 11L15 6.692V10H13C11.8503 9.99871 10.7138 10.2458 9.66839 10.7244C8.62299 11.203 7.69332 11.9018 6.943 12.773C8.23432 12.2612 9.61096 11.9989 11 12Z" fill="#A0AEC0"/>
+                        </svg>
+                      </span>
+                    </button>
 
-                      <li class="sharelist-item">
-                        <!-- TWITTER SHARE LINK -->
-                        <a href="#" class="sharelist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Twitter">
-                          <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.4727 2.71781C21.6545 3.07668 20.7828 3.31456 19.8739 3.43006C20.8089 2.87181 21.5225 1.99456 21.858 0.937185C20.9863 1.45693 20.0238 1.82406 18.998 2.02893C18.1703 1.14756 16.9905 0.601685 15.7035 0.601685C13.2065 0.601685 11.1963 2.62843 11.1963 5.11306C11.1963 5.47056 11.2265 5.81431 11.3008 6.14156C7.55116 5.95868 4.23328 4.16156 2.00441 1.42393C1.61528 2.09906 1.38703 2.87181 1.38703 3.70368C1.38703 5.26568 2.19141 6.65031 3.39041 7.45193C2.66578 7.43818 1.95491 7.22781 1.35266 6.89643C1.35266 6.91018 1.35266 6.92806 1.35266 6.94593C1.35266 9.13768 2.91603 10.9582 4.96616 11.3776C4.59903 11.4779 4.19891 11.5261 3.78366 11.5261C3.49491 11.5261 3.20341 11.5096 2.92978 11.4491C3.51416 13.2352 5.17241 14.5483 7.14416 14.5909C5.60966 15.7913 3.66128 16.5146 1.55203 16.5146C1.18216 16.5146 0.827406 16.4981 0.472656 16.4527C2.47053 17.7411 4.83828 18.4767 7.39166 18.4767C15.6912 18.4767 20.2287 11.6017 20.2287 5.64243C20.2287 5.44306 20.2218 5.25056 20.2122 5.05943C21.1073 4.42418 21.8594 3.63081 22.4727 2.71781Z" fill="#B0B0B0"/>
-                          </svg>
-                        </a>
-                      </li>
+                    <!-- SHARE DROPDOWN START -->
+                    <div class="share-dropdown">
+                      <ul class="shareslist">
+                        <li class="shareslist-item">
+                          <!-- FACEBOOK SHARE LINK -->
+                          <a href="#" class="shareslist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Facebook">
+                            <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.20147 3.91179H10.0132V0.756441C9.70059 0.713443 8.62566 0.616699 7.37377 0.616699C4.76168 0.616699 2.97232 2.2597 2.97232 5.27944V8.05856H0.0898438V11.586H2.97232V20.4617H6.50638V11.5868H9.27227L9.71134 8.05939H6.50555V5.62921C6.50638 4.60967 6.7809 3.91179 8.20147 3.91179Z" fill="#B0B0B0"/>
+                            </svg>
+                          </a>
+                        </li>
 
-                      <li class="sharelist-item">
-                        <!-- INSTAGRAM SHARE LINK -->
-                        <a href="#" class="sharelist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Instagram">
-                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.80469 0.539185H16.0547C19.8511 0.539185 22.9297 3.61781 22.9297 7.41418V15.6642C22.9297 19.4606 19.8511 22.5392 16.0547 22.5392H7.80469C4.00831 22.5392 0.929688 19.4606 0.929688 15.6642V7.41418C0.929688 3.61781 4.00831 0.539185 7.80469 0.539185ZM16.0547 20.4767C18.7084 20.4767 20.8672 18.3179 20.8672 15.6642V7.41418C20.8672 4.76043 18.7084 2.60168 16.0547 2.60168H7.80469C5.15094 2.60168 2.99219 4.76043 2.99219 7.41418V15.6642C2.99219 18.3179 5.15094 20.4767 7.80469 20.4767H16.0547Z" fill="#B0B0B0"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.42969 11.5392C6.42969 8.50181 8.89231 6.03918 11.9297 6.03918C14.9671 6.03918 17.4297 8.50181 17.4297 11.5392C17.4297 14.5766 14.9671 17.0392 11.9297 17.0392C8.89231 17.0392 6.42969 14.5766 6.42969 11.5392ZM8.49219 11.5392C8.49219 13.4339 10.0349 14.9767 11.9297 14.9767C13.8244 14.9767 15.3672 13.4339 15.3672 11.5392C15.3672 9.64306 13.8244 8.10168 11.9297 8.10168C10.0349 8.10168 8.49219 9.64306 8.49219 11.5392Z" fill="#B0B0B0"/>
-                            <circle cx="17.8423" cy="5.62667" r="0.732875" fill="#B0B0B0"/>
-                          </svg>
-                        </a>
-                      </li>
-                      
-                      <li class="sharelist-item">
-                        <!-- WHATSAPP SHARE LINK -->
-                        <a href="#" class="sharelist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Whatsapp">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" fill="#B0B0B0"/>
-                          </svg>
-                        </a>
-                      </li>
-                      
-                      <li class="sharelist-item">
-                        <!-- COPY LINK -->
-                        <a href="#" class="sharelist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
-                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.678 18.1112C3.75923 18.1113 2.87726 17.7501 2.22245 17.1056L2.15023 17.0334C1.82123 16.7123 1.55982 16.3287 1.3814 15.9051C1.20297 15.4814 1.11115 15.0264 1.11134 14.5667C1.11018 14.0691 1.20779 13.5761 1.39852 13.1165C1.58924 12.6568 1.8693 12.2396 2.22245 11.8889L10.8336 3.37226C11.7085 2.4613 12.9062 1.93046 14.1688 1.89409C15.4313 1.85772 16.6576 2.31873 17.5836 3.17782C18.0012 3.59437 18.3317 4.08988 18.5558 4.63546C18.7799 5.18104 18.8933 5.76578 18.8891 6.3556C18.8842 7.01432 18.7491 7.66558 18.4917 8.27194C18.2343 8.87831 17.8596 9.42783 17.3891 9.88893L9.65023 17.5556C9.60212 17.6203 9.54051 17.6738 9.46966 17.7123C9.39881 17.7508 9.32043 17.7734 9.23996 17.7786C9.1595 17.7837 9.07887 17.7713 9.00368 17.7422C8.92849 17.7131 8.86054 17.6679 8.80456 17.6099C8.74857 17.5519 8.70589 17.4823 8.67947 17.4062C8.65306 17.33 8.64354 17.249 8.65159 17.1687C8.65963 17.0885 8.68505 17.011 8.72607 16.9415C8.76708 16.8721 8.82272 16.8125 8.88912 16.7667L16.6058 9.10004C16.9723 8.74231 17.2645 8.31571 17.4656 7.84474C17.6668 7.37377 17.7729 6.8677 17.778 6.3556C17.782 5.9124 17.6976 5.47285 17.5297 5.06267C17.3618 4.65248 17.1138 4.27989 16.8002 3.96671C16.0823 3.31274 15.1364 2.96672 14.166 3.00308C13.1956 3.03945 12.2783 3.4553 11.6113 4.16115L3.028 12.6778C2.77507 12.9234 2.57357 13.2169 2.43526 13.5412C2.29695 13.8656 2.22461 14.2142 2.22245 14.5667C2.22126 14.8763 2.28154 15.183 2.3998 15.4691C2.51805 15.7552 2.69193 16.015 2.91134 16.2334L2.98356 16.3056C3.48064 16.7633 4.13759 17.0076 4.81298 16.9858C5.48836 16.964 6.12817 16.6778 6.59467 16.1889L14.0113 8.8556C14.1516 8.71378 14.2622 8.54542 14.3366 8.36036C14.411 8.1753 14.4477 7.97725 14.4447 7.77782C14.4459 7.6046 14.4126 7.43286 14.3468 7.27262C14.281 7.11239 14.184 6.96685 14.0613 6.84449C13.7808 6.58721 13.4103 6.45059 13.0299 6.4641C12.6495 6.47761 12.2896 6.64018 12.028 6.91671L6.91689 11.9834C6.81228 12.0873 6.67069 12.1453 6.52326 12.1448C6.37584 12.1443 6.23466 12.0852 6.13078 11.9806C6.02691 11.876 5.96884 11.7344 5.96936 11.587C5.96988 11.4395 6.02895 11.2984 6.13356 11.1945L11.2669 6.11115C11.7374 5.62911 12.3786 5.35137 13.0521 5.33786C13.7256 5.32435 14.3774 5.57615 14.8669 6.03893C15.092 6.26809 15.2689 6.54003 15.3873 6.83868C15.5056 7.13733 15.5629 7.45666 15.5558 7.77782C15.5552 8.12366 15.4856 8.46591 15.3511 8.78453C15.2166 9.10315 15.0199 9.39173 14.7724 9.63338L7.378 16.9889C6.66128 17.7045 5.6908 18.1079 4.678 18.1112Z" fill="#B0B0B0"/>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+                        <li class="shareslist-item">
+                          <!-- TWITTER SHARE LINK -->
+                          <a href="#" class="shareslist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Twitter">
+                            <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.4727 2.71781C21.6545 3.07668 20.7828 3.31456 19.8739 3.43006C20.8089 2.87181 21.5225 1.99456 21.858 0.937185C20.9863 1.45693 20.0238 1.82406 18.998 2.02893C18.1703 1.14756 16.9905 0.601685 15.7035 0.601685C13.2065 0.601685 11.1963 2.62843 11.1963 5.11306C11.1963 5.47056 11.2265 5.81431 11.3008 6.14156C7.55116 5.95868 4.23328 4.16156 2.00441 1.42393C1.61528 2.09906 1.38703 2.87181 1.38703 3.70368C1.38703 5.26568 2.19141 6.65031 3.39041 7.45193C2.66578 7.43818 1.95491 7.22781 1.35266 6.89643C1.35266 6.91018 1.35266 6.92806 1.35266 6.94593C1.35266 9.13768 2.91603 10.9582 4.96616 11.3776C4.59903 11.4779 4.19891 11.5261 3.78366 11.5261C3.49491 11.5261 3.20341 11.5096 2.92978 11.4491C3.51416 13.2352 5.17241 14.5483 7.14416 14.5909C5.60966 15.7913 3.66128 16.5146 1.55203 16.5146C1.18216 16.5146 0.827406 16.4981 0.472656 16.4527C2.47053 17.7411 4.83828 18.4767 7.39166 18.4767C15.6912 18.4767 20.2287 11.6017 20.2287 5.64243C20.2287 5.44306 20.2218 5.25056 20.2122 5.05943C21.1073 4.42418 21.8594 3.63081 22.4727 2.71781Z" fill="#B0B0B0"/>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="shareslist-item">
+                          <!-- INSTAGRAM SHARE LINK -->
+                          <a href="#" class="shareslist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Instagram">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.80469 0.539185H16.0547C19.8511 0.539185 22.9297 3.61781 22.9297 7.41418V15.6642C22.9297 19.4606 19.8511 22.5392 16.0547 22.5392H7.80469C4.00831 22.5392 0.929688 19.4606 0.929688 15.6642V7.41418C0.929688 3.61781 4.00831 0.539185 7.80469 0.539185ZM16.0547 20.4767C18.7084 20.4767 20.8672 18.3179 20.8672 15.6642V7.41418C20.8672 4.76043 18.7084 2.60168 16.0547 2.60168H7.80469C5.15094 2.60168 2.99219 4.76043 2.99219 7.41418V15.6642C2.99219 18.3179 5.15094 20.4767 7.80469 20.4767H16.0547Z" fill="#B0B0B0"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.42969 11.5392C6.42969 8.50181 8.89231 6.03918 11.9297 6.03918C14.9671 6.03918 17.4297 8.50181 17.4297 11.5392C17.4297 14.5766 14.9671 17.0392 11.9297 17.0392C8.89231 17.0392 6.42969 14.5766 6.42969 11.5392ZM8.49219 11.5392C8.49219 13.4339 10.0349 14.9767 11.9297 14.9767C13.8244 14.9767 15.3672 13.4339 15.3672 11.5392C15.3672 9.64306 13.8244 8.10168 11.9297 8.10168C10.0349 8.10168 8.49219 9.64306 8.49219 11.5392Z" fill="#B0B0B0"/>
+                              <circle cx="17.8423" cy="5.62667" r="0.732875" fill="#B0B0B0"/>
+                            </svg>
+                          </a>
+                        </li>
+                        
+                        <li class="shareslist-item">
+                          <!-- WHATSAPP SHARE LINK -->
+                          <a href="#" class="shareslist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" fill="#B0B0B0"/>
+                            </svg>
+                          </a>
+                        </li>
+                        
+                        <li class="shareslist-item">
+                          <!-- COPY LINK -->
+                          <a href="#" class="shareslist-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.678 18.1112C3.75923 18.1113 2.87726 17.7501 2.22245 17.1056L2.15023 17.0334C1.82123 16.7123 1.55982 16.3287 1.3814 15.9051C1.20297 15.4814 1.11115 15.0264 1.11134 14.5667C1.11018 14.0691 1.20779 13.5761 1.39852 13.1165C1.58924 12.6568 1.8693 12.2396 2.22245 11.8889L10.8336 3.37226C11.7085 2.4613 12.9062 1.93046 14.1688 1.89409C15.4313 1.85772 16.6576 2.31873 17.5836 3.17782C18.0012 3.59437 18.3317 4.08988 18.5558 4.63546C18.7799 5.18104 18.8933 5.76578 18.8891 6.3556C18.8842 7.01432 18.7491 7.66558 18.4917 8.27194C18.2343 8.87831 17.8596 9.42783 17.3891 9.88893L9.65023 17.5556C9.60212 17.6203 9.54051 17.6738 9.46966 17.7123C9.39881 17.7508 9.32043 17.7734 9.23996 17.7786C9.1595 17.7837 9.07887 17.7713 9.00368 17.7422C8.92849 17.7131 8.86054 17.6679 8.80456 17.6099C8.74857 17.5519 8.70589 17.4823 8.67947 17.4062C8.65306 17.33 8.64354 17.249 8.65159 17.1687C8.65963 17.0885 8.68505 17.011 8.72607 16.9415C8.76708 16.8721 8.82272 16.8125 8.88912 16.7667L16.6058 9.10004C16.9723 8.74231 17.2645 8.31571 17.4656 7.84474C17.6668 7.37377 17.7729 6.8677 17.778 6.3556C17.782 5.9124 17.6976 5.47285 17.5297 5.06267C17.3618 4.65248 17.1138 4.27989 16.8002 3.96671C16.0823 3.31274 15.1364 2.96672 14.166 3.00308C13.1956 3.03945 12.2783 3.4553 11.6113 4.16115L3.028 12.6778C2.77507 12.9234 2.57357 13.2169 2.43526 13.5412C2.29695 13.8656 2.22461 14.2142 2.22245 14.5667C2.22126 14.8763 2.28154 15.183 2.3998 15.4691C2.51805 15.7552 2.69193 16.015 2.91134 16.2334L2.98356 16.3056C3.48064 16.7633 4.13759 17.0076 4.81298 16.9858C5.48836 16.964 6.12817 16.6778 6.59467 16.1889L14.0113 8.8556C14.1516 8.71378 14.2622 8.54542 14.3366 8.36036C14.411 8.1753 14.4477 7.97725 14.4447 7.77782C14.4459 7.6046 14.4126 7.43286 14.3468 7.27262C14.281 7.11239 14.184 6.96685 14.0613 6.84449C13.7808 6.58721 13.4103 6.45059 13.0299 6.4641C12.6495 6.47761 12.2896 6.64018 12.028 6.91671L6.91689 11.9834C6.81228 12.0873 6.67069 12.1453 6.52326 12.1448C6.37584 12.1443 6.23466 12.0852 6.13078 11.9806C6.02691 11.876 5.96884 11.7344 5.96936 11.587C5.96988 11.4395 6.02895 11.2984 6.13356 11.1945L11.2669 6.11115C11.7374 5.62911 12.3786 5.35137 13.0521 5.33786C13.7256 5.32435 14.3774 5.57615 14.8669 6.03893C15.092 6.26809 15.2689 6.54003 15.3873 6.83868C15.5056 7.13733 15.5629 7.45666 15.5558 7.77782C15.5552 8.12366 15.4856 8.46591 15.3511 8.78453C15.2166 9.10315 15.0199 9.39173 14.7724 9.63338L7.378 16.9889C6.66128 17.7045 5.6908 18.1079 4.678 18.1112Z" fill="#B0B0B0"/>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- SHARE DROPDOWN END -->
                   </div>
-                  <!-- SHARE DROPDOWN END -->
                 </div>
               </div>
 
+              <!-- PRODUCT-PRICES -->
               <div class="product-prices">
                 <span class="current-price">
                   <span class="sign">&dollar; </span>
@@ -765,14 +789,1910 @@
                   40.00
                 </span>
               </div>
+
+              <!-- PRODUCT-COLORS -->
+              <div class="product-colors">
+                <div class="product-colors-header">
+                  <h4 class="colors-title">Colors</h4>
+                </div>
+
+                <div class="product-colors-body">
+                  <button class="colorbox" style="border-color: #dd3936">
+                    <span class="color" style="background: #dd3936"></span>
+                  </button>
+
+                  <button class="colorbox" style="border-color: #E97001">
+                    <span class="color" style="background: #E97001"></span>
+                  </button>
+
+                  <button class="colorbox" style="border-color: #12393C">
+                    <span class="color" style="background: #12393C"></span>
+                  </button>
+
+                  <button class="colorbox" style="border-color: #B6B6B6">
+                    <span class="color" style="background: #B6B6B6"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- PRODUCT-STORAGES -->
+              <div class="product-storage">
+                <div class="product-storage-header">
+                  <h4 class="storage-title">Storages</h4>
+                </div>
+
+                <div class="product-storage-body">
+                  <button class="btn-storage">32 GB</button>
+                  <button class="btn-storage">64 GB</button>
+                  <button class="btn-storage active">128 GB</button>
+                  <button class="btn-storage">256 GB</button>
+                  <button class="btn-storage">512 GB</button>
+                </div>
+              </div>
+
+              <!-- PRODUCT BUTTONS -->
+              <div class="product-buttons">
+                <div class="cartbtn">
+                  <button class="btn-submit" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+                    <span class="btn-text">Add To Cart</span>
+                  </button>
+                </div>
+
+                <div class="buybtn">
+                  <a href="checkout.html" class="btn-addto">
+                    <span class="btn-text">Buy Now</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
   </section>
-	<!--========== CART-SECTION END ============-->
+	<!--========== PRODUCT-DETAILS END ============-->
+
+
+	<!--========== PRODUCT-INFOS START ============-->
+  <div class="productinfos">
+    <div class="container">
+      <div class="productinfos-content">
+        <!-- PRODUCT INFO TAB LIST START -->
+        <ul class="nav nav-tabs" id="infoTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="descriptions-tab" data-bs-toggle="tab" data-bs-target="#descriptions" type="button" role="tab" aria-controls="descriptions" aria-selected="true">
+              Description
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="specification-tab" data-bs-toggle="tab" data-bs-target="#specification" type="button" role="tab" aria-controls="specification" aria-selected="false">
+              Specification
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">
+              <span>Ratings and</span> Reviews
+            </button>
+          </li>
+        </ul>
+        <!-- PRODUCT INFO TAB LIST END -->
+  
+        <!-- PRODUCT INFO CONTENT START -->
+        <div class="tab-content" id="infoTabContent">
+          <div class="tab-pane fade show active" id="descriptions" role="tabpanel" aria-labelledby="descriptions-tab">
+            <div class="description">
+              <div class="description-header">
+                <h2 class="description-title">iPhone 12 Pro Max - 128GB</h2>
+              </div>
+              
+              <div class="description-body">
+                <ul class="descriptionlist">
+                  <li class="descriptionlist-item">
+                    Operating System: Android 10, MIUI 12
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Processor: MediaTek Helio G25 (12 nm)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    CPU: Octa-core
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    GPU: PowerVR GE8320 (650 MHz)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    RAM: 2GB
+                  </li>
+                  
+                  <li class="descriptionlist-item">
+                    ROM: 32GB
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Display: 6.53 inches 720 x 1600 pixels
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Rear Camera: 13MP
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Front Camera: 5MP
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Battery: Non-removable Li-Po 5000 mAh battery (Charging 10W)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Connectivity: Wi-Fi 802.11 b/g/n, hotspot. Bluetooth: 5.0, A2DP, LE
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Sensors: Accelerometer, gyro, proximity
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="specification-tab">
+            <div class="description">
+              <div class="description-header">
+                <h2 class="description-title">iPhone 12 Pro Max - 128GB</h2>
+              </div>
+              
+              <div class="description-body">
+                <ul class="descriptionlist">
+                  <li class="descriptionlist-item">
+                    Operating System: Android 10, MIUI 12
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Processor: MediaTek Helio G25 (12 nm)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    CPU: Octa-core
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    GPU: PowerVR GE8320 (650 MHz)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    RAM: 2GB
+                  </li>
+                  
+                  <li class="descriptionlist-item">
+                    ROM: 32GB
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Display: 6.53 inches 720 x 1600 pixels
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Rear Camera: 13MP
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Front Camera: 5MP
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Battery: Non-removable Li-Po 5000 mAh battery (Charging 10W)
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Connectivity: Wi-Fi 802.11 b/g/n, hotspot. Bluetooth: 5.0, A2DP, LE
+                  </li>
+  
+                  <li class="descriptionlist-item">
+                    Sensors: Accelerometer, gyro, proximity
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+            <div class="reviews">
+              <div class="reviews-header">
+                <h2 class="reviews-title">Ratings & Reviews of iPhone 12 Pro Max - 128GB</h2>
+              </div>
+
+              <div class="reviews-body">
+                <!-- RATINGS START -->
+                <div class="ratings">
+                  <div class="ratings-left">
+                    <div class="reting">
+                      <span class="getrate">4.5</span>
+                      <span class="totalrate">/5</span>
+                    </div>
+
+                    <ul class="ratinglist">
+                      <li class="ratinglist-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511.98685 511" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <g>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" fill="#ffc107" data-original="#ffc107"></path>
+                          </g>
+                        </svg>
+                      </li>
+                      <li class="ratinglist-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511.98685 511" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <g>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" fill="#ffc107" data-original="#ffc107"></path>
+                          </g>
+                        </svg>
+                      </li>
+                      <li class="ratinglist-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511.98685 511" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <g>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" fill="#ffc107" data-original="#ffc107"></path>
+                          </g>
+                        </svg>
+                      </li>
+                      <li class="ratinglist-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511.98685 511" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <g>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" fill="#ffc107" data-original="#ffc107"></path>
+                          </g>
+                        </svg>
+                      </li>
+                      <li class="ratinglist-item">
+                        <svg version="1.1" xmlns:svgjs="http://svgjs.com/svgjs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                          <path fill="#A0AEC0" d="M510.7,196.1c-3.4-10.4-12.5-17.7-23.4-18.7L339.5,164L281,27.2c-4.3-10-14.1-16.5-25-16.5v410.6l127.4,76.2 c9.3,5.6,21.1,5.1,29.9-1.3c8.9-6.4,13-17.4,10.6-28.1L391,323L502.7,225C510.9,217.8,514,206.5,510.7,196.1z"/>
+                          <path fill="#FFC107" d="M231,27.2L172.5,164L24.7,177.4c-10.9,1-20,8.3-23.4,18.7c-3.4,10.4-0.3,21.7,8,28.9L121,323L88.1,468 c-2.4,10.7,1.7,21.7,10.6,28.1c4.8,3.4,10.3,5.2,15.9,5.2c4.8,0,9.6-1.3,13.9-3.9L256,421.3V10.7C245.1,10.7,235.3,17.2,231,27.2z" />
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <p class="ratingcount">53 Ratings</p>
+                  </div>
+
+                  <div class="ratings-right">
+                    <div class="reting-single">
+                      <ul class="ratinglist">
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+
+                      <p class="ratingcount">40</p>
+                    </div>
+
+                    <div class="reting-single">
+                      <ul class="ratinglist">
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+
+                      <p class="ratingcount">30</p>
+                    </div>
+
+                    <div class="reting-single">
+                      <ul class="ratinglist">
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+
+                      <p class="ratingcount">8</p>
+                    </div>
+
+                    <div class="reting-single">
+                      <ul class="ratinglist">
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+
+                      <p class="ratingcount">5</p>
+                    </div>
+
+                    <div class="reting-single">
+                      <ul class="ratinglist">
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#F2B807"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="ratinglist-item">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.23879 2.34166C7.47879 1.60486 8.52119 1.60486 8.76039 2.34166L9.61639 4.97526C9.66869 5.13565 9.77035 5.27541 9.90685 5.37455C10.0433 5.47369 10.2077 5.52714 10.3764 5.52726H13.146C13.9212 5.52726 14.2428 6.51926 13.6164 6.97526L11.3764 8.60246C11.2396 8.70169 11.1378 8.84167 11.0855 9.00235C11.0331 9.16302 11.033 9.33613 11.0852 9.49686L11.9412 12.1305C12.1812 12.8673 11.3372 13.4809 10.7092 13.0249L8.46919 11.3977C8.33255 11.2985 8.16804 11.245 7.99919 11.245C7.83034 11.245 7.66582 11.2985 7.52919 11.3977L5.28919 13.0249C4.66199 13.4809 3.81879 12.8673 4.05799 12.1305L4.91399 9.49686C4.96613 9.33613 4.96603 9.16302 4.91372 9.00235C4.86141 8.84167 4.75956 8.70169 4.62279 8.60246L2.38359 6.97606C1.75719 6.52006 2.07959 5.52806 2.85399 5.52806H5.62279C5.79163 5.52811 5.95615 5.47473 6.09281 5.37558C6.22947 5.27643 6.33125 5.13658 6.38359 4.97606L7.23959 2.34246L7.23879 2.34166Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+
+                      <p class="ratingcount">2</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- RATINGS END -->
+
+                <!-- REVIEW START -->
+                <div class="givereview">
+                  <div class="givereview-header">
+                    <h4 class="givereview-title">Give your review</h4>
+                  </div>
+
+                  <div class="givereview-body">
+                    <!-- REVIEW FORM START -->
+                    <form class="reviewform">
+                      <ul class="reviewlist">
+                        <li class="reviewlist-item">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4795 4.68308C14.9595 3.20948 17.0443 3.20948 17.5227 4.68308L19.2347 9.95028C19.3393 10.2711 19.5427 10.5506 19.8156 10.7488C20.0886 10.9471 20.4173 11.054 20.7547 11.0543H26.2939C27.8443 11.0543 28.4875 13.0383 27.2347 13.9503L22.7547 17.2047C22.4812 17.4031 22.2775 17.6831 22.1729 18.0044C22.0682 18.3258 22.0681 18.672 22.1723 18.9935L23.8843 24.2607C24.3643 25.7343 22.6763 26.9615 21.4203 26.0495L16.9403 22.7951C16.6671 22.5967 16.338 22.4898 16.0003 22.4898C15.6626 22.4898 15.3336 22.5967 15.0603 22.7951L10.5803 26.0495C9.32593 26.9615 7.63953 25.7343 8.11793 24.2607L9.82993 18.9935C9.93421 18.672 9.93402 18.3258 9.8294 18.0044C9.72477 17.6831 9.52108 17.4031 9.24753 17.2047L4.76913 13.9519C3.51633 13.0399 4.16113 11.0559 5.70993 11.0559H11.2475C11.5852 11.056 11.9143 10.9492 12.1876 10.7509C12.4609 10.5526 12.6645 10.2729 12.7691 9.95188L14.4811 4.68468L14.4795 4.68308Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="reviewlist-item">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4795 4.68308C14.9595 3.20948 17.0443 3.20948 17.5227 4.68308L19.2347 9.95028C19.3393 10.2711 19.5427 10.5506 19.8156 10.7488C20.0886 10.9471 20.4173 11.054 20.7547 11.0543H26.2939C27.8443 11.0543 28.4875 13.0383 27.2347 13.9503L22.7547 17.2047C22.4812 17.4031 22.2775 17.6831 22.1729 18.0044C22.0682 18.3258 22.0681 18.672 22.1723 18.9935L23.8843 24.2607C24.3643 25.7343 22.6763 26.9615 21.4203 26.0495L16.9403 22.7951C16.6671 22.5967 16.338 22.4898 16.0003 22.4898C15.6626 22.4898 15.3336 22.5967 15.0603 22.7951L10.5803 26.0495C9.32593 26.9615 7.63953 25.7343 8.11793 24.2607L9.82993 18.9935C9.93421 18.672 9.93402 18.3258 9.8294 18.0044C9.72477 17.6831 9.52108 17.4031 9.24753 17.2047L4.76913 13.9519C3.51633 13.0399 4.16113 11.0559 5.70993 11.0559H11.2475C11.5852 11.056 11.9143 10.9492 12.1876 10.7509C12.4609 10.5526 12.6645 10.2729 12.7691 9.95188L14.4811 4.68468L14.4795 4.68308Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="reviewlist-item">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4795 4.68308C14.9595 3.20948 17.0443 3.20948 17.5227 4.68308L19.2347 9.95028C19.3393 10.2711 19.5427 10.5506 19.8156 10.7488C20.0886 10.9471 20.4173 11.054 20.7547 11.0543H26.2939C27.8443 11.0543 28.4875 13.0383 27.2347 13.9503L22.7547 17.2047C22.4812 17.4031 22.2775 17.6831 22.1729 18.0044C22.0682 18.3258 22.0681 18.672 22.1723 18.9935L23.8843 24.2607C24.3643 25.7343 22.6763 26.9615 21.4203 26.0495L16.9403 22.7951C16.6671 22.5967 16.338 22.4898 16.0003 22.4898C15.6626 22.4898 15.3336 22.5967 15.0603 22.7951L10.5803 26.0495C9.32593 26.9615 7.63953 25.7343 8.11793 24.2607L9.82993 18.9935C9.93421 18.672 9.93402 18.3258 9.8294 18.0044C9.72477 17.6831 9.52108 17.4031 9.24753 17.2047L4.76913 13.9519C3.51633 13.0399 4.16113 11.0559 5.70993 11.0559H11.2475C11.5852 11.056 11.9143 10.9492 12.1876 10.7509C12.4609 10.5526 12.6645 10.2729 12.7691 9.95188L14.4811 4.68468L14.4795 4.68308Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="reviewlist-item">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4795 4.68308C14.9595 3.20948 17.0443 3.20948 17.5227 4.68308L19.2347 9.95028C19.3393 10.2711 19.5427 10.5506 19.8156 10.7488C20.0886 10.9471 20.4173 11.054 20.7547 11.0543H26.2939C27.8443 11.0543 28.4875 13.0383 27.2347 13.9503L22.7547 17.2047C22.4812 17.4031 22.2775 17.6831 22.1729 18.0044C22.0682 18.3258 22.0681 18.672 22.1723 18.9935L23.8843 24.2607C24.3643 25.7343 22.6763 26.9615 21.4203 26.0495L16.9403 22.7951C16.6671 22.5967 16.338 22.4898 16.0003 22.4898C15.6626 22.4898 15.3336 22.5967 15.0603 22.7951L10.5803 26.0495C9.32593 26.9615 7.63953 25.7343 8.11793 24.2607L9.82993 18.9935C9.93421 18.672 9.93402 18.3258 9.8294 18.0044C9.72477 17.6831 9.52108 17.4031 9.24753 17.2047L4.76913 13.9519C3.51633 13.0399 4.16113 11.0559 5.70993 11.0559H11.2475C11.5852 11.056 11.9143 10.9492 12.1876 10.7509C12.4609 10.5526 12.6645 10.2729 12.7691 9.95188L14.4811 4.68468L14.4795 4.68308Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                        <li class="reviewlist-item">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4795 4.68308C14.9595 3.20948 17.0443 3.20948 17.5227 4.68308L19.2347 9.95028C19.3393 10.2711 19.5427 10.5506 19.8156 10.7488C20.0886 10.9471 20.4173 11.054 20.7547 11.0543H26.2939C27.8443 11.0543 28.4875 13.0383 27.2347 13.9503L22.7547 17.2047C22.4812 17.4031 22.2775 17.6831 22.1729 18.0044C22.0682 18.3258 22.0681 18.672 22.1723 18.9935L23.8843 24.2607C24.3643 25.7343 22.6763 26.9615 21.4203 26.0495L16.9403 22.7951C16.6671 22.5967 16.338 22.4898 16.0003 22.4898C15.6626 22.4898 15.3336 22.5967 15.0603 22.7951L10.5803 26.0495C9.32593 26.9615 7.63953 25.7343 8.11793 24.2607L9.82993 18.9935C9.93421 18.672 9.93402 18.3258 9.8294 18.0044C9.72477 17.6831 9.52108 17.4031 9.24753 17.2047L4.76913 13.9519C3.51633 13.0399 4.16113 11.0559 5.70993 11.0559H11.2475C11.5852 11.056 11.9143 10.9492 12.1876 10.7509C12.4609 10.5526 12.6645 10.2729 12.7691 9.95188L14.4811 4.68468L14.4795 4.68308Z" fill="#A0AEC0"/>
+                          </svg>
+                        </li>
+                      </ul>
+
+                      <textarea rows="6" class="inputfield" placeholder="Enter review..."></textarea>
+
+                      <div class="review-images">
+                        <figure class="reviewthumb">
+                          <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                        </figure>
+
+                        <figure class="reviewthumb">
+                          <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                        </figure>
+
+                        <figure class="reviewthumb">
+                          <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                        </figure>
+
+                        <div class="uploadthumb">
+                          <input type="file" id="uploadimage" hidden>
+                          <label for="uploadimage">
+                            <img src="assets/images/reviews/upload-thumb.png" alt="review-thumb">
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="submitinfo">
+                        <div class="submitbox">
+                          <button class="btn-submit">
+                            <span class="btn-text">Submit</span>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- REVIEW FORM END -->
+
+                    <!-- REVIEWS -->
+                    <div class="reviewpreview">
+                      <div class="singlereview">
+                        <div class="singlereview-header">
+                          <div class="topinfo">
+                            <div class="list-date">
+                              <ul class="revlist">
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                              </ul>28 June 2023
+
+                              <p class="datetime">28 June 2023</p>
+                            </div>
+                            
+                            <p class="author">By Jhon Doe</p>
+                          </div>
+                        </div>
+
+                        <div class="singlereview-body">
+                          <div class="reviewinfo">
+                            <p class="reviewtext">
+                              valo lagescha tai arekta order korlam .asha kori porer taw valo hobe
+                              valo lagescha tai arekta order korlam .
+                            </p>
+                          </div>
+
+                          <div class="reviewimages">
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="singlereview">
+                        <div class="singlereview-header">
+                          <div class="topinfo">
+                            <div class="list-date">
+                              <ul class="revlist">
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                              </ul>
+
+                              <p class="datetime">28 June 2023</p>
+                            </div>
+                            
+                            <p class="author">By Jhon Doe</p>
+                          </div>
+                        </div>
+
+                        <div class="singlereview-body">
+                          <div class="reviewinfo">
+                            <p class="reviewtext">
+                              valo lagescha tai arekta order korlam .asha kori porer taw valo hobe
+                              valo lagescha tai arekta order korlam .
+                            </p>
+                          </div>
+
+                          <div class="reviewimages">
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="singlereview">
+                        <div class="singlereview-header">
+                          <div class="topinfo">
+                            <div class="list-date">
+                              <ul class="revlist">
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                                <li class="revlist-item">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.23879 2.34154C7.47879 1.60474 8.52119 1.60474 8.76039 2.34154L9.61639 4.97514C9.66869 5.13553 9.77035 5.27528 9.90685 5.37442C10.0433 5.47356 10.2077 5.52702 10.3764 5.52714H13.146C13.9212 5.52714 14.2428 6.51914 13.6164 6.97514L11.3764 8.60234C11.2396 8.70156 11.1378 8.84155 11.0855 9.00222C11.0331 9.1629 11.033 9.33601 11.0852 9.49674L11.9412 12.1303C12.1812 12.8671 11.3372 13.4807 10.7092 13.0247L8.46919 11.3975C8.33255 11.2983 8.16804 11.2449 7.99919 11.2449C7.83034 11.2449 7.66582 11.2983 7.52919 11.3975L5.28919 13.0247C4.66199 13.4807 3.81879 12.8671 4.05799 12.1303L4.91399 9.49674C4.96613 9.33601 4.96603 9.1629 4.91372 9.00222C4.86141 8.84155 4.75956 8.70156 4.62279 8.60234L2.38359 6.97594C1.75719 6.51994 2.07959 5.52794 2.85399 5.52794H5.62279C5.79163 5.52799 5.95615 5.47461 6.09281 5.37546C6.22947 5.27631 6.33125 5.13646 6.38359 4.97594L7.23959 2.34234L7.23879 2.34154Z" fill="#F2B807"/>
+                                  </svg>
+                                </li>
+                              </ul>
+
+                              <p class="datetime">28 June 2023</p>
+                            </div>
+                            
+                            <p class="author">By Jhon Doe</p>
+                          </div>
+                        </div>
+
+                        <div class="singlereview-body">
+                          <div class="reviewinfo">
+                            <p class="reviewtext">
+                              valo lagescha tai arekta order korlam .asha kori porer taw valo hobe
+                              valo lagescha tai arekta order korlam .
+                            </p>
+                          </div>
+
+                          <div class="reviewimages">
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+
+                            <figure class="reviewthumb">
+                              <img src="assets/images/reviews/review-thumb.png" alt="review-thumb">
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- REVIEW END -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT INFO CONTENT END -->
+      </div>
+    </div>
+  </div>
+	<!--========== PRODUCT-INFOS END ==============-->
+
+
+	<!--========== RELATED-PRODUCTS START ============-->
+  <section class="related-products">
+    <div class="container p-0">
+      <div class="related-products-content">
+        <!-- RELATED-PRODUCTS HEADER START -->
+        <div class="related-products-header">
+          <!-- RELATED-CATEGORY TITLE -->
+          <h1 class="related-products-title">Related Products</h1>
+        </div>
+        <!-- RELATED-PRODUCTS HEADER END -->
+
+        <!-- RELATED-PRODUCTS BODY START -->
+        <div class="related-products-body">
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge out-of-stock">Out of Stock</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-1.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Samsung Galaxy A32 - 8/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-2.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Vivo Y20G - 6/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-20%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-3.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Vivo V21e - 8/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/tab-1.png" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Realme C11 (2021) - 2/32GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/tab-3.png" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Realme GT Master Edition - 8/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL START -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-6.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Oppo F19 Pro - 8/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-7.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Oppo Reno 6</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT-THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-8.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">OnePlus 8 - 8/128GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <span class="reviewcount">4.5</span>
+                
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-9.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-BODY END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">Infinix Hot 10 Play - 4/64GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVEIW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+
+          <!-- PRODUCT START -->
+          <div class="product">
+            <!-- CARD-BADGE START -->
+            <span class="discount-badge">-10%</span>
+            <!-- CARD-BADGE END -->
+
+            <!-- PRODUCT-BUTTONS START -->
+            <div class="product-buttons">
+              <!-- WISHLIST-BUTTON -->
+              <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to wishlist">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z" fill="rgba(0,0,0,1)"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- CART-BUTTON -->
+              <button class="btn-cart" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Add to cart">
+                <span class="icon">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M10.3536 19.4778C9.11306 19.4778 8.10352 20.4874 8.10352 21.7279C8.10352 22.9685 9.11306 23.9781 10.3536 23.9781C11.5942 23.9781 12.6037 22.9685 12.6037 21.7279C12.6037 20.4874 11.5942 19.4778 10.3536 19.4778ZM10.3536 22.478C9.9396 22.478 9.60359 22.142 9.60359 21.7279C9.60359 21.3139 9.9396 20.9779 10.3536 20.9779C10.7676 20.9779 11.1037 21.3139 11.1037 21.7279C11.1037 22.142 10.7676 22.478 10.3536 22.478Z" fill="#888888"></path>
+                      <path d="M19.3536 19.4778C18.1131 19.4778 17.1035 20.4874 17.1035 21.7279C17.1035 22.9685 18.1131 23.9781 19.3536 23.9781C20.5942 23.9781 21.6037 22.9685 21.6037 21.7279C21.6037 20.4874 20.5942 19.4778 19.3536 19.4778ZM19.3536 22.478C18.9396 22.478 18.6036 22.142 18.6036 21.7279C18.6036 21.3139 18.9396 20.9779 19.3536 20.9779C19.7676 20.9779 20.1037 21.3139 20.1037 21.7279C20.1037 22.142 19.7676 22.478 19.3536 22.478Z" fill="#888888"></path>
+                      <path d="M24.4291 4.74714C24.2881 4.57614 24.0766 4.47713 23.8546 4.47713H6.22578L5.57325 2.03352C5.48624 1.705 5.18923 1.47699 4.84871 1.47699H1.35355C0.939531 1.47699 0.603516 1.81301 0.603516 2.22702C0.603516 2.64104 0.939531 2.97706 1.35355 2.97706H4.27269L8.12937 17.4212C8.21637 17.7498 8.51339 17.9778 8.8539 17.9778H20.8545C21.2685 17.9778 21.6045 17.6417 21.6045 17.2277C21.6045 16.8137 21.2685 16.4777 20.8545 16.4777H9.42993L8.99041 14.8306L22.3875 14.2276C22.7371 14.2111 23.0296 13.9561 23.0911 13.6126L24.5911 5.36217C24.6316 5.14316 24.5716 4.91815 24.4291 4.74714ZM21.7245 12.756L8.59289 13.347L6.6263 5.9772H22.9561L21.7245 12.756Z" fill="#888888"></path>
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" transform="translate(0.603516 0.727539)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- PRODUCT-BUTTONS END -->
+            
+            <!-- PRODUCT-HEADER START -->
+            <figure class="product-header">
+              <!-- PRODUCT THUMBNAIL -->
+              <a href="product-details.html" class="link">
+                <img src="assets/images/products/mobile-tabs/mobile-10.jpg" alt="card-thumbnail">
+              </a>
+            </figure>
+            <!-- PRODUCT-HEADER END -->
+            
+            <!-- PRODUCT-BODY START -->
+            <div class="product-body">
+              <!-- PRODUCT-TITLE START -->
+              <a href="product-details.html" class="cardlink">
+                <h5 class="product-title">OnePlus 8 pro - 12/256GB</h5>
+              </a>
+              <!-- PRODUCT-TITLE END -->
+            
+              <!-- PRODUCT-REVIEW START -->
+              <div class="review">
+                <!-- REVIEW AVERAGE -->
+                <span class="reviewcount">4.5</span>
+                
+                <!-- REVIEW LIST -->
+                <ul class="reviewlist">
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#FFC107"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                  <li class="reviewlist-item">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.84215 3.50525L6.84991 5.46092L7.31823 8.22879C7.35949 8.44965 7.10934 8.61137 6.90938 8.50664L4.45996 7.20642V0C4.56403 0 4.66811 0.0463092 4.71271 0.14249L5.94299 2.65387L8.68232 3.05284C8.91128 3.09203 8.99565 3.35029 8.84215 3.50525V3.50525Z" fill="#ECEFF1"></path>
+                      <path d="M4.46004 0V7.20642L2.01063 8.50664C1.81401 8.61244 1.56014 8.45214 1.60177 8.22879L2.0701 5.46092L0.0778577 3.50525C-0.0756489 3.35029 0.00835231 3.09203 0.237683 3.05284L2.97701 2.65387L4.2073 0.14249C4.2519 0.0463092 4.35597 0 4.46004 0V0Z" fill="#FFC107"></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- PRODUCT-REVIEW END -->
+
+              <!-- PRODUCT-PRICES START -->
+              <div class="prices">
+                <!-- CURRENT PRICE -->
+                <p class="current-price">
+                  <span>$ </span>
+                  270
+                </p>
+
+                <!-- PREVIOUS PRICE -->
+                <p class="previous-price">
+                  <span>$ </span>
+                  370
+                </p>
+              </div>
+              <!-- PRODUCT-PRICES END -->
+            </div>
+            <!-- PRODUCT-BODY END -->
+          </div>
+          <!-- PRODUCT-END -->
+        </div>
+        <!-- RELATED-PRODUCTS BODY END -->
+      </div>
+    </div>
+  </section>
+	<!--========== RELATED-PRODUCTS END ==============-->
 
 
   <!--========== FOOTER-START ==========-->
