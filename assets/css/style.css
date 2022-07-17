@@ -2165,6 +2165,53 @@ select {
   color: #dd3936;
 }
 
+.btn-filter {
+  padding: 0.25rem 1rem;
+  background: transparent;
+  border: none;
+  border: solid 0.0625rem #616161;
+  color: #616161;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-filter .text {
+  color: inherit;
+  font: inherit;
+}
+
+.btn-filter .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.btn-filter .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/
@@ -8551,6 +8598,191 @@ select {
   .searchresult {
     padding: 2rem 0.5rem 4rem;
   }
+}
+
+.searchresult .filter-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.searchresult .filter-results-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .searchresult .filter-results-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.searchresult .filter-results-header .resultinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchresult .filter-results-header .resultinfo .result {
+  color: #202022;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.searchresult .filter-results-header .filter-sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 36rem) {
+  .searchresult .filter-results-header .filter-sorting {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+.searchresult .filter-results-header .filter-sorting .filter {
+  width: 5.25rem;
+  display: block;
+}
+
+@media screen and (min-width: 62rem) {
+  .searchresult .filter-results-header .filter-sorting .filter {
+    display: none;
+  }
+}
+
+.searchresult .filter-results-header .filter-sorting .sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.searchresult .filter-results-header .filter-sorting .sorting .sortlabel {
+  color: #202022;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
+.searchresult .filter-results-header .filter-sorting .sorting .selectfield {
+  background: white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1426_13293' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1426_13293)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 8%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  -webkit-box-shadow: 0 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0 0 0.0625rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0 0 0.0625rem rgba(50, 50, 71, 0.08);
+  padding: 0.5rem 0.75rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
+.searchresult .emptyresult {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.searchresult .emptyresult .emptybox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.searchresult .emptyresult .emptybox .icon {
+  height: 8.75rem;
+  width: 8.75rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 36rem) {
+  .searchresult .emptyresult .emptybox .icon {
+    height: 15.625rem;
+    width: 15.625rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .searchresult .emptyresult .emptybox .icon {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .searchresult .emptyresult .emptybox .icon {
+    height: 25rem;
+    width: 25rem;
+  }
+}
+
+.searchresult .emptyresult .emptybox .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /**=======================================================**

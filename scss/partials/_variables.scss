@@ -92,6 +92,7 @@ $border-2: hsl(216, 6%, 15%); //#242629
 $input-border: hsl(255, 7%, 88%); //#E0DFE3
 $category-border: hsl(0, 0%, 74%); //#BDBDBD
 $inputborder: hsl(214, 20%, 69%); //#A0AEC0
+$button-border: rgb(111, 111, 111); //#6F6F6F
 
 /**=====================================================**
                     NORMAL-COLORS
@@ -106,6 +107,9 @@ $shadow-1: #4444440d;
 $shadow-2: #42474c59;
 $shadow-3: rgb(14, 14, 16);
 
+$shadow-4: rgba(50, 50, 71, 0.08);
+$shadow-5: $shadow-4;
+
 /**=====================================================**
                         BOX-SHADOWS
 =======================================================**/
@@ -114,6 +118,8 @@ $box-shadow-1: 0 .5rem 3rem 0 $dividerbg, 0 .25rem .5rem 0 $shadow-1, 0 0 .0625r
 $box-shadow-2: drop-shadow(0 .9375rem 1.875rem rgba($black, 0.15));
 $box-shadow-3: 0 0 1.875rem rgba($black, 0.12);
 $share-shadow: 0 -0.25rem .375rem rgba($shadow-3, 0.08);
+$selectshadow: 0 .0625rem .125rem $shadow-4, 0 0 .0625rem $shadow-5;
+
 
 /**=====================================================**
                         TEXT-SHADOWS

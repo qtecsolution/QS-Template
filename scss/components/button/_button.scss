@@ -399,6 +399,30 @@
 	}
 }
 
+.btn-filter {
+	padding: length(4) length(16);
+	@include transparent-button;
+	@include border(solid, 1, $text-primary);
+	color: $text-primary;
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
+	@include flex-center;
+
+	.text {
+		color: inherit;
+		font: inherit;
+	}
+
+	.icon {
+		@include square(length(16));
+		@include flex-center;
+		overflow: hidden;
+
+		svg {
+			@include wh100;
+		}
+	}
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/

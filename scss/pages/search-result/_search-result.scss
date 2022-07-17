@@ -10,8 +10,96 @@
   }
 
   .filter-results {
+    @include flex-column;
+    gap: length(24);
+
     &-header {
+      @include flex-column;
+      gap: length(8);
+
+      @include breakpoint(mobile576) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .resultinfo {
+        @include flex-center-vert;
+
+        .result {
+          color: $footer-heading;
+          @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+        }
+      }
+
+      .filter-sorting {
+        @include flex-center-between;
+
+        @include breakpoint(mobile576) {
+          justify-content: flex-end;
+          gap: length(16);
+        }
       
+        .filter {
+          width: length(84);
+          display: block;
+  
+          @include breakpoint(tab992) {
+            display: none;
+          }
+        }
+
+        .sorting {
+          @include flex-center-vert;
+          gap: length(8);
+
+          .sortlabel {
+            color: $footer-heading;
+            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+          }
+
+          .selectfield {
+            background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1426_13293' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1426_13293)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 8%;
+            appearance: none;
+            @include radius(5);
+            box-shadow: $selectshadow;
+            padding: length(8) length(12);
+            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+          }
+        }
+      }
+      
+    }
+  }
+
+  .emptyresult {
+    @include wh100;
+    @include flex-center;
+
+    .emptybox {
+      @include flex-center-column;
+      gap: length(16);
+      text-align: center;
+
+      .icon {
+        @include square(length(140));
+        overflow: hidden;
+
+        @include breakpoint(mobile576) {
+          @include square(length(250));
+        }
+
+        @include breakpoint(mobile768) {
+          @include square(length(320));
+        }
+
+        @include breakpoint(tab992) {
+          @include square(length(400));
+        }
+  
+        svg {
+          @include wh100;
+        }
+      }
     }
   }
 }
