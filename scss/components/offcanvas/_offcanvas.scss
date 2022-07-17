@@ -549,6 +549,31 @@
 			}
 		}
 	}
+
+	.emptycart {
+		@include flex-center;
+		height: calc(100vh - 5.25rem);
+
+		.cartbox {
+			@include flex-center-column;
+			text-align: center;
+
+			.icon {
+				@include square(length(140));
+				@include flex-center;
+				overflow: hidden;
+
+				svg {
+					@include wh100;
+				}
+			}
+
+			.textcart {
+				color: $footer-heading;
+				@include font-face($secondaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+			}
+		}
+	}
 }
 
 .cartoffcanvas {

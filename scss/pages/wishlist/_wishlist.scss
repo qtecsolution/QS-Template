@@ -50,6 +50,7 @@
 
       .icon {
         @include square(length(140));
+        @include flex-center;
         overflow: hidden;
 
         @include breakpoint(mobile768) {
