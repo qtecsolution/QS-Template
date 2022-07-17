@@ -76,10 +76,6 @@
     @include flex-center;
 
     .emptybox {
-      @include flex-center-column;
-      gap: length(16);
-      text-align: center;
-
       .icon {
         @include square(length(140));
         overflow: hidden;
