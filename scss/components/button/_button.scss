@@ -377,6 +377,28 @@
 	}
 }
 
+.btn-clear {
+	@include transparent-button;
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
+	color: $primary;
+}
+
+.btn-apply {
+	padding: length(4) length(16);
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
+	@include setBgColor($primary, $white);
+	@include border(solid, 2, transparent);
+	@include radius(4);
+	@include transitionsbackground;
+
+	@include hover {
+		// background: darken($primary, 10%);
+		background: transparent;
+		border-color: $primary;
+		color: $primary;
+	}
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/

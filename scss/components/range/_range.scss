@@ -1,0 +1,34 @@
+.noUi-target {
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  background: $border-1;
+  height: length(6);
+
+  .noUi-base {
+    .noUi-connects {
+      .noUi-connect {
+        background: $primary;
+      }
+    }
+
+    .noUi-origin {
+      .noUi-handle {
+        @include square(length(16));
+        @include circle;
+        background: $white;
+        cursor: pointer;
+        @include border(solid, 3, $primary);
+        right: length(-15);
+        top: length(-5);
+
+        &::before, &::after {
+          width: 0;
+          height: 0;
+          content: '';
+          display: none;
+        }
+      }
+    }
+  }
+}

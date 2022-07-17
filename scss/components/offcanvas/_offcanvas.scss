@@ -82,6 +82,11 @@
       @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(28, 20));
 		}
 
+    .filter-title {
+      color: $footer-heading;
+      @include font-face($secondaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+    }
+
 		.headerinfo {
 			@include flex-center-vert;
 			@include w100;

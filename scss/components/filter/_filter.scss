@@ -1,0 +1,65 @@
+/**=======================================================**
+                      FILTER-PRODUCT START
+**=======================================================**/
+
+.searchfilter {
+  background: $white;
+  @include radius(10);
+  padding: length(24) length(16);
+  @include flex-column;
+  gap: length(16);
+
+  &-header {
+    @include flex-column;
+    gap: length(16);
+    @include border-single(bottom, solid, 1, $profilebox-2);
+    padding-bottom: length(16);
+
+    .filter-title {
+      color: $footer-heading;
+      @include font-face($secondaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+    }
+
+    .priceinputs {
+      @include flex-center-between;
+      gap: length(16);
+
+      .minimum,
+      .maximum {
+        @include flex-center-vert;
+
+        .inputlabel {
+          color: $text-primary;
+          @include font-face($secondaryFont, style('normal'), size(12), weight('medium'), line-height(20, 12));
+          width: length(40);
+        }
+
+        .inputfield {
+          @include border(solid, 1, $sharebg);
+          @include radius(5);
+          text-align: center;
+          width: calc(100% - 2.5rem);
+          @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+          padding: length(4) length(8);
+          @include transitionsall;
+
+          &:focus {
+            border-color: $datetext;
+          }
+        }
+      }
+    }
+
+    .searchbuttons {
+      @include flex-center-between;
+    }
+  }
+  
+  &-body {
+    
+  }
+}
+
+/**=======================================================**
+                      FILTER-PRODUCT END
+**=======================================================**/
