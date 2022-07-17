@@ -1,0 +1,70 @@
+/**=======================================================**
+                      CUSTOM-RADIO START
+**=======================================================**/
+
+.custom-radio {
+  .radio {
+    &:checked ~ .radiolabel {
+      &::before {
+        border-color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .radiolabel {
+    cursor: pointer;
+    color: $text-primary;
+    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+    position: relative;
+    padding-left: length(24);
+    @include flex-center-vert;
+    gap: length(4);
+
+    .icon {
+      @include square(length(16));
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      @include vertical-align;
+      @include transitionsall;
+    }
+
+    &::before {
+      left: 0;
+      @include square(length(16));
+      @include circle;
+      @include border(solid, 1, $inputborder);
+      background: $white;
+    }
+    
+    &::after {
+      @include square(length(8));
+      @include circle;
+      background: $primary;
+      left: length(4);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::selection {
+      @include setBgColor(transparent, $text-primary);
+    }
+  }
+}
+
+/**=======================================================**
+                      CUSTOM-RADIO END
+**=======================================================**/

@@ -56,7 +56,31 @@
   }
   
   &-body {
-    
+    @include flex-column;
+    gap: length(16);
+
+    .filterdetail {
+      @include flex-column;
+      gap: length(16);
+
+      &-header {
+        .filterdetail-title {
+          color: $footer-heading;
+          @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: length(8);
+      }
+    }
+
+    .divider {
+      @include w100;
+      height: length(1);
+      background: $profilebox-2;
+    }
   }
 }
 

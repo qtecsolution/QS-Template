@@ -1,0 +1,62 @@
+/**=======================================================**
+                      CUSTOM-CHECKBOX START
+**=======================================================**/
+
+.custom-checkbox {
+  .checkbox {
+    &:checked ~ .checklabel {
+      &::before {
+        background: $primary;
+        border-color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .checklabel {
+    cursor: pointer;
+    color: $text-primary;
+    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+    position: relative;
+    padding-left: length(24);
+
+    &::before,
+    &::after {
+      content: '';
+      @include vertical-align;
+      @include transitionsall;
+    }
+
+    &::before {
+      background: $white;
+      left: 0;
+      @include square(length(16));
+      @include border(solid, 1, $inputborder);
+      @include radius(3);
+    }
+
+    &::after {
+      left: length(5);
+      width: length(5);
+      height: length(10);
+      @include border(solid, 2, $white);
+      @include transform(translateY(-65%) rotate(45deg));
+      border-top: 0;
+      border-left: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::selection {
+      @include setBgColor(transparent, $text-primary);
+    }
+  }
+}
+
+/**=======================================================**
+                      CUSTOM-CHECKBOX END
+**=======================================================**/
