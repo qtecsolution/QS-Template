@@ -682,6 +682,10 @@ textarea {
   resize: none;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
@@ -9254,6 +9258,266 @@ select {
   }
 }
 
+.checkout .checkoutproducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .checkoutproducts-header .checkoutproducts-title {
+  color: #202022;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.checkout .checkoutproducts-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout .shipping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .shipping-header .shipping-title {
+  color: #202022;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.checkout .shipping-body {
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 1rem 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .shipping-body .nav-tabs {
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 25.875rem) {
+  .checkout .shipping-body .nav-tabs {
+    gap: 1rem;
+  }
+}
+
+.checkout .shipping-body .nav-tabs .nav-item {
+  width: auto;
+}
+
+.checkout .shipping-body .nav-tabs .nav-link {
+  background: white;
+  color: #dd3936;
+  border: solid 0.0625rem #dd3936;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.33333;
+  padding: 0.75rem 1rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 25.875rem) {
+  .checkout .shipping-body .nav-tabs .nav-link {
+    padding: 0.75rem 1.5rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.14286;
+  }
+}
+
+.checkout .shipping-body .nav-tabs .nav-link:hover:not(.active) {
+  background: #dd3936;
+  color: white;
+}
+
+.checkout .shipping-body .nav-tabs .nav-link.active {
+  background: #dd3936;
+  color: white;
+}
+
+.checkout .shipping-body .addform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkout .shipping-body .addform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkout .shipping-body .addform .inputbox .inputlabel {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 62rem) {
+  .checkout .shipping-body .addform .inputbox .inputlabel {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield {
+  background: white;
+  color: #272726;
+  border: solid 0.0625rem #dfdee3;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+  padding: 0.625rem 1rem;
+  width: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .checkout .shipping-body .addform .inputbox .inputfield {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield::placeholder {
+  color: #bfbfbf;
+}
+
+.checkout .shipping-body .addform .inputbox .inputfield:focus {
+  border-color: #b0b0b0;
+}
+
+.checkout .shipping-body .addform .inputbox .selectfield {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1426_13293' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1426_13293)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+  border: solid 0.0625rem #dfdee3;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  color: #272726;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+  padding: 0.625rem 1rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .checkout .shipping-body .addform .inputbox .selectfield {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+}
+
+.checkout .shipping-body .addform .inputbox .selectfield:focus {
+  border-color: #b0b0b0;
+}
+
+.checkout .shipping-body .addform .inputbox .error-message {
+  display: none;
+  color: #dd3936;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.33333;
+}
+
+.checkout .shipping-body .addform .inputbox.errorfield .inputfield {
+  border-color: #dd3936;
+}
+
+.checkout .shipping-body .addform .inputbox.errorfield .selectfield {
+  border-color: #dd3936;
+}
+
+.checkout .shipping-body .addform .inputbox.errorfield .error-message {
+  display: block;
+}
+
 .checkout-details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9293,7 +9557,7 @@ select {
 
 .checkout-details .order-summary-body .order {
   border-bottom: solid 0.03125rem #b0b0b0;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

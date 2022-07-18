@@ -9,6 +9,157 @@
     padding: length(0) length(8) length(64);
   }
 
+  .checkoutproducts {
+    @include flex-column;
+    gap: length(24);
+
+    &-header {
+      .checkoutproducts-title {
+        color: $footer-heading;
+        @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(28, 20));
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: length(16);
+    }
+  }
+
+  .shipping {
+    @include flex-column;
+    gap: length(24);
+
+    &-header {
+      .shipping-title {
+        color: $footer-heading;
+        @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(28, 20));
+      }
+    }
+
+    &-body {
+      background: $white;
+      @include radius(10);
+      padding: length(16) length(16) length(32);
+      @include flex-column;
+      gap: length(24);
+
+      .nav-tabs {
+        gap: length(8);
+          
+        @include breakpoint(mobile414) {
+          gap: length(16);
+        }
+
+        .nav-item {
+          width: auto;
+        }
+        
+        .nav-link {
+          @include setBgColor($white, $primary);
+          @include border(solid, 1, $primary);
+          @include radius(8);
+          @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+          padding: length(12) length(16);
+          @include transitionsall;
+          
+          @include breakpoint(mobile414) {
+            padding: length(12) length(24);
+            @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(16, 14));
+          }
+
+          &:hover:not(.active) {
+            @include setBgColor($primary, $white);
+          }
+
+          &.active {
+            @include setBgColor($primary, $white);
+          }
+        }
+      }
+
+      .addform {
+        @include flex-column;
+        gap: length(8);
+
+        .inputbox {
+          @include flex-column;
+          gap: length(8);
+
+          .inputlabel {
+            @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(tab992) {
+              @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+          }
+
+          .inputfield {
+            @include setBgColor($white, $secondary);
+            @include border(solid, 1, $input-border);
+            @include radius(5);
+            @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            padding: length(10) length(16);
+            @include w100;
+            @include transitionsall;
+        
+            @include breakpoint(tab992) {
+              @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+
+            &::placeholder {
+              color: $placeholder-color;
+            }
+
+            &:focus {
+              border-color: $border-1;
+            }
+          }
+
+          .selectfield {
+            appearance: none;
+            background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1426_13293' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1426_13293)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+            @include border(solid, 1, $input-border);
+            @include radius(5);
+            color: $secondary;
+            cursor: pointer;
+            @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            padding: length(10) length(16);
+            @include transitionsall;
+        
+            @include breakpoint(tab992) {
+              @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+            }
+
+            &:focus {
+              border-color: $border-1;
+            }
+          }
+
+          .error-message {
+            display: none;
+            color: $primary;
+            @include font-face($secondaryFont, style('normal'), size(12), weight('medium'), line-height(16, 12));
+          }
+
+          &.errorfield {
+            .inputfield {
+              border-color: $primary;
+            }
+
+            .selectfield {
+              border-color: $primary;
+            }
+
+            .error-message {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &-details {
     @include flex-column;
     gap: length(24);
@@ -30,7 +181,7 @@
 
         .order {
           @include border-single(bottom, solid, 0.5, $border-1);
-          padding: length(8) length(12);
+          padding: length(12);
           @include flex-center-between;
 
           &-title {
