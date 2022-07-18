@@ -8,13 +8,13 @@
   <meta name="description" content="qShop- Super Market, eCommerce HTML Template">
 	<meta name="author" content="Qtec Solution Limited">
   <!-- SITE TITLE -->
-  <title>qShop | Forgot Password</title>
+  <title>qShop | Reset Password</title>
   <!-- SITE FAVICON -->
-  <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
   <!-- BOOTSTRAP CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
   <!-- CUSTOM STYLE -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="m-0 p-0">
@@ -23,7 +23,7 @@
 	<div class="preloader" id="preloader">
 		<div class="preload">
 			<div class="loaderlogo">
-        <img src="assets/images/logo/loader.svg" alt="logo">
+        <img src="../assets/images/logo/loader.svg" alt="logo">
       </div>
 		</div>
 	</div>
@@ -36,15 +36,9 @@
       <div class="authentication">
         <div class="authentication-header">
           <div class="verification">
-            <div class="verification-head">
-              <h3 class="verification-title">Verification</h3>
-
-              <a href="login.html" class="btn-back">Back to Login</a>
-            </div>
-
             <div class="verification-body">
-              <p class="verification-text">
-                Please enter your email address. You will receive a code to create a new password via email
+              <p class="verification-text fw-bold text-center">
+                Congratulations! your password has been successfully reset.
               </p>
             </div>
           </div>
@@ -52,20 +46,19 @@
     
         <div class="authentication-body">
           <form class="authenticationform">
-            <div class="inputbox">
-              <input type="email" placeholder="Enter your email address" class="inputfield">
-              <p class="error-message">This field is required</p>
-            </div>
+            <figure class="congrats">
+              <img src="../assets/images/empty-screen/success/congrats.svg" alt="congrats-thumbnail">
+            </figure>
 
             <div class="submitbox">
               <!-- SUBMIT BUTTON START -->
               <button class="btn-submit d-none" type="button">
-                <span class="btn-text">Sign In</span>
+                <span class="btn-text">Continue</span>
               </button>
               <!-- SUBMIT BUTTON END -->
 
-              <a href="verification.html" class="btn-submit" role="button">
-                <span class="btn-text">Send OTP</span>
+              <a href="login.html" class="btn-submit" role="button">
+                <span class="btn-text">Continue Shopping</span>
               </a>
             </div>
           </form>
@@ -77,7 +70,7 @@
 
 
   <!-- PRELOADER JS -->
-  <script src="assets/js/features/preloader/loader.js"></script>
+  <script src="../assets/js/features/preloader/loader.js"></script>
 </body>
 
 </html>

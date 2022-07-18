@@ -8,13 +8,13 @@
   <meta name="description" content="qShop- Super Market, eCommerce HTML Template">
 	<meta name="author" content="Qtec Solution Limited">
   <!-- SITE TITLE -->
-  <title>qShop | Register</title>
+  <title>qShop | Login</title>
   <!-- SITE FAVICON -->
-  <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
   <!-- BOOTSTRAP CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
   <!-- CUSTOM STYLE -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="m-0 p-0">
@@ -23,7 +23,7 @@
 	<div class="preloader" id="preloader">
 		<div class="preload">
 			<div class="loaderlogo">
-        <img src="assets/images/logo/loader.svg" alt="logo">
+        <img src="../assets/images/logo/loader.svg" alt="logo">
       </div>
 		</div>
 	</div>
@@ -36,53 +36,49 @@
       <div class="authentication">
         <div class="authentication-header">
           <figure class="logo">
-            <img src="assets/images/logo/logo.svg" alt="logo">
+            <img src="../assets/images/logo/logo.svg" alt="logo">
           </figure>
         </div>
     
         <div class="authentication-body">
           <form class="authenticationform">
             <div class="inputbox">
-              <input type="text" placeholder="Enter full name" class="inputfield">
-            </div>
-
-            <div class="inputbox">
-              <input type="email" placeholder="Enter email address" class="inputfield">
+              <input type="email" placeholder="Enter email or mobile number" class="inputfield">
               <p class="error-message">This field is required</p>
             </div>
-
+  
             <div class="inputbox">
-              <input type="tel" pattern="[0-9]{3}-[0-9]{8}" placeholder="Enter phone number" class="inputfield">
+              <input type="password" placeholder="Enter password" class="inputfield logpassfield">
               <p class="error-message">This field is required</p>
+            
+              <a href="forgot-password.html" class="authlink">Forgot?</a>
             </div>
 
             <div class="inputbox">
-              <input type="password" placeholder="Enter password" class="inputfield">
-              <p class="error-message">This field is required</p>
-              <p class="text">Minimum password must be 8 characters</p>
-            </div>
-
-            <div class="inputbox">
-              <input type="password" placeholder="Enter confirm password" class="inputfield">
-              <p class="error-message">Password didn't match. please try again</p>
+              <input type="checkbox" id="rememberpassword" class="checkfield" hidden>
+              <label for="rememberpassword" class="checklabel">Remember Password</label>
             </div>
 
             <div class="submitbox">
               <!-- SUBMIT BUTTON START -->
-              <button class="btn-submit" type="button">
-                <span class="btn-text">Sign Up</span>
+              <button class="btn-submit d-none" type="button">
+                <span class="btn-text">Sign In</span>
               </button>
               <!-- SUBMIT BUTTON END -->
+
+              <a href="../index.html" class="btn-submit" role="button">
+                <span class="btn-text">Sign In</span>
+              </a>
             </div>
           </form>
 
           <div class="logininfo">
             <div class="socialinfo">
-              <h6 class="title">Or, Sign up with social</h6>
+              <h6 class="title">Or, Sign in with social</h6>
 
               <ul class="social-list">
                 <li class="social-list-item">
-                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign up with Facebook">
+                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign in with Facebook">
                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="28.4805" cy="27.6138" r="27.5" fill="#F7F7F7"/>
                       <path d="M30.2851 39.2351V28.6486H33.8566L34.3875 24.5037H30.2851V21.8635C30.2851 20.6674 30.6184 19.8485 32.335 19.8485H34.5102V16.153C33.4518 16.0396 32.388 15.9848 31.3236 15.989C28.1668 15.989 25.9994 17.9162 25.9994 21.454V24.4959H22.4512V28.6409H26.0071V39.2351H30.2851Z" fill="#3B5998"/>
@@ -91,7 +87,7 @@
                 </li>
 
                 <li class="social-list-item">
-                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign up with Google">
+                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign in with Google">
                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="28.4805" cy="27.6138" r="27.5" fill="#F7F7F7"/>
                       <g clip-path="url(#googleicon)">
@@ -114,8 +110,8 @@
             </div>
 
             <div class="authdetails">
-              <span class="authtitle">Already have an account?</span>
-              <a href="login.html" class="authlink">SIGN IN</a>
+              <span class="authtitle">Don't have an account?</span>
+              <a href="register.html" class="authlink">SIGN UP</a>
             </div>
           </div>
         </div>
@@ -126,11 +122,11 @@
 
 
   <!-- PRELOADER JS -->
-  <script src="assets/js/features/preloader/loader.js"></script>
+  <script src="../assets/js/features/preloader/loader.js"></script>
   <!-- BOOTSTRAP JS -->
-  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- TOOLTIP JS -->
-  <script src="assets/js/bootstrap/tooltip/tooltip.js"></script>
+  <script src="../assets/js/bootstrap/tooltip/tooltip.js"></script>
 </body>
 
 </html>
