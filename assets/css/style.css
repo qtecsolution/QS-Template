@@ -1197,7 +1197,7 @@ select {
 .auth .authentication-body .authenticationform .inputbox .checklabel::after {
   content: '';
   position: absolute;
-  top: 40%;
+  top: 43%;
   left: 0.4375rem;
   width: 0.3125rem;
   height: 0.625rem;
@@ -6320,6 +6320,106 @@ select {
 
 /**=======================================================**
                       CUSTOM-CHECKBOX END
+**=======================================================**/
+/**=======================================================**
+                      PAYMENT-RADIO START
+**=======================================================**/
+.paymentradio .radio:checked ~ .radiolabel::before {
+  border-color: #dd3936;
+}
+
+.paymentradio .radio:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.paymentradio .radiolabel {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.paymentradio .radiolabel .icon {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  background: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.paymentradio .radiolabel .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.paymentradio .radiolabel .text {
+  color: #616161;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.paymentradio .radiolabel::before, .paymentradio .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.paymentradio .radiolabel::before {
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border: solid 0.0625rem #a0aec0;
+  background: white;
+}
+
+.paymentradio .radiolabel::after {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  background: #dd3936;
+  left: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.paymentradio .radiolabel::-moz-selection {
+  background: transparent;
+  color: #616161;
+}
+
+.paymentradio .radiolabel::selection {
+  background: transparent;
+  color: #616161;
+}
+
+/**=======================================================**
+                      PAYMENT-RADIO END
 **=======================================================**/
 /**=======================================================**
                         ANIMATION START

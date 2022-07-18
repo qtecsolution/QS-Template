@@ -1,0 +1,76 @@
+/**=======================================================**
+                      PAYMENT-RADIO START
+**=======================================================**/
+
+.paymentradio {
+  .radio {
+    &:checked ~ .radiolabel {
+      &::before {
+        border-color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .radiolabel {
+    cursor: pointer;
+    position: relative;
+    padding-left: length(32);
+    @include flex-center-vert;
+    gap: length(16);
+
+    .icon {
+      @include square(length(64));
+      @include radius(10);
+      background: $profilebox-2;
+      @include flex-center;
+      padding: length(8);
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .text {
+      color: $text-primary;
+      @include font-face($secondaryFont, style('normal'), size(16), weight('medium'), line-height(24, 16));
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      @include vertical-align;
+      @include transitionsall;
+    }
+
+    &::before {
+      left: 0;
+      @include square(length(16));
+      @include circle;
+      @include border(solid, 1, $inputborder);
+      background: $white;
+    }
+    
+    &::after {
+      @include square(length(8));
+      @include circle;
+      background: $primary;
+      left: length(4);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::selection {
+      @include setBgColor(transparent, $text-primary);
+    }
+  }
+}
+
+/**=======================================================**
+                      PAYMENT-RADIO END
+**=======================================================**/
