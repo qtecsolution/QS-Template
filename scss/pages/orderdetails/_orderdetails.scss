@@ -4,11 +4,187 @@
 
 .orderdetails {
   padding: length(0) length(8) length(48);
-  
+
   @include breakpoint(tab992) {
     padding: length(0) length(8) length(64);
   }
 
+
+  .order-detail-timeline {
+    background: $white;
+    padding: length(17) length(19);
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(phone500) {
+      gap: length(20);
+    }
+
+    .timelinetitle {
+      @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(30, 18));
+    }
+
+    .timeline {
+      display: flex;
+
+      @include breakpoint(tablet991) {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-box {
+        width: 25%;
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        @include breakpoint(tablet991) {
+          width: 100%;
+          margin: 0 auto;
+          min-height: length(140);
+          flex-direction: row;
+        }
+
+        &:first-of-type {
+          .timeline-progress {
+            &::before {
+              left: 0;
+              width: 0;
+              height: length(0);
+            }
+          }
+        }
+
+        .timeline-time {
+          @include breakpoint(tablet991) {
+            width: calc(50% - 4rem);
+          }
+
+          .date {
+            color: $gray-1;
+
+            @include breakpoint(desktop1199) {
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            }
+
+            @include breakpoint(desktop1200) {
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            }
+          }
+
+          .time {
+            color: $gray-1;
+
+            @include breakpoint(desktop1199) {
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            }
+
+            @include breakpoint(desktop1200) {
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            }
+          }
+        }
+
+        .timeline-progress {
+          @include square(length(40));
+          @include border(solid, 2, $profilebox);
+          @include circle;
+          background: $white;
+          @include flex-center;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            left: -540%;
+            width: 540%;
+            height: length(2);
+            background: $profilebox;
+
+            @include breakpoint(laptop1400) {
+              left: -445%;
+              width: 445%;
+            }
+
+            @include breakpoint(desktop1199) {
+              left: -352%;
+              width: 352%;
+            }
+
+            @include breakpoint(tablet991) {
+              left: 50%;
+              @include transform(translateX(-50%));
+              width: length(2);
+              top: -283%;
+              height: 283%;
+            }
+          }
+
+          .timelinebox {
+            @include square(length(24));
+            @include circle;
+            background: $white;
+          }
+        }
+
+        .timeline-status {
+          @include breakpoint(tablet991) {
+            width: calc(50% - 4rem);
+            padding: 0 length(40);
+          }
+
+          @include breakpoint(phone500) {
+            padding: 0 length(10);
+          }
+
+          .statustitle {
+            color: $text-primary;
+            @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+
+            @include breakpoint(desktop1199) {
+              @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(20, 14));
+            }
+          }
+
+          .statustext {
+            color: $gray-1;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+            @include line-clamp;
+
+            @include breakpoint(tab992) {
+              padding: length(0) length(8);
+            }
+
+            @include breakpoint(desktop1199) {
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            }
+          }
+        }
+
+        &.active {
+          .timeline-progress {
+            border-color: $primary;
+
+            &::before {
+              background: $primary;
+            }
+
+            .timelinebox {
+              background: $primary;
+            }
+          }
+
+          .timeline-status {
+            .statustitle {
+              color: $dark-1;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**=======================================================**

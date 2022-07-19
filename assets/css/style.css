@@ -10069,6 +10069,282 @@ select {
   }
 }
 
+.orderdetails .order-detail-timeline {
+  background: white;
+  padding: 1.0625rem 1.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .orderdetails .order-detail-timeline {
+    gap: 1.25rem;
+  }
+}
+
+.orderdetails .order-detail-timeline .timelinetitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+}
+
+.orderdetails .order-detail-timeline .timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails .order-detail-timeline .timeline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 8.75rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box:first-of-type .timeline-progress::before {
+  left: 0;
+  width: 0;
+  height: 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-time {
+    width: calc(50% - 4rem);
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-time .date {
+  color: #878787;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-time .date {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-time .date {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-time .time {
+  color: #878787;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-time .time {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-time .time {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-progress {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: solid 0.125rem #c4c4c4;
+  border-radius: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-progress::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -540%;
+  width: 540%;
+  height: 0.125rem;
+  background: #c4c4c4;
+}
+
+@media screen and (max-width: 87.5rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-progress::before {
+    left: -445%;
+    width: 445%;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-progress::before {
+    left: -352%;
+    width: 352%;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-progress::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0.125rem;
+    top: -283%;
+    height: 283%;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-progress .timelinebox {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background: white;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-status {
+    width: calc(50% - 4rem);
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-status {
+    padding: 0 0.625rem;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-status .statustitle {
+  color: #616161;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-status .statustitle {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.42857;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box .timeline-status .statustext {
+  color: #878787;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 62rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-status .statustext {
+    padding: 0rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .orderdetails .order-detail-timeline .timeline-box .timeline-status .statustext {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+.orderdetails .order-detail-timeline .timeline-box.active .timeline-progress {
+  border-color: #dd3936;
+}
+
+.orderdetails .order-detail-timeline .timeline-box.active .timeline-progress::before {
+  background: #dd3936;
+}
+
+.orderdetails .order-detail-timeline .timeline-box.active .timeline-progress .timelinebox {
+  background: #dd3936;
+}
+
+.orderdetails .order-detail-timeline .timeline-box.active .timeline-status .statustitle {
+  color: #242424;
+}
+
 /**=======================================================**
                       ORDER-DETAILS END
 **=======================================================**/
