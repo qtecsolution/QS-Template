@@ -340,6 +340,7 @@
   @include flex-center-vert;
   align-items: flex-start;
   gap: length(14);
+  @include radius(8);
 
   &-cap {
     @include square(length(96));

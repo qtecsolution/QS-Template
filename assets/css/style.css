@@ -2825,6 +2825,8 @@ select {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 0.875rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .card-order-cap {
@@ -9942,6 +9944,9 @@ select {
 
 .orderlist-menu {
   background: white;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 48rem) {

@@ -11,6 +11,8 @@
   
   &-menu {
     background: $white;
+    @include radius(8);
+    overflow: hidden;
 
     .nav-tabs {
       @include breakpoint(mobile768) {
