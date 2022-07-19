@@ -1,0 +1,87 @@
+/**=======================================================**
+                      ORDER-LIST START
+**=======================================================**/
+
+.orderlist {
+  padding: length(0) length(8) length(48);
+  
+  @include breakpoint(tab992) {
+    padding: length(0) length(8) length(64);
+  }
+  
+  &-menu {
+    background: $white;
+
+    .nav-tabs {
+      @include breakpoint(mobile768) {
+        flex-direction: column;
+      }
+
+      .nav-item {
+        width: auto;
+
+        &:last-of-type {
+          .nav-link {
+            border-bottom: 0;
+          }
+        }
+      }
+
+      .nav-link {
+        border: none;
+        @include radius(0);
+        padding: length(8) length(14);
+        @include flex-center;
+        border: none;
+
+        .text {
+          color: $product-title;
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          }
+        }
+
+        .icon {
+          display: none;
+
+          @include breakpoint(mobile768) {
+            @include flex-center;
+          }
+        }
+
+        @include breakpoint(mobile768) {
+          padding: length(12) length(14);
+          @include border-single(bottom, solid, 1, $ratecolor);
+          @include flex-center-between;
+        }
+
+        &.active {
+          background: $notifyborder;
+
+          .text {
+            color: $primary;
+          }
+        }
+
+        &:hover:not(.active) {
+          border-color: $ratecolor;
+        }
+      }
+    }
+  }
+
+  &-content {
+    .orders {
+      .orderlink {
+        @include w100;
+      }
+    }
+  }
+}
+
+
+/**=======================================================**
+                      ORDER-LIST END
+**=======================================================**/

@@ -334,6 +334,90 @@
   }
 }
 
+.card-order {
+  background: $white;
+  padding: length(12);
+  @include flex-center-vert;
+  align-items: flex-start;
+  gap: length(14);
+
+  &-cap {
+    @include square(length(96));
+    background: $capbg;
+    @include flex-center;
+    padding: length(4) length(12);
+
+    img {
+      @include wh100;
+      object-fit: contain;
+    }
+  }
+
+  &-details {
+    width: calc(100% - 6rem);
+    @include flex-column;
+    gap: length(4);
+
+    @include breakpoint(mobile768) {
+      gap: length(12);
+    }
+
+    .orderid-orderbadge {
+      @include flex-center-between;
+      gap: length(4);
+      flex-wrap: wrap;
+
+      .orderid {
+        color: $dark-2;
+        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
+
+        @include breakpoint(mobile768) {
+          @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+        }
+      }
+
+      .orderbadge {
+        .orderedbadge {
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(19.6, 12));
+          padding: length(4) length(8);
+          text-align: center;
+          @include radius(4);
+          &.badge-success {
+            @include setBgColor($successbg, $successcolor);
+          }
+  
+          &.badge-pending {
+            @include setBgColor($pendingbg, $pendingcolor);
+          }
+  
+          &.badge-cancelled {
+            @include setBgColor($dangerbg, $dangercolor);
+          }
+        }
+      }
+    }
+
+    .orderdate {
+      color: $text-primary;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(19.6, 12));
+
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+      }
+    }
+
+    .orderprice {
+      color: $dark-1;
+      @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(22.4, 16));
+
+      span {
+        color: inherit;
+        font: inherit;
+      }
+    }
+  }
+}
+
 /**=======================================================**
                         CARDS END
 **=======================================================**/
