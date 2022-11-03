@@ -1,4 +1,3 @@
-
 /**=====================================================
                       APP MENU START
 =====================================================**/
@@ -21,7 +20,7 @@
     @include list-horizontal;
 
     &-item {
-      width: calc(100% / 4);
+      width: calc(100% / 3);
       @include flex-center;
 
       @include hover {
