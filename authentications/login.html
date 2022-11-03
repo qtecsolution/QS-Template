@@ -1,132 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- REQUIRED META TAGS -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="qShop- Super Market, eCommerce HTML Template">
-	<meta name="author" content="Qtec Solution Limited">
-  <!-- SITE TITLE -->
-  <title>qShop | Login</title>
-  <!-- SITE FAVICON -->
-  <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
-  <!-- BOOTSTRAP CSS -->
-  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
-  <!-- CUSTOM STYLE -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+  <head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="qShop- Super Market, eCommerce HTML Template"
+    />
+    <meta name="author" content="Qtec Solution Limited" />
+    <!-- SITE TITLE -->
+    <title>qShop | Login</title>
+    <!-- SITE FAVICON -->
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
 
-<body class="m-0 p-0">
-  
-  <!--========== PRELOADER-START ==========-->
-	<div class="preloader" id="preloader">
-		<div class="preload">
-			<div class="loaderlogo">
-        <img src="../assets/images/logo/loader.svg" alt="logo">
-      </div>
-		</div>
-	</div>
-	<!--========== PRELOADER-END ============-->
-
-  
-  <!--========== AUTHENTICATION-START ==========-->
-  <div class="auth">
-    <div class="auth-box">
-      <div class="authentication">
-        <div class="authentication-header">
-          <figure class="logo">
-            <img src="../assets/images/logo/logo.svg" alt="logo">
-          </figure>
+  <body class="m-0 p-0">
+    <!--========== PRELOADER-START ==========-->
+    <div class="preloader" id="preloader">
+      <div class="preload">
+        <div class="loaderlogo">
+          <img src="../assets/images/logo/loader.svg" alt="logo" />
         </div>
-    
-        <div class="authentication-body">
-          <form class="authenticationform">
-            <div class="inputbox">
-              <input type="email" placeholder="Enter email or mobile number" class="inputfield">
-              <p class="error-message">This field is required</p>
-            </div>
-  
-            <div class="inputbox">
-              <input type="password" placeholder="Enter password" class="inputfield logpassfield">
-              <p class="error-message">This field is required</p>
-            
-              <a href="forgot-password.html" class="authlink">Forgot?</a>
-            </div>
+      </div>
+    </div>
+    <!--========== PRELOADER-END ============-->
 
-            <div class="inputbox">
-              <input type="checkbox" id="rememberpassword" class="checkfield" hidden>
-              <label for="rememberpassword" class="checklabel">Remember Password</label>
-            </div>
+    <!--========== AUTHENTICATION-START ==========-->
+    <div class="auth">
+      <div class="auth-box">
+        <div class="authentication">
+          <div class="authentication-header">
+            <figure class="logo">
+              <img src="../assets/images/logo/logo.svg" alt="logo" />
+            </figure>
+          </div>
 
-            <div class="submitbox">
-              <!-- SUBMIT BUTTON START -->
-              <button class="btn-submit d-none" type="button">
-                <span class="btn-text">Sign In</span>
-              </button>
-              <!-- SUBMIT BUTTON END -->
+          <div class="authentication-body">
+            <form class="authenticationform">
+              <div class="inputbox">
+                <input
+                  type="email"
+                  placeholder="Enter email or mobile number"
+                  class="inputfield"
+                />
+                <p class="error-message">This field is required</p>
+              </div>
 
-              <a href="../index.html" class="btn-submit" role="button">
-                <span class="btn-text">Sign In</span>
-              </a>
-            </div>
-          </form>
+              <div class="inputbox">
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  class="inputfield logpassfield"
+                />
+                <p class="error-message">This field is required</p>
 
-          <div class="logininfo">
-            <div class="socialinfo">
-              <h6 class="title">Or, Sign in with social</h6>
+                <a href="forgot-password.html" class="authlink">Forgot?</a>
+              </div>
 
-              <ul class="social-list">
-                <li class="social-list-item">
-                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign in with Facebook">
-                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="28.4805" cy="27.6138" r="27.5" fill="#F7F7F7"/>
-                      <path d="M30.2851 39.2351V28.6486H33.8566L34.3875 24.5037H30.2851V21.8635C30.2851 20.6674 30.6184 19.8485 32.335 19.8485H34.5102V16.153C33.4518 16.0396 32.388 15.9848 31.3236 15.989C28.1668 15.989 25.9994 17.9162 25.9994 21.454V24.4959H22.4512V28.6409H26.0071V39.2351H30.2851Z" fill="#3B5998"/>
-                    </svg>
-                  </button>
-                </li>
+              <div class="inputbox">
+                <input
+                  type="checkbox"
+                  id="rememberpassword"
+                  class="checkfield"
+                  hidden
+                />
+                <label for="rememberpassword" class="checklabel"
+                  >Remember Password</label
+                >
+              </div>
 
-                <li class="social-list-item">
-                  <button class="social-list-link" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign in with Google">
-                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="28.4805" cy="27.6138" r="27.5" fill="#F7F7F7"/>
-                      <g clip-path="url(#googleicon)">
-                        <path d="M23.668 28.1137C23.668 27.1228 23.941 26.1945 24.4153 25.3997V22.0283H21.0439C19.7058 23.7661 18.9805 25.8841 18.9805 28.1137C18.9805 30.3433 19.7058 32.4612 21.0439 34.199H24.4153V30.8276C23.941 30.0328 23.668 29.1046 23.668 28.1137Z" fill="#FBBD00"/>
-                        <path d="M28.9805 33.4263L26.6367 35.7701L28.9805 38.1138C31.2101 38.1138 33.328 37.3885 35.0658 36.0504V32.6826H31.698C30.8963 33.1586 29.9641 33.4263 28.9805 33.4263Z" fill="#0F9D58"/>
-                        <path d="M24.4154 30.8276L21.0439 34.199C21.3089 34.5431 21.5973 34.8726 21.9095 35.1848C23.7982 37.0735 26.3095 38.1137 28.9805 38.1137V33.4262C27.0421 33.4262 25.3432 32.3824 24.4154 30.8276Z" fill="#31AA52"/>
-                        <path d="M38.9805 28.1138C38.9805 27.5054 38.9254 26.8959 38.8167 26.3022L38.7288 25.8218H28.9805V30.5093H33.7247C33.264 31.4257 32.5556 32.1734 31.698 32.6826L35.0658 36.0504C35.4098 35.7855 35.7393 35.4971 36.0515 35.1849C37.9403 33.2961 38.9805 30.7849 38.9805 28.1138Z" fill="#3C79E6"/>
-                        <path d="M32.737 24.3572L33.1513 24.7715L36.4659 21.457L36.0516 21.0427C34.1628 19.154 31.6516 18.1138 28.9805 18.1138L26.6367 20.4575L28.9805 22.8013C30.3995 22.8013 31.7336 23.3538 32.737 24.3572Z" fill="#CF2D48"/>
-                        <path d="M28.9806 22.8013V18.1138C26.3095 18.1138 23.7983 19.154 21.9095 21.0427C21.5973 21.3548 21.3089 21.6843 21.0439 22.0284L24.4154 25.3998C25.3432 23.845 27.0421 22.8013 28.9806 22.8013Z" fill="#EB4132"/>
-                      </g>
-                      <defs>
-                        <clipPath id="googleicon">
-                          <rect width="20" height="20" fill="white" transform="translate(18.9805 18.1138)"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
+              <div class="submitbox">
+                <!-- SUBMIT BUTTON START -->
+                <button class="btn-submit d-none" type="button">
+                  <span class="btn-text">Sign In</span>
+                </button>
+                <!-- SUBMIT BUTTON END -->
 
-            <div class="authdetails">
-              <span class="authtitle">Don't have an account?</span>
-              <a href="register.html" class="authlink">SIGN UP</a>
+                <a href="../index.html" class="btn-submit" role="button">
+                  <span class="btn-text">Sign In</span>
+                </a>
+              </div>
+            </form>
+
+            <div class="logininfo">
+              <div class="socialinfo">
+                <h6 class="title">Or, Sign in with social</h6>
+
+                <ul class="social-list">
+                  <li class="social-list-item">
+                    <button
+                      class="social-list-link"
+                      type="button"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Sign in with Facebook"
+                    >
+                      <svg
+                        width="56"
+                        height="56"
+                        viewBox="0 0 56 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="28.4805"
+                          cy="27.6138"
+                          r="27.5"
+                          fill="#F7F7F7"
+                        />
+                        <path
+                          d="M30.2851 39.2351V28.6486H33.8566L34.3875 24.5037H30.2851V21.8635C30.2851 20.6674 30.6184 19.8485 32.335 19.8485H34.5102V16.153C33.4518 16.0396 32.388 15.9848 31.3236 15.989C28.1668 15.989 25.9994 17.9162 25.9994 21.454V24.4959H22.4512V28.6409H26.0071V39.2351H30.2851Z"
+                          fill="#3B5998"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="social-list-item">
+                    <button
+                      class="social-list-link"
+                      type="button"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Sign in with Google"
+                    >
+                      <svg
+                        width="56"
+                        height="56"
+                        viewBox="0 0 56 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="28.4805"
+                          cy="27.6138"
+                          r="27.5"
+                          fill="#F7F7F7"
+                        />
+                        <g clip-path="url(#googleicon)">
+                          <path
+                            d="M23.668 28.1137C23.668 27.1228 23.941 26.1945 24.4153 25.3997V22.0283H21.0439C19.7058 23.7661 18.9805 25.8841 18.9805 28.1137C18.9805 30.3433 19.7058 32.4612 21.0439 34.199H24.4153V30.8276C23.941 30.0328 23.668 29.1046 23.668 28.1137Z"
+                            fill="#FBBD00"
+                          />
+                          <path
+                            d="M28.9805 33.4263L26.6367 35.7701L28.9805 38.1138C31.2101 38.1138 33.328 37.3885 35.0658 36.0504V32.6826H31.698C30.8963 33.1586 29.9641 33.4263 28.9805 33.4263Z"
+                            fill="#0F9D58"
+                          />
+                          <path
+                            d="M24.4154 30.8276L21.0439 34.199C21.3089 34.5431 21.5973 34.8726 21.9095 35.1848C23.7982 37.0735 26.3095 38.1137 28.9805 38.1137V33.4262C27.0421 33.4262 25.3432 32.3824 24.4154 30.8276Z"
+                            fill="#31AA52"
+                          />
+                          <path
+                            d="M38.9805 28.1138C38.9805 27.5054 38.9254 26.8959 38.8167 26.3022L38.7288 25.8218H28.9805V30.5093H33.7247C33.264 31.4257 32.5556 32.1734 31.698 32.6826L35.0658 36.0504C35.4098 35.7855 35.7393 35.4971 36.0515 35.1849C37.9403 33.2961 38.9805 30.7849 38.9805 28.1138Z"
+                            fill="#3C79E6"
+                          />
+                          <path
+                            d="M32.737 24.3572L33.1513 24.7715L36.4659 21.457L36.0516 21.0427C34.1628 19.154 31.6516 18.1138 28.9805 18.1138L26.6367 20.4575L28.9805 22.8013C30.3995 22.8013 31.7336 23.3538 32.737 24.3572Z"
+                            fill="#CF2D48"
+                          />
+                          <path
+                            d="M28.9806 22.8013V18.1138C26.3095 18.1138 23.7983 19.154 21.9095 21.0427C21.5973 21.3548 21.3089 21.6843 21.0439 22.0284L24.4154 25.3998C25.3432 23.845 27.0421 22.8013 28.9806 22.8013Z"
+                            fill="#EB4132"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="googleicon">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(18.9805 18.1138)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="authdetails">
+                <span class="authtitle">Don't have an account?</span>
+                <a href="register.html" class="authlink">SIGN UP</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--========== AUTHENTICATION-END ============-->
+    <!--========== AUTHENTICATION-END ============-->
 
-
-  <!-- PRELOADER JS -->
-  <script src="../assets/js/features/preloader/loader.js"></script>
-  <!-- BOOTSTRAP JS -->
-  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- TOOLTIP JS -->
-  <script src="../assets/js/bootstrap/tooltip/tooltip.js"></script>
-</body>
-
+    <!-- PRELOADER JS -->
+    <script src="../assets/js/features/preloader/loader.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- TOOLTIP JS -->
+    <script src="../assets/js/bootstrap/tooltip/tooltip.js"></script>
+  </body>
 </html>
