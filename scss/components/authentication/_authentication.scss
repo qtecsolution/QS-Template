@@ -57,8 +57,8 @@
         overflow: hidden;
 
         img {
-          @include wh100;
-          object-fit: contain;
+          @include w100;
+          object-fit: cover;
         }
       }
 
@@ -71,10 +71,22 @@
 
           .verification-title {
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(20), weight('bold'), line-height(28, 20));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(20),
+              weight("bold"),
+              line-height(28, 20)
+            );
 
             @include breakpoint(tab992) {
-              @include font-face($primaryFont, style('normal'), size(24), weight('bold'), line-height(33.6, 24));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(24),
+                weight("bold"),
+                line-height(33.6, 24)
+              );
             }
           }
         }
@@ -82,10 +94,22 @@
         &-body {
           .verification-text {
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-        
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
+
             @include breakpoint(tab992) {
-              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(16),
+                weight("normal"),
+                line-height(22.4, 16)
+              );
             }
           }
         }
@@ -112,13 +136,25 @@
             @include setBgColor($white, $secondary);
             @include border(solid, 1, $input-border);
             @include radius(10);
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
             padding: length(14) length(16);
             @include w100;
             @include transitionsall;
-        
+
             @include breakpoint(tab992) {
-              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(16),
+                weight("normal"),
+                line-height(22.4, 16)
+              );
             }
 
             &::placeholder {
@@ -153,14 +189,26 @@
             padding-left: length(26);
             cursor: pointer;
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-        
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
+
             @include breakpoint(tab992) {
-              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(16),
+                weight("normal"),
+                line-height(22.4, 16)
+              );
             }
 
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               top: 50%;
               @include transform(translateY(-50%));
@@ -172,7 +220,7 @@
             }
 
             &::after {
-              content: '';
+              content: "";
               position: absolute;
               top: 43%;
               left: length(7);
@@ -194,18 +242,36 @@
 
           .error-message {
             color: $primary;
-            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(12),
+              weight("medium"),
+              line-height(16.8, 12)
+            );
             display: none;
           }
 
           .text {
             color: darken($border-1, 15%);
-            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(12),
+              weight("normal"),
+              line-height(16.8, 12)
+            );
           }
 
           .authlink {
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
             position: absolute;
             top: 50%;
             right: length(16);
@@ -223,7 +289,6 @@
             @include w100;
 
             @include breakpoint(mobile576) {
-
             }
 
             .inputverify {
@@ -232,13 +297,25 @@
               @include flex-center;
               @include setBgColor($prime-shops-bg, $text-verify);
               @include border(solid, 1, transparent);
-              @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.2, 18));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(18),
+                weight("semibold"),
+                line-height(25.2, 18)
+              );
               overflow: hidden;
               text-align: center;
               @include transitionsall;
 
               @include breakpoint(mobile576) {
-                @include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(30.8, 22));
+                @include font-face(
+                  $primaryFont,
+                  style("normal"),
+                  size(22),
+                  weight("semibold"),
+                  line-height(30.8, 22)
+                );
                 @include square(length(60));
               }
 
@@ -296,10 +373,22 @@
 
           .title {
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-        
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
+
             @include breakpoint(tab992) {
-              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(16),
+                weight("normal"),
+                line-height(22.4, 16)
+              );
             }
           }
 
@@ -330,19 +419,37 @@
 
           .authtitle {
             color: $text-primary;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
           }
 
           .authlink {
             @include setBgColor(transparent, $primary);
-            @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("medium"),
+              line-height(19.6, 14)
+            );
             text-align: center;
             text-transform: uppercase;
           }
 
           .btn-resend {
             @include setBgColor(transparent, $resendbg);
-            @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("medium"),
+              line-height(19.6, 14)
+            );
             text-align: center;
             text-transform: uppercase;
             @include transitionscolor;
