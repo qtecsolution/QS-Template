@@ -28,6 +28,7 @@
     .sidebar-body {
       @include flex-column;
       padding: size(4) size(0) size(0);
+      background: $white;
 
       .profilelink {
         @include flex-center-between;
@@ -50,6 +51,14 @@
           );
         }
 
+        &:hover:not(.active) {
+          background: $progressbg;
+
+          .text {
+            color: $primary;
+          }
+        }
+
         &.active {
           background: $progressbg;
 
@@ -66,6 +75,126 @@
     }
 
     .shippingaddress {
+    }
+  }
+
+  .change-details {
+    background: $white;
+    @include flex-column;
+    gap: size(32);
+    padding: size(20);
+
+    @include breakpoint(mobile576) {
+      padding: size(24);
+    }
+
+    @include breakpoint(mobile768) {
+      padding: size(32);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(48);
+    }
+
+    .change-header {
+      .title {
+        color: $labeltext;
+        @include font-face(
+          $secondaryFont,
+          style("normal"),
+          size(20),
+          weight("semibold"),
+          line-height(26, 20)
+        );
+
+        @include breakpoint(mobile768) {
+          font-size: size(24);
+        }
+
+        @include breakpoint(tab992) {
+          font-size: size(28);
+        }
+      }
+    }
+
+    .change-body {
+      .changeform {
+        @include flex-column;
+        gap: size(40);
+
+        &-header {
+          @include flex-column;
+          gap: size(24);
+
+          .inputbox {
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              color: $labeltext;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("medium"),
+                line-height(16, 14)
+              );
+            }
+
+            .inputfield {
+              @include setBgColor($white, $black2);
+              @include border(solid, 1, $input-border);
+              @include radius(6);
+              @include w100;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(16, 14)
+              );
+              height: size(48);
+              padding: size(16);
+              @include transitionsall;
+
+              &::placeholder {
+                color: $placeholdertext;
+              }
+
+              &:focus {
+                border-color: $border-1;
+              }
+            }
+          }
+        }
+
+        &-body {
+          @include flex-center-column;
+          gap: size(12);
+          text-align: center;
+
+          .info {
+            color: $labeltext;
+            @include font-face(
+              $secondaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(16, 14)
+            );
+
+            .link {
+              color: $labeltext;
+              font-weight: 700;
+              @include transitionscolor;
+
+              @include hover {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
