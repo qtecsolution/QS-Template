@@ -227,24 +227,13 @@
   background: $white;
   @include radius(10);
   position: relative;
+  @include h100;
 
   .discount-badge {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
-  }
-
-  .product-buttons {
-    position: absolute;
-    top: length(12);
-    left: length(12);
-    z-index: 10;
-    @include flex-column;
-    gap: length(8);
-    opacity: 0;
-    visibility: hidden;
-    @include transitionsall;
   }
 
   &-header {
@@ -271,6 +260,7 @@
     @include flex-center-column;
     gap: length(12);
     text-align: center;
+    @include w100;
 
     .cardlink {
       height: length(36);
@@ -415,9 +405,9 @@
       }
     }
 
-    .buttons {
+    .addbutton {
       @include flex-center;
-      gap: size(10);
+      @include w100;
     }
   }
 

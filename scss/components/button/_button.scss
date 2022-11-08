@@ -1,426 +1,547 @@
-
 /**=======================================================**
                         BUTTONS START
 **=======================================================**/
 
 .up-btn {
-	margin-left: auto;
-	left: 100%;
-	@include circle;
-	padding: length(14);
-	@include flex-center;
-	cursor: pointer;
+  margin-left: auto;
+  left: 100%;
+  @include circle;
+  padding: length(14);
+  @include flex-center;
+  cursor: pointer;
 }
 
 .btn-more {
-	@include flex-center-vert;
-	gap: length(10);
+  @include flex-center-vert;
+  gap: length(10);
 
-	.text {
-		color: $select-text;
-		@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+  .text {
+    color: $select-text;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("normal"),
+      line-height(19.6, 14)
+    );
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
-		}
-	}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(22.4, 16)
+      );
+    }
+  }
 
-	.icon {
-		display: inline-block;
-		margin-top: length(-3);
-	}
+  .icon {
+    display: inline-block;
+    margin-top: length(-3);
+  }
 
-	@include hover {
-		.text {
-			color: $primary;
-		}
+  @include hover {
+    .text {
+      color: $primary;
+    }
 
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-				}
-			}
-		}
-	}
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
 }
 
 .discount-badge {
-	@include setBgColor($primary, $white);
-	@include double-radius(top, right, 10, bottom, left, 10);
-	display: inline-block;
-	@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-	padding: length(8) length(14);
-	text-align: center;
+  @include setBgColor($primary, $white);
+  @include double-radius(top, right, 10, bottom, left, 10);
+  display: inline-block;
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(14),
+    weight("normal"),
+    line-height(19.6, 14)
+  );
+  padding: length(8) length(14);
+  text-align: center;
 }
 
 .out-of-stock {
-	@include setBgColor($offpricebg, $white);
+  @include setBgColor($offpricebg, $white);
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-	@include square(length(32));
-	@include transparent-button;
+  @include square(length(32));
+  @include transparent-button;
 
-	&::after {
-		width: 0;
-		height: 0;
-		content: '';
-		display: none;
-	}
+  &::after {
+    width: 0;
+    height: 0;
+    content: "";
+    display: none;
+  }
 
-	svg {
-		@include wh100;
+  svg {
+    @include wh100;
 
-		path {
-			fill: $border-1;
-		}
-	}
+    path {
+      fill: $border-1;
+    }
+  }
 
-	@include hover {
-		svg {
-			path {
-				fill: $primary;
-			}
-		}
-	}
+  @include hover {
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+  }
 }
 
 .btn-full {
-	@include setBgColor($primary, $white);
-	@include radius(10);
-	@include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
-	@include w100;
-	display: inline-block;
-	padding: length(16);
-	text-align: center;
-	@include transitionsall;
+  @include setBgColor($primary, $white);
+  @include radius(10);
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(16),
+    weight("bold"),
+    line-height(22.4, 16)
+  );
+  @include w100;
+  display: inline-block;
+  padding: length(16);
+  text-align: center;
+  @include transitionsall;
 
-	@include hover {
-		@include setBgColor(darken($primary, 15%), rgba($white, 0.75));
-	}
+  @include hover {
+    @include setBgColor(darken($primary, 15%), rgba($white, 0.75));
+  }
 }
 
 .btn-submit {
-	@include w100;
-	padding: length(12);
-	position: relative;
-	background: $white;
-	@include border(solid, 2, $primary);
-	@include radius(5);
-	@include flex-center;
-	text-align: center;
-	@include transitionsall;
+  @include w100;
+  padding: length(12);
+  position: relative;
+  background: $white;
+  @include border(solid, 2, $primary);
+  @include radius(5);
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		@include wh100;
-		background: $primary;
-		@include transitionsall;
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    @include wh100;
+    background: $primary;
+    @include transitionsall;
+  }
 
-	.btn-text {
-		color: $white;
-		position: relative;
-		@include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
-		text-align: center;
-		text-transform: uppercase;
-	
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
-		}
-	}
+  .btn-text {
+    color: $white;
+    position: relative;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(12),
+      weight("medium"),
+      line-height(16.8, 12)
+    );
+    text-align: center;
+    text-transform: uppercase;
 
-	@include hover {
-		.btn-text {
-			color: $primary;
-		}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("medium"),
+        line-height(19.6, 14)
+      );
+    }
+  }
 
-		&::before {
-			width: 0;
-		}
-	}
+  @include hover {
+    .btn-text {
+      color: $primary;
+    }
+
+    &::before {
+      width: 0;
+    }
+  }
 }
 
 .btn-back {
-	@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
-	@include border(solid, 1.5, $primary);
-	position: relative;
-	padding: length(8) length(20);
-	@include radius(30);
-	@include setBgColor($white, $primary);
-	@include transitionsall;
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(12),
+    weight("normal"),
+    line-height(16.8, 12)
+  );
+  @include border(solid, 1.5, $primary);
+  position: relative;
+  padding: length(8) length(20);
+  @include radius(30);
+  @include setBgColor($white, $primary);
+  @include transitionsall;
 
-	@include hover {
-		@include setBgColor($primary, $white);
-	}
+  @include hover {
+    @include setBgColor($primary, $white);
+  }
 }
 
 .btn-wishlist,
 .btn-cart {
-	@include transparent-button;
-	@include square(length(36));
-	@include flex-center;
-	background: $white;
-	box-shadow: $box-shadow-3;
-	@include circle;
-	padding: length(8);
+  @include transparent-button;
+  @include square(length(36));
+  @include flex-center;
+  background: $white;
+  box-shadow: $box-shadow-3;
+  @include circle;
+  padding: length(8);
 
-	.icon {
-		@include square(length(24));
-		@include flex-center;
-		
-		svg {
-			@include wh100;
-		}
-	}
+  .icon {
+    @include square(length(24));
+    @include flex-center;
+
+    svg {
+      @include wh100;
+    }
+  }
 }
 
 .btn-wishlist {
-	.icon {		
-		svg {
-			path {
-				fill: transparent;
-				stroke: $gray-1;
-				stroke-width: 1.25;
-			}
-		}
-	}
+  .icon {
+    svg {
+      path {
+        fill: transparent;
+        stroke: $gray-1;
+        stroke-width: 1.25;
+      }
+    }
+  }
 
-	@include hover {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-					stroke: transparent;
-				}
-			}
-		}
-	}
+  @include hover {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+          stroke: transparent;
+        }
+      }
+    }
+  }
 
-	&:focus,
-	&:active {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-					stroke: transparent;
-				}
-			}
-		}
-	}
+  &:focus,
+  &:active {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+          stroke: transparent;
+        }
+      }
+    }
+  }
 }
 
 .btn-wish {
-	background: $white;
-	@include square(length(48));
-	@include flex-center;
-	@include radius(4);
-	padding: length(8);
-	overflow: hidden;
+  background: $white;
+  @include square(length(48));
+  @include flex-center;
+  @include radius(4);
+  padding: length(8);
+  overflow: hidden;
 
-	.icon {
-		@include square(length(24));
-		@include flex-center;
-		overflow: hidden;
+  .icon {
+    @include square(length(24));
+    @include flex-center;
+    overflow: hidden;
 
-		svg {
-			path {
-				fill: transparent;
-				stroke: $gray-1;
-				stroke-width: 1.25;
-			}
-		}
-	}
+    svg {
+      path {
+        fill: transparent;
+        stroke: $gray-1;
+        stroke-width: 1.25;
+      }
+    }
+  }
 
-	@include hover {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-					stroke: transparent;
-				}
-			}
-		}
-	}
+  @include hover {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+          stroke: transparent;
+        }
+      }
+    }
+  }
 
-	&:focus,
-	&:active {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-					stroke: transparent;
-				}
-			}
-		}
-	}
+  &:focus,
+  &:active {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+          stroke: transparent;
+        }
+      }
+    }
+  }
 }
 
 .btn-cart {
-	.icon {		
-		svg {
-			path {
-				@include transitionsall;
-			}
-		}
-	}
+  .icon {
+    svg {
+      path {
+        @include transitionsall;
+      }
+    }
+  }
 
-	@include hover {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-				}
-			}
-		}
-	}
+  @include hover {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
 
-	&:focus,
-	&:active {
-		.icon {
-			svg {
-				path {
-					fill: $primary;
-				}
-			}
-		}
-	}
+  &:focus,
+  &:active {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
 }
 
 .btn-addto {
-	position: relative;
-	text-transform: uppercase;
-	@include border(solid, 2, $primary);
-	@include setBgColor($white, $primary);
-	padding: length(12);
-	@include w100;
-	@include radius(8);
+  position: relative;
+  text-transform: uppercase;
+  @include border(solid, 2, $primary);
+  @include setBgColor($white, $primary);
+  padding: length(12);
+  @include w100;
+  @include radius(8);
 
-	&::before {
-		content: '';
-		position: absolute;
-		background: $primary;
-		top: 0;
-		bottom: 0;
-		right: 0; 
-		width: 0;
-		@include h100;
-		@include transitionsall;
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    background: $primary;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    @include h100;
+    @include transitionsall;
+  }
 
-	.btn-text {
-		color: $primary;
-		@include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
-		position: relative;
-		@include w100;
-		text-align: center;
-		text-transform: uppercase;
-	
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
-		}
-	}
+  .btn-text {
+    color: $primary;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(12),
+      weight("medium"),
+      line-height(16.8, 12)
+    );
+    position: relative;
+    @include w100;
+    text-align: center;
+    text-transform: uppercase;
 
-	@include hover {
-		&::before {
-			@include w100;
-		}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("medium"),
+        line-height(19.6, 14)
+      );
+    }
+  }
 
-		.btn-text {
-			color: $white;
-		}
-	}
+  @include hover {
+    &::before {
+      @include w100;
+    }
+
+    .btn-text {
+      color: $white;
+    }
+  }
 }
 
 .btn-delete {
-	@include square(length(24));
-	@include flex-center;
-	@include transparent-button;
-	overflow: hidden;
+  @include square(length(24));
+  @include flex-center;
+  @include transparent-button;
+  overflow: hidden;
 
-	svg {
-		@include wh100;
+  svg {
+    @include wh100;
 
-		path {
-			@include transitionsall;
-		}
-	}
+    path {
+      @include transitionsall;
+    }
+  }
 
-	@include hover {
-		svg {
-			path {
-				fill: $primary;
-			}
-		}
-	}
+  @include hover {
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+  }
 }
 
 .btn-storage {
-	padding: length(8) length(16);
-	@include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
-	@include transparent-button;
-	@include radius(4);
-	@include setBgColor($storagebg, $white);
+  padding: length(8) length(16);
+  @include font-face(
+    $secondaryFont,
+    style("normal"),
+    size(14),
+    weight("semibold"),
+    line-height(24, 14)
+  );
+  @include transparent-button;
+  @include radius(4);
+  @include setBgColor($storagebg, $white);
 
-	&:hover:not(.active) {
-		@include setBgColor($primary, $white);
-	}
+  &:hover:not(.active) {
+    @include setBgColor($primary, $white);
+  }
 
-	&.active {
-		@include setBgColor($primary, $white);
-	}
+  &.active {
+    @include setBgColor($primary, $white);
+  }
 }
 
 .btn-clear {
-	@include transparent-button;
-	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
-	color: $primary;
+  @include transparent-button;
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(12),
+    weight("semibold"),
+    line-height(20, 12)
+  );
+  color: $primary;
 }
 
 .btn-apply {
-	padding: length(4) length(16);
-	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
-	@include setBgColor($primary, $white);
-	@include border(solid, 2, transparent);
-	@include radius(4);
-	@include transitionsbackground;
+  padding: length(4) length(16);
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(12),
+    weight("semibold"),
+    line-height(20, 12)
+  );
+  @include setBgColor($primary, $white);
+  @include border(solid, 2, transparent);
+  @include radius(4);
+  @include transitionsbackground;
 
-	@include hover {
-		// background: darken($primary, 10%);
-		background: transparent;
-		border-color: $primary;
-		color: $primary;
-	}
+  @include hover {
+    // background: darken($primary, 10%);
+    background: transparent;
+    border-color: $primary;
+    color: $primary;
+  }
 }
 
 .btn-filter {
-	padding: length(4) length(16);
-	@include transparent-button;
-	@include border(solid, 1, $text-primary);
-	color: $text-primary;
-	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
-	@include flex-center;
+  padding: length(4) length(16);
+  @include transparent-button;
+  @include border(solid, 1, $text-primary);
+  color: $text-primary;
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(12),
+    weight("semibold"),
+    line-height(20, 12)
+  );
+  @include flex-center;
 
-	.text {
-		color: inherit;
-		font: inherit;
-	}
+  .text {
+    color: inherit;
+    font: inherit;
+  }
 
-	.icon {
-		@include square(length(16));
-		@include flex-center;
-		overflow: hidden;
+  .icon {
+    @include square(length(16));
+    @include flex-center;
+    overflow: hidden;
 
-		svg {
-			@include wh100;
-		}
-	}
+    svg {
+      @include wh100;
+    }
+  }
+}
+
+.btn-addcart {
+  @include w100;
+  @include setBgColor($black3, $white);
+  @include flex-center;
+  gap: size(8);
+  @include radius(32);
+  padding: size(8);
+
+  .icon {
+    @include square(length(24));
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include wh100;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .text {
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("medium"),
+      line-height(20, 14)
+    );
+  }
+
+  @include hover {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+    color: $primary;
+  }
 }
 
 /**=======================================================**
