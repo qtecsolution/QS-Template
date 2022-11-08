@@ -33,11 +33,17 @@
       .titlebox {
         .cardtitle {
           color: $text-primary;
-          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(14),
+            weight("normal"),
+            line-height(19.6, 14)
+          );
           @include line-clamp;
           height: length(39.19);
           @include transitionscolor;
-  
+
           @include hover {
             color: $primary;
           }
@@ -72,13 +78,25 @@
           .priceinfo {
             span {
               color: $border-1;
-              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(19.6, 14)
+              );
             }
           }
 
           .prevprice {
             color: $border-1;
-            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(19.6, 14)
+            );
             text-decoration: line-through;
 
             span {
@@ -90,7 +108,13 @@
 
       .currentprice {
         color: $text-primary;
-        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("bold"),
+          line-height(19.6, 14)
+        );
       }
     }
 
@@ -104,14 +128,20 @@
         overflow: hidden;
 
         .countfield {
-          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(14),
+            weight("normal"),
+            line-height(19.6, 14)
+          );
           height: length(32);
           width: length(48);
           @include setBgColor(transparent, $text-primary);
           text-align: center;
           padding: length(4);
         }
-        
+
         .btn-decrement,
         .btn-increment {
           @include square(length(32));
@@ -122,7 +152,7 @@
             @include wh100;
           }
         }
-        
+
         .btn-decrement {
           background: $decrementbg;
         }
@@ -160,11 +190,23 @@
 
     .suggestion-title {
       color: $text-primary;
-      @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(12),
+        weight("medium"),
+        line-height(16.8, 12)
+      );
       @include text-overflow;
-      
+
       @include breakpoint(mobile480) {
-        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("medium"),
+          line-height(19.6, 14)
+        );
       }
     }
   }
@@ -192,7 +234,7 @@
     right: 0;
     z-index: 10;
   }
-  
+
   .product-buttons {
     position: absolute;
     top: length(12);
@@ -246,17 +288,35 @@
 
     .product-title {
       color: $dark-1;
-      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(12),
+        weight("normal"),
+        line-height(16.8, 12)
+      );
       @include line-clamp;
       align-items: center;
       @include transitionscolor;
 
       @include breakpoint(mobile576) {
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(19.6, 14)
+        );
       }
 
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(22.4, 16)
+        );
       }
 
       @include hover {
@@ -269,7 +329,13 @@
       gap: length(4);
 
       .reviewcount {
-        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("medium"),
+          line-height(19.6, 14)
+        );
         color: $ratingColor;
       }
 
@@ -294,23 +360,41 @@
       flex-wrap: wrap;
       gap: length(8);
       text-align: center;
-      
+
       @include breakpoint(tab992) {
         gap: length(12);
       }
 
       .current-price {
         color: $secondary;
-        @include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(19.6, 14));
-  
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("medium"),
+          line-height(19.6, 14)
+        );
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(22.4, 16));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("medium"),
+            line-height(22.4, 16)
+          );
         }
       }
 
       .previous-price {
         color: $text-primary;
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(19.6, 14)
+        );
         text-decoration: line-through;
 
         span {
@@ -318,11 +402,22 @@
           font: inherit;
           text-decoration: line-through;
         }
-  
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("normal"),
+            line-height(22.4, 16)
+          );
         }
       }
+    }
+
+    .buttons {
+      @include flex-center;
+      gap: size(10);
     }
   }
 
@@ -370,27 +465,45 @@
 
       .orderid {
         color: $dark-2;
-        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("semibold"),
+          line-height(19.6, 14)
+        );
 
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("semibold"),
+            line-height(30, 18)
+          );
         }
       }
 
       .orderbadge {
         .orderedbadge {
-          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(19.6, 12));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(12),
+            weight("normal"),
+            line-height(19.6, 12)
+          );
           padding: length(4) length(8);
           text-align: center;
           @include radius(4);
           &.badge-success {
             @include setBgColor($successbg, $successcolor);
           }
-  
+
           &.badge-pending {
             @include setBgColor($pendingbg, $pendingcolor);
           }
-  
+
           &.badge-cancelled {
             @include setBgColor($dangerbg, $dangercolor);
           }
@@ -400,16 +513,34 @@
 
     .orderdate {
       color: $text-primary;
-      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(19.6, 12));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(12),
+        weight("normal"),
+        line-height(19.6, 12)
+      );
 
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(19.6, 14)
+        );
       }
     }
 
     .orderprice {
       color: $dark-1;
-      @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(22.4, 16));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("semibold"),
+        line-height(22.4, 16)
+      );
 
       span {
         color: inherit;
