@@ -1,7 +1,7 @@
 .swal2-html-container {
   color: $text-primary;
   @include font-face(
-    $primaryFont,
+    $secondaryFont,
     style("normal"),
     size(14),
     weight("medium"),
@@ -10,7 +10,7 @@
 
   @include breakpoint(tab992) {
     @include font-face(
-      $primaryFont,
+      $secondaryFont,
       style("normal"),
       size(16),
       weight("medium"),
@@ -21,6 +21,7 @@
 
 .swal2-confirm {
   background: $successcolor !important;
+  font-family: $secondaryFont;
 
   &:focus {
     box-shadow: 0 0 0 size(3) rgba($successcolor, 0.5) !important;
