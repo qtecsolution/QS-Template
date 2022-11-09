@@ -71,7 +71,90 @@
   }
 
   &-details {
-    .personalinfo {
+    @include w100;
+
+    .profileinfo {
+      @include w100;
+      background: $white;
+      padding: size(16) size(16) size(32);
+
+      @include breakpoint(mobile768) {
+        padding: size(24) size(24) size(48);
+      }
+
+      &-header {
+        @include flex-center-vert;
+        gap: size(16);
+
+        .uploadinfo {
+          position: relative;
+
+          .user-profile {
+            @include square(size(60));
+            @include flex-center;
+            @include circle;
+            overflow: hidden;
+            position: relative;
+
+            @include breakpoint(tab992) {
+              @include square(size(84));
+            }
+
+            img {
+              @include wh100;
+            }
+          }
+
+          .uploadlabel {
+            @include square(size(24));
+            background: $uploadbtnbg;
+            @include circle;
+            cursor: pointer;
+            @include flex-center;
+            overflow: hidden;
+            padding: size(7);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .userdescript {
+          @include flex-column;
+          gap: size(4);
+
+          .name {
+            color: $dark-2;
+            @include font-face(
+              $secondaryFont,
+              style("normal"),
+              size(18),
+              weight("bold"),
+              line-height(22, 18)
+            );
+            letter-spacing: size(0.08);
+          }
+
+          .phonenumber {
+            color: $ratingtext;
+            @include font-face(
+              $secondaryFont,
+              style("normal"),
+              size(14),
+              weight("normal"),
+              line-height(23, 14)
+            );
+          }
+        }
+      }
+
+      &-body {
+      }
     }
 
     .shippingaddress {
@@ -169,30 +252,7 @@
         }
 
         &-body {
-          @include flex-center-column;
-          gap: size(12);
-          text-align: center;
-
-          .info {
-            color: $labeltext;
-            @include font-face(
-              $secondaryFont,
-              style("normal"),
-              size(14),
-              weight("normal"),
-              line-height(16, 14)
-            );
-
-            .link {
-              color: $labeltext;
-              font-weight: 700;
-              @include transitionscolor;
-
-              @include hover {
-                color: $black;
-              }
-            }
-          }
+          @include flex-center;
         }
       }
     }
