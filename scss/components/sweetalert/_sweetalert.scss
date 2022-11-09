@@ -1,0 +1,28 @@
+.swal2-html-container {
+  color: $text-primary;
+  @include font-face(
+    $primaryFont,
+    style("normal"),
+    size(14),
+    weight("medium"),
+    line-height(19.6, 14)
+  );
+
+  @include breakpoint(tab992) {
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(16),
+      weight("medium"),
+      line-height(22.4, 16)
+    );
+  }
+}
+
+.swal2-confirm {
+  background: $successcolor !important;
+
+  &:focus {
+    box-shadow: 0 0 0 size(3) rgba($successcolor, 0.5) !important;
+  }
+}

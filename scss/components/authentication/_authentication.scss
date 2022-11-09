@@ -293,10 +293,10 @@
 
             .inputverify {
               @include square(length(48));
-              @include circle;
+              @include radius(8);
               @include flex-center;
-              @include setBgColor($prime-shops-bg, $text-verify);
-              @include border(solid, 1, transparent);
+              @include setBgColor($white, $text-verify);
+              @include border(solid, 1, $inputborder);
               @include font-face(
                 $primaryFont,
                 style("normal"),

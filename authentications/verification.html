@@ -11,6 +11,11 @@
     <title>babai | Verification</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <!-- SWEETALERT CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/sweetalert/sweetalert2.min.css"
+    />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
     <!-- CUSTOM STYLE -->
@@ -50,24 +55,20 @@
             <form class="authenticationform">
               <div class="inputbox">
                 <div class="verify">
-                  <input type="number" placeholder="1" class="inputverify" />
-                  <input type="number" placeholder="2" class="inputverify" />
-                  <input type="number" placeholder="3" class="inputverify" />
-                  <input type="number" placeholder="4" class="inputverify" />
+                  <input type="number" placeholder="" class="inputverify" />
+                  <input type="number" placeholder="" class="inputverify" />
+                  <input type="number" placeholder="" class="inputverify" />
+                  <input type="number" placeholder="" class="inputverify" />
                 </div>
                 <p class="error-message">This field is required</p>
               </div>
 
               <div class="submitbox">
                 <!-- SUBMIT BUTTON START -->
-                <button class="btn-submit d-none" type="button">
+                <button class="btn-submit" id="continue" type="button">
                   <span class="btn-text">Continue</span>
                 </button>
                 <!-- SUBMIT BUTTON END -->
-
-                <a href="reset-password.html" class="btn-submit" role="button">
-                  <span class="btn-text">Continue</span>
-                </a>
               </div>
             </form>
 
@@ -85,5 +86,8 @@
 
     <!-- PRELOADER JS -->
     <script src="../assets/js/features/preloader/loader.js"></script>
+    <!-- SWEET ALERT JS -->
+    <script src="../assets/js/sweetalert/sweetalert2@11.js"></script>
+    <script src="../assets/js/sweetalert/alertlogin.js"></script>
   </body>
 </html>

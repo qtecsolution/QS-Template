@@ -11,6 +11,11 @@
     <title>babai | Login</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <!-- SWEETALERT CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/sweetalert/sweetalert2.min.css"
+    />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
     <!-- CUSTOM STYLE -->
@@ -43,44 +48,25 @@
               <div class="inputbox">
                 <input
                   type="email"
-                  placeholder="Enter email or mobile number"
+                  placeholder="Enter email address or mobile number"
                   class="inputfield"
                 />
                 <p class="error-message">This field is required</p>
               </div>
 
-              <div class="inputbox">
-                <input
-                  type="password"
-                  placeholder="Enter password"
-                  class="inputfield logpassfield"
-                />
-                <p class="error-message">This field is required</p>
-
-                <a href="forgot-password.html" class="authlink">Forgot?</a>
-              </div>
-
-              <div class="inputbox">
-                <input
-                  type="checkbox"
-                  id="rememberpassword"
-                  class="checkfield"
-                  hidden
-                />
-                <label for="rememberpassword" class="checklabel"
-                  >Remember Password</label
-                >
-              </div>
-
               <div class="submitbox">
                 <!-- SUBMIT BUTTON START -->
-                <button class="btn-submit d-none" type="button">
-                  <span class="btn-text">Sign In</span>
+                <button class="btn-submit" id="send-otp" type="button">
+                  <span class="btn-text">Send OTP</span>
                 </button>
                 <!-- SUBMIT BUTTON END -->
 
-                <a href="../index.html" class="btn-submit" role="button">
-                  <span class="btn-text">Sign In</span>
+                <a
+                  href="verification.html"
+                  class="btn-submit d-none"
+                  role="button"
+                >
+                  <span class="btn-text">Send OTP</span>
                 </a>
               </div>
             </form>
@@ -181,11 +167,6 @@
                   </li>
                 </ul>
               </div>
-
-              <div class="authdetails">
-                <span class="authtitle">Don't have an account?</span>
-                <a href="register.html" class="authlink">SIGN UP</a>
-              </div>
             </div>
           </div>
         </div>
@@ -199,5 +180,8 @@
     <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- TOOLTIP JS -->
     <script src="../assets/js/bootstrap/tooltip/tooltip.js"></script>
+    <!-- SWEET ALERT JS -->
+    <script src="../assets/js/sweetalert/sweetalert2@11.js"></script>
+    <script src="../assets/js/sweetalert/otpalert.js"></script>
   </body>
 </html>
