@@ -72,10 +72,14 @@
 
   &-details {
     @include w100;
+    @include flex-column;
+    gap: size(16);
 
     .profileinfo {
       @include w100;
       background: $white;
+      @include flex-column;
+      gap: size(48);
       padding: size(16) size(16) size(32);
 
       @include breakpoint(mobile768) {
@@ -83,81 +87,403 @@
       }
 
       &-header {
-        @include flex-center-vert;
-        gap: size(16);
+        @include flex-column;
+        gap: size(36);
 
-        .uploadinfo {
-          position: relative;
+        .userprofile {
+          @include flex-center-vert;
+          gap: size(16);
 
-          .user-profile {
-            @include square(size(60));
-            @include flex-center;
-            @include circle;
-            overflow: hidden;
+          .uploadinfo {
             position: relative;
 
-            @include breakpoint(tab992) {
-              @include square(size(84));
+            .user-profile {
+              @include square(size(60));
+              @include flex-center;
+              @include circle;
+              overflow: hidden;
+              position: relative;
+
+              @include breakpoint(tab992) {
+                @include square(size(84));
+              }
+
+              img {
+                @include wh100;
+              }
             }
 
-            img {
-              @include wh100;
+            .uploadlabel {
+              @include square(size(24));
+              background: $uploadbtnbg;
+              @include circle;
+              cursor: pointer;
+              @include flex-center;
+              overflow: hidden;
+              padding: size(7);
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 10;
+
+              svg {
+                @include wh100;
+              }
             }
           }
 
-          .uploadlabel {
-            @include square(size(24));
-            background: $uploadbtnbg;
-            @include circle;
-            cursor: pointer;
-            @include flex-center;
-            overflow: hidden;
-            padding: size(7);
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 10;
+          .userdescript {
+            @include flex-column;
+            gap: size(4);
 
-            svg {
-              @include wh100;
+            .name {
+              color: $dark-2;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(18),
+                weight("bold"),
+                line-height(22, 18)
+              );
+              letter-spacing: size(0.08);
+            }
+
+            .phonenumber {
+              color: $ratingtext;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(23, 14)
+              );
             }
           }
         }
 
-        .userdescript {
-          @include flex-column;
-          gap: size(4);
+        .titlebox-editbox {
+          @include flex-center-vert;
+          gap: size(32);
 
-          .name {
-            color: $dark-2;
-            @include font-face(
-              $secondaryFont,
-              style("normal"),
-              size(18),
-              weight("bold"),
-              line-height(22, 18)
-            );
-            letter-spacing: size(0.08);
+          .titlebox {
+            .title {
+              color: $dark-2;
+              font-family: $secondaryFont;
+              font-size: size(18);
+              font-weight: 700;
+              letter-spacing: size(0.08);
+            }
           }
 
-          .phonenumber {
-            color: $ratingtext;
-            @include font-face(
-              $secondaryFont,
-              style("normal"),
-              size(14),
-              weight("normal"),
-              line-height(23, 14)
-            );
+          .editbox {
+            .btn-edit {
+              // width: size(64);
+              height: size(24);
+              @include radius(6);
+              @include flex-center;
+              padding: size(4) size(10);
+              font-family: $secondaryFont;
+              font-size: size(11);
+              font-weight: 700;
+              text-align: center;
+              @include transitionsall;
+
+              @include hover {
+                @include setBgColor($uploadbtnbg, $editbg);
+              }
+            }
           }
         }
       }
 
       &-body {
+        .viewprofile {
+          .viewinfo {
+            @include flex;
+            gap: size(16);
+
+            .icon {
+              background: $iconbg;
+              @include square(size(36));
+              @include circle;
+              @include flex-center;
+            }
+
+            .detail {
+              @include flex-column;
+              gap: size(4);
+              width: calc(100% - size(48));
+
+              .title {
+                color: $black;
+                font-family: $secondaryFont;
+                font-size: size(14);
+                font-weight: 600;
+              }
+
+              .text {
+                color: $labeltext;
+                font-family: $secondaryFont;
+                font-size: size(14);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .editprofile {
+          .inputbox {
+            @include flex-column;
+            gap: length(8);
+
+            .inputlabel {
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(19.6, 14)
+              );
+
+              @include breakpoint(tab992) {
+                @include font-face(
+                  $secondaryFont,
+                  style("normal"),
+                  size(16),
+                  weight("normal"),
+                  line-height(22.4, 16)
+                );
+              }
+            }
+
+            .inputfield {
+              @include setBgColor($white, $secondary);
+              @include border(solid, 1, $input-border);
+              @include radius(5);
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(19.6, 14)
+              );
+              padding: length(10) length(16);
+              @include w100;
+              @include transitionsall;
+
+              @include breakpoint(tab992) {
+                @include font-face(
+                  $secondaryFont,
+                  style("normal"),
+                  size(16),
+                  weight("normal"),
+                  line-height(22.4, 16)
+                );
+              }
+
+              &::placeholder {
+                color: $placeholder-color;
+              }
+
+              &:focus {
+                border-color: $border-1;
+              }
+            }
+
+            .selectfield {
+              appearance: none;
+              background: $white
+                url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1426_13293' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1426_13293)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A")
+                no-repeat center right 4%;
+              @include border(solid, 1, $input-border);
+              @include radius(5);
+              color: $secondary;
+              cursor: pointer;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(14),
+                weight("normal"),
+                line-height(19.6, 14)
+              );
+              padding: length(10) length(16);
+              @include transitionsall;
+
+              @include breakpoint(tab992) {
+                @include font-face(
+                  $secondaryFont,
+                  style("normal"),
+                  size(16),
+                  weight("normal"),
+                  line-height(22.4, 16)
+                );
+              }
+
+              &:focus {
+                border-color: $border-1;
+              }
+            }
+
+            .error-message {
+              display: none;
+              color: $primary;
+              @include font-face(
+                $secondaryFont,
+                style("normal"),
+                size(12),
+                weight("medium"),
+                line-height(16, 12)
+              );
+            }
+
+            &.errorfield {
+              .inputfield {
+                border-color: $primary;
+              }
+
+              .selectfield {
+                border-color: $primary;
+              }
+
+              .error-message {
+                display: block;
+              }
+            }
+          }
+        }
       }
     }
 
     .shippingaddress {
+      @include w100;
+      background: $white;
+      @include flex-column;
+      gap: size(48);
+      padding: size(16) size(16) size(32);
+
+      @include breakpoint(mobile768) {
+        padding: size(24) size(24) size(48);
+      }
+
+      &-header {
+        .title {
+          color: $ratingtext;
+          font-family: $secondaryFont;
+          font-size: size(18);
+          font-weight: 700;
+          letter-spacing: size(0.08);
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(84);
+
+        .addresses {
+          @include flex-column;
+          gap: size(32);
+
+          .address {
+            @include flex-center-between;
+
+            .leftcontent {
+              @include flex-column;
+              gap: size(20);
+
+              .details {
+                @include flex-column;
+                gap: size(4);
+                background: $white;
+                width: size(200);
+
+                .name {
+                  color: $dark-2;
+                  @include font-face(
+                    $secondaryFont,
+                    style("normal"),
+                    size(18),
+                    weight("bold"),
+                    line-height(22, 18)
+                  );
+                  letter-spacing: size(0.08);
+                }
+
+                .phone,
+                .addresslocation {
+                  color: $labeltext;
+                  font-family: $secondaryFont;
+                  font-size: size(14);
+                  font-weight: 400;
+                }
+              }
+
+              .defaultbox {
+                width: size(200);
+
+                .btn-default {
+                  width: size(156);
+                  height: size(28);
+                  @include setBgColor($white, $uploadbtnbg);
+                  @include border(solid, 1, $uploadbtnbg);
+                  @include radius(6);
+                  @include flex-center;
+                  padding: size(8) size(16);
+                  font-family: $secondaryFont;
+                  font-size: size(11);
+                  font-weight: 700;
+                  text-align: center;
+                  @include transitionsall;
+
+                  @include hover {
+                    @include setBgColor($uploadbtnbg, $white);
+                  }
+                }
+              }
+            }
+
+            .rightcontent {
+              @include flex-column;
+              align-items: flex-end;
+              justify-content: space-between;
+              height: size(110);
+
+              .btn-edit,
+              .btn-remove {
+                display: inline-block;
+                @include flex-center;
+                @include square(20);
+                @include flex-center;
+                overflow: hidden;
+                @include transparent-button;
+              }
+
+              .btn-edit {
+                @include hover {
+                  svg {
+                    path {
+                      fill: $blue;
+                    }
+                  }
+                }
+              }
+
+              .btn-remove {
+                @include hover {
+                  svg {
+                    path {
+                      fill: $primary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .newaddress {
+          width: size(170);
+        }
+      }
     }
   }
 
